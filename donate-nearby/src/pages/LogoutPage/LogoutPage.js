@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Logout() {
+export function LogoutPage() {
     return(
         <div>logout</div>
     )

@@ -1,0 +1,27 @@
+.hero {
+  margin: 6.8750rem;
+
+  //TODO: why the image is not loading
+  &::before {
+    content: "";
+    background-image: url("../../../src/assets/images/Home-Hero-Image.jpg");
+    background-repeat: no-repeat;
+    top: 0;
+    left: 0;
+  }
+
+  &__header {
+
+    font-size: $font-size-38;
+    line-height: $line-height-55;
+
+    //TODO: why the image is not loading
+    &::after {
+      content: "";
+      background-image: url("../../../src/assets/decorations/Decoration.svg");
+      background-repeat: no-repeat;
+      top: 0;
+      left: 0;
+    }
+  }
+}

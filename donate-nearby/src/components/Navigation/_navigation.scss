@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: sticky;
+  top: 0;
+  margin: 2.3125rem 8.8750rem 13.75rem 5rem;
+  --login-indent: 1.25rem;
+
+  &-login-section {
+    display: flex;
+    flex-direction: row;
+    margin: 0 var(--login-indent) 0.5313rem 0;
+    gap: 20px;
+    font-size: $font-size-14;
+    color: $font-color-login;
+
+    &__login {
+      padding: 0.5625rem 0;
+    }
+
+    &__register {
+      font-size: $font-size-13;
+      padding: 0.5625rem 0.625rem;
+      border: 0.75px solid $border-color-alt;
+    }
+  }
+
+  &-nav-section__ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-top: 0.5313rem;
+
+    &__li {
+      padding: 0.5625rem var(--login-indent);
+      border: 0.75px solid transparent;
+      font-size: $font-size-18;
+      line-height: $line-height-24;
+      //for test before I activate the Link class
+      &:hover {
+        border-color: $font-color-main;
+      }
+    }
+  }
+}

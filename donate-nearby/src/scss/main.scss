@@ -4,5 +4,7 @@
 @import "variables/mixins";
 @import "variables/fonts";
 @import "styles/styles";
+@import "../components/Navigation/navigation";
+@import "../components/Hero/hero";
 
 //TODO: npm audit for those 6 high severity vulnerabilities

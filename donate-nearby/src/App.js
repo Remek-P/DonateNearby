@@ -1,12 +1,11 @@
 import React from "react";
 import "./scss/main.scss"
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import { HomePage } from "./pages/HomePage/HomePage";
 import { Layout } from "./components/Layout/Layout";
-import { Home } from "./pages/Home/Home";
-import { Form } from "./pages/Form/Form";
-import { Login } from "./pages/Login/Login";
-import { Logout } from "./pages/Logout/Logout";
-import { Register } from "./pages/Register/Register";
+import { LoginPage } from "./pages/LoginPage/LoginPage";
+import { LogoutPage } from "./pages/LogoutPage/LogoutPage";
+import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { MissingPage } from "./pages/MissingPage/MissingPage";
 
 function App() {
@@ -14,12 +13,11 @@ function App() {
     <BrowserRouter>
         <Routes>
           <Route path={"/"} element={<Layout />}>
-              <Route index element={<Home />}></Route>
-              <Route path={"form"} element={<Form />}></Route>
-              <Route path={"login"} element={<Login />}></Route>
-              <Route path={"logout"} element={<Logout />}></Route>
-              <Route path={"register"} element={<Register />}></Route>
-              <Route path={"*"} element={<MissingPage />}></Route>
+              <Route exact path={"/"} element={<HomePage />} />
+              <Route path={"login"} element={<LoginPage />} />
+              <Route path={"logout"} element={<LogoutPage />} />
+              <Route path={"register"} element={<RegisterPage />} />
+              <Route path={"*"} element={<MissingPage />} />
           </Route>
         </Routes>
     </BrowserRouter>
