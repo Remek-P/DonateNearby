@@ -1,7 +1,8 @@
-@import "settings/reset";
-@import "settings/colors";
+@import "styles/reset";
+@import "variables/colors";
 //@import "settings/breakpoints";
-@import "settings/mixins";
-@import "settings/fonts";
+@import "variables/mixins";
+@import "variables/fonts";
+@import "styles/styles";
 
 //TODO: npm audit for those 6 high severity vulnerabilities
