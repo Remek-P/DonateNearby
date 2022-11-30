@@ -5,10 +5,10 @@ import { Navigation } from "../Navigation/Navigation";
 export function Layout() {
     return (
         <>
-            <Navigation/>
-            <main>
-                <Outlet/>
-            </main>
+            <Navigation />
+
+                <Outlet />
+
         </>
     )
 }
