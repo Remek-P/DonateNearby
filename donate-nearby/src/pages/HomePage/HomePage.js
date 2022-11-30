@@ -8,7 +8,7 @@ import {ContactForm} from "../../components/ContactForm/ContactForm";
 
 export function HomePage() {
     return(
-        <main className={"main-container"}>
+        <main className="main-container">
             <Hero />
             <Statistics />
             <CTA />
