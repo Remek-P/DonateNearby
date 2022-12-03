@@ -1,14 +1,16 @@
-.header {
+.navbar {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 3.84vh 7.47vw 22.84vh 4.21vw;
+  position: absolute;
+  top: 3.84%;
+  right: 7.47%;
   --login-indent: 1.25rem;
 
   &-login-section {
     display: flex;
     flex-direction: row;
-    margin: 0 var(--login-indent) 0.5313rem 0;
+    margin-right: var(--login-indent);
     gap: 20px;
     font-size: $font-size-14;
     color: $font-color-login;
@@ -28,10 +30,12 @@
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
-    margin-top: 0.5313rem;
+    margin-top: clamp(0.5rem, 4vw, 2.125rem);
+    padding: 0 var(--login-indent);
+    gap: clamp(0.5rem, 3vw, 3.4375rem);
 
     &__li {
-      padding: 0.5625rem var(--login-indent);
+
       border: 0.75px solid transparent;
       font-size: $font-size-18;
       line-height: $line-height-24;

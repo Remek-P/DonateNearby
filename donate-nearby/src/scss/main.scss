@@ -1,11 +1,10 @@
-@import "styles/reset";
-@import "variables/colors";
-//@import "settings/breakpoints";
-@import "variables/mixins";
-@import "variables/fonts";
-@import "styles/styles";
+@import "./styles/reset";
+@import "./variables/colors";
+@import "./variables/breakpoints";
+@import "./variables/mixins";
+@import "./variables/fonts";
+@import "./styles/styles";
 @import "../components/Navigation/navigation";
 @import "../components/Hero/hero";
 @import "../components/Statistics/statistics";
-
-//TODO: npm audit for those 6 high severity vulnerabilities
+@import "../components/CTA/cta";

@@ -1,62 +1,56 @@
-.main-container {
-  //TODO: ogarnąć to
-  &::before {
-    content: "";
-    background: transparent url("../../../src/assets/images/Home-Hero-Image.jpg") 0 0 no-repeat padding-box;
-    background-size: cover;
-    min-width: 1368px;
-    //width: 1368px;
-    height: auto;
-    aspect-ratio: 152 / 107;
-    position: absolute;
-    top: 0;
-    left: -483px;
-    z-index: -100;
-  }
-}
-
 .hero {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  margin: 11.4226376vh 14.4736842vw 25vh 14.4736842vw;
-
-  &__header {
+  background-image: url("../../../src/assets/images/Home-Hero-Image.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 0 left -25.4210526315789vw;
+  &-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-size: $font-size-38;
-    line-height: $line-height-55;
-    position: relative;
+    padding: 342px 275px 271px 951px;
 
-    &::after {
-      content: "";
-      background-image: url("../../../src/assets/decorations/Decoration.svg");
-      background-repeat: no-repeat;
-      width: 253px;
-      height: 33px;
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      transform: translate(-50%, 50%);
+    &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-size: $font-size-38;
+      line-height: $line-height-55;
+      letter-spacing: -0.76px;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-image: url("../../../src/assets/decorations/Decoration.svg");
+        background-repeat: no-repeat;
+        width: 253px;
+        height: 33px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
     }
-  }
 
-  &__links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2.75rem;
-    padding: 12.7726vh 1rem 1rem 1rem;
-    font-size: $font-size-36;
-    line-height: $line-height-45;
-    font-weight: $font-weight-light;
-    text-transform: uppercase;
-  }
+    &__links {
+      display: flex;
+      gap: 2.75rem;
+      padding-top: 12.7726vh;
+      font-size: $font-size-36;
+      line-height: $line-height-45;
+      font-weight: $font-weight-light;
+      text-transform: uppercase;
+    }
 
-  &__link-stuff, &__link-organise {
+    &__link-stuff, &__link-organise {
+      border: 0.75px solid $font-color-main;
+      text-align: center;
+    }
 
-
-    border: 0.75px solid $font-color-main;
+    &__link-stuff{
+      padding: 13px 93px;
+    }
+    &__link-organise {
+      padding: 13px 51px;
+    }
   }
 }

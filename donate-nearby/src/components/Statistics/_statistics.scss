@@ -1,19 +1,21 @@
 .statistics {
-  height: 384px;
+  max-height: 384px;
   background-color: $border-color-alt;
+  background-image: url("../../assets/images/3 Columns Background.png");
+  background-repeat: no-repeat;
 
   &-ul {
     display: flex;
     justify-content: space-around;
+    padding: 46px 0 86px 0;
+    text-align: center;
 
     &-li {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 10px 200px;
 
       &__component {
-        padding-top: 42px;
         font-size: $font-size-90;
         line-height: $line-height-122;
         font-weight: $font-weight-light;
@@ -21,6 +23,7 @@
       }
 
       &__header {
+        padding: 5px 0 28px 0;
         font-size: $font-size-18;
         line-height: $line-height-30;
         text-transform: uppercase;
@@ -28,7 +31,6 @@
 
       &__description {
         width: 17.579vw;
-        padding-top: 12px;
         font-family: $font-alt;
         font-weight: $font-weight-light;
         letter-spacing: -0.32px;
