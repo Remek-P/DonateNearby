@@ -20,27 +20,27 @@ export function Navigation() {
                 <div className="navbar-nav-section">
                     <ul className="navbar-nav-section__ul">
                         <li className="navbar-nav-section__ul__li">
-                            <Link>
+                            <Link to="start" spy={true} smooth={true} delay={100} duration={500}>
                                 Start
                             </Link>
                         </li>
                         <li className="navbar-nav-section__ul__li">
-                            <Link to="statistics" spy={true} smooth={true} delay={500} duration={500}>
+                            <Link to="statistics" spy={true} smooth="easeInOutQuad" delay={100} duration={500}>
                                 O co chodzi?
                             </Link>
                         </li>
                         <li className="navbar-nav-section__ul__li">
-                            <Link>
+                            <Link to="about" spy={true} smooth="easeInOutQuad" delay={100} duration={500}>
                                 O nas
                             </Link>
                         </li>
                         <li className="navbar-nav-section__ul__li">
-                            <Link>
+                            <Link to="partenrs" spy={true} smooth="easeInOutQuad" delay={100} duration={500}>
                                 Fundacje i organizacje
                             </Link>
                         </li>
                         <li className="navbar-nav-section__ul__li">
-                            <Link>
+                            <Link to="contact" spy={true} smooth="easeInOutQuad" delay={100} duration={500}>
                                 Kontakt
                             </Link>
                         </li>

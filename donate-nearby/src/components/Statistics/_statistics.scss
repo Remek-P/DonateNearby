@@ -2,13 +2,12 @@
   max-height: 384px;
   background-color: $border-color-alt;
   background-image: url("../../assets/images/3 Columns Background.png");
-  background-repeat: no-repeat;
+  background-repeat: repeat;
 
   &-ul {
     display: flex;
     justify-content: space-around;
     padding: 46px 0 86px 0;
-    text-align: center;
 
     &-li {
       display: flex;
@@ -35,7 +34,6 @@
         font-weight: $font-weight-light;
         letter-spacing: -0.32px;
         line-height: $line-height-18;
-        text-align: center;
       }
     }
   }
