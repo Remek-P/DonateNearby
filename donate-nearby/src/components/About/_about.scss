@@ -1,0 +1,52 @@
+.about {
+  background-color: $background-color-alt;
+  background-image: url("../../../src/assets/images/People.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  top: 0;
+  right: 0;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+
+
+    &__header {
+      font-size: $font-size-38;
+      line-height: $line-height-55;
+      letter-spacing: -0.76px;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-image: url("../../../src/assets/decorations/Decoration.svg");
+        background-repeat: no-repeat;
+        width: 253px;
+        height: 33px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+
+    &__description {
+      font-size: $font-size-30;
+      line-height: $line-height-54;
+      letter-spacing: -0.6px;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-image: url("../../../src/assets/decorations/Signature.svg");
+        background-repeat: no-repeat;
+        width: 209px;
+        height: 149px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+  }
+}
