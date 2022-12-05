@@ -1,8 +1,8 @@
 .hero {
-  background-image: url("../../../src/assets/images/Home-Hero-Image.jpg");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: top 0 left -25.4210526315789vw;
+
   &-container {
     display: flex;
     flex-direction: column;

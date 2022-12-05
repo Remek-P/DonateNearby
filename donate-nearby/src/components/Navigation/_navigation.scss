@@ -33,15 +33,16 @@
     margin-top: clamp(0.5rem, 4vw, 2.125rem);
     padding: 0 var(--login-indent);
     gap: clamp(0.5rem, 3vw, 3.4375rem);
+    --li-padding-X: 9px;
+    --li-padding-Y: 20px;
 
     &__li {
-
+      //padding: var(--li-padding-X) var(--li-padding-Y);
       border: 0.75px solid transparent;
       font-size: $font-size-18;
       line-height: $line-height-24;
-      //for test before I activate the Link class
       &:hover {
-        border-color: $font-color-main;
+        //border-color: $font-color-main;
       }
     }
   }

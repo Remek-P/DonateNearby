@@ -1,14 +1,12 @@
 .about {
   background-color: $background-color-alt;
-  background-image: url("../../../src/assets/images/People.jpg");
-  background-repeat: no-repeat;
-  background-size: contain;
-  top: 0;
-  right: 0;
 
   &-container {
     display: flex;
     flex-direction: column;
+    background-image: url("../../../src/assets/images/People.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
 
 
     &__header {

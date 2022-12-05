@@ -45,6 +45,10 @@ blockquote, q {
   quotes: "" "";
 }
 
+input {
+  text-align: inherit;
+}
+
 //Form - hide numeric input up and down arrows
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -53,4 +57,19 @@ input::-webkit-inner-spin-button {
 }
 input[type=number]{
   -moz-appearance: textfield;
+}
+//Button reset with border
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  margin: 0; /* 2 */
+  overflow: visible;
+  border: none;
+  background-color: inherit;
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit;
+  line-height: 1.15; /* 1 */
+  text-transform: none;
 }

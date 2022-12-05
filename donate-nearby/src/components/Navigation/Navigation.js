@@ -1,14 +1,20 @@
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
-import React from "react";
+import React, {useContext} from "react";
+import { GlobalContext } from "../../context/GlobalContext";
 
 export function Navigation() {
+
+    const { loggedUser } = useContext(GlobalContext)
+
+    const loggingNamePicker = loggedUser[1] === undefined ? "Zaloguj" : loggedUser[1]
+
     return (
             <nav className="navbar">
                 <div className="navbar-login-section">
                     <div className="navbar-login-section__login">
                         <NavLink to="/login">
-                            Zaloguj
+                            {loggingNamePicker}
                         </NavLink>
                     </div>
                     <div className="navbar-login-section__register">
