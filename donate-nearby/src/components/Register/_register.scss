@@ -1,0 +1,97 @@
+.register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+  &__header {
+    padding-bottom: 118px;
+    font-size: $font-size-40;
+    line-height: $line-height-55;
+    letter-spacing: -0.8px;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("../../../src/assets/decorations/Decoration.svg");
+      background-repeat: no-repeat;
+      width: 253px;
+      height: 33px;
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    background-color: $background-color-alt;
+    padding: 44px 67px;
+    gap: calc(31px - 13px);
+    //gap: 31px;
+
+    &-container {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+
+      &__label {
+        font-size: $font-size-16;
+        font-weight: $font-weight-semibold;
+        //TODO: Changed the line-line-height, cause 85 is obviously an error
+        line-height: $line-height-18;
+      }
+
+      &__input {
+        min-width: 250px;
+        padding-top: 20px;
+        font-family: $font-base;
+        font-size: $font-size-14;
+        font-weight: $font-weight-regular;
+        line-height: $line-height-14;
+        background-color: $background-color-alt;
+        border: none;
+        border-bottom: 1px solid $font-color-main;
+      }
+
+      &-validation {
+        font-size: $font-size-13;
+        line-height: $line-height-14;
+      }
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    gap: calc(293px - var(--button-pudding-Y));
+    font-size: $font-size-18;
+    font-weight: $font-weight-light;
+    line-height: $line-height-32;
+    --button-pudding-Y: 15px;
+
+    &-login, &-register {
+      padding: 13px var(--button-pudding-Y);
+    }
+
+    &-register {
+      border: 0.75px solid $font-color-main;
+      cursor: pointer;
+    }
+  }
+}
+
+//Classes for passing or failing validation
+.pass {
+  color: transparent;
+}
+
+.fail {
+  color: $warning-color;
+}
