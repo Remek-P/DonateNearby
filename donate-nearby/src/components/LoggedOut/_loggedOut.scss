@@ -1,0 +1,35 @@
+.loggedOut {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  &__header {
+    padding: 93px;
+    font-size: $font-size-40;
+    line-height: $line-height-55;
+    letter-spacing: -0.8px;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("../../../src/assets/decorations/Decoration.svg");
+      background-repeat: no-repeat;
+      width: 253px;
+      height: 33px;
+      position: absolute;
+      top: 69%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  &__link {
+    padding: 13px 17px;
+    border: 0.75px solid $font-color-main;
+    font-size: $font-size-18;
+    font-weight: $font-weight-light;
+    line-height: $line-height-32;
+    cursor: pointer;
+  }
+}

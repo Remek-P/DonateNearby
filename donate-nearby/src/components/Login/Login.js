@@ -24,6 +24,7 @@ export function Login() {
             email,
             password,
         }
+
         loginUser(userData);
         navigate("/");
     }

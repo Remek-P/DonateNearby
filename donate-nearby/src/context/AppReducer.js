@@ -1,15 +1,26 @@
 //reducer for handling multiple functions for provider
 export function AppReducer(state, action) {
     switch (action.type) {
-        case "Validate-user-email":
+        // case "Validate-user-email":
+        //     return {
+        //         ...state,
+        //         loginDatabase: state.loginDatabase.map(user => {
+        //             if (user.login === action.payload.email) {
+        //                 return user.login
+        //             }
+        //             return user.login
+        //         })
+        //     };
+        case "Logout-user":
             return {
                 ...state,
                 loginDatabase: state.loginDatabase.map(user => {
-                    if (user.login === action.payload.email) {
-                        return user.login
+                    if (user.login === action.payload) {
+                        user.isLogged = false;
                     }
-                    return user.login
-                })
+                    return user;
+                }),
+                loggedUser: []
             };
         case "Login-user":
             return {
@@ -17,10 +28,10 @@ export function AppReducer(state, action) {
                 loginDatabase: state.loginDatabase.map(user => {
                     if (user.login === action.payload.email && user.password === action.payload.password) {
                         user.isLogged = true;
-                        state.loggedUser.push(user.login)
                     }
-                    return user
+                    return user;
                 }),
+                loggedUser: state.loginDatabase.filter(user => user.isLogged === true)[0].login
             };
         default:
             return state;

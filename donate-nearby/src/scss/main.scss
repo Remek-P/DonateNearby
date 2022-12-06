@@ -5,10 +5,15 @@
 @import "./variables/fonts";
 @import "./styles/styles";
 @import "../components/Navigation/navigation";
+@import "../components/Navigation/LoginBar/loginBar";
+@import "../components/Navigation/LoginBar/Logout/logout";
+@import "../components/Navigation/NavigationBar/navigationBar";
 @import "../components/Hero/hero";
 @import "../components/Statistics/statistics";
 @import "../components/CTA/cta";
 @import "../components/About/about";
 @import "../components/Partners/partenrs";
 @import "../components/Login/login";
+@import "../components/LoggedOut/loggedOut";
 @import "../components/Register/register";
+

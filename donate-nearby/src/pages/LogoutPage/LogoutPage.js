@@ -1,7 +1,8 @@
 import React from "react";
+import { LoggedOut } from "../../components/LoggedOut/LoggedOut";
 
 export function LogoutPage() {
     return(
-        <div>logout</div>
+        <LoggedOut />
     )
 }

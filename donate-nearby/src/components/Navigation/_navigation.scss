@@ -5,45 +5,4 @@
   position: absolute;
   top: 3.84%;
   right: 7.47%;
-  --login-indent: 1.25rem;
-
-  &-login-section {
-    display: flex;
-    flex-direction: row;
-    margin-right: var(--login-indent);
-    gap: 20px;
-    font-size: $font-size-14;
-    color: $font-color-login;
-
-    &__login {
-      padding: 0.5625rem 0;
-    }
-
-    &__register {
-      font-size: $font-size-13;
-      padding: 0.5625rem 0.625rem;
-      border: 0.75px solid $border-color-alt;
-    }
-  }
-
-  &-nav-section__ul {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: clamp(0.5rem, 4vw, 2.125rem);
-    padding: 0 var(--login-indent);
-    gap: clamp(0.5rem, 3vw, 3.4375rem);
-    --li-padding-X: 9px;
-    --li-padding-Y: 20px;
-
-    &__li {
-      //padding: var(--li-padding-X) var(--li-padding-Y);
-      border: 0.75px solid transparent;
-      font-size: $font-size-18;
-      line-height: $line-height-24;
-      &:hover {
-        //border-color: $font-color-main;
-      }
-    }
-  }
 }

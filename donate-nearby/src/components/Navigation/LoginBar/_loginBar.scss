@@ -1,0 +1,21 @@
+.login-section {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  font-size: $font-size-14;
+  color: $font-color-login;
+
+  &__login, &__logged {
+    padding: 0.5625rem 5px;
+  }
+
+  &__logged, &__giveaway {
+    color: $font-color-send;
+  }
+
+  &__register, &__giveaway {
+    font-size: $font-size-13;
+    padding: 0.5625rem 0.625rem;
+    border: 0.75px solid $border-color-alt;
+  }
+}

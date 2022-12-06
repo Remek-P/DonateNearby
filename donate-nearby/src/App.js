@@ -8,21 +8,24 @@ import { LoginPage } from "./pages/LoginPage/LoginPage";
 import { LogoutPage } from "./pages/LogoutPage/LogoutPage";
 import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
 import { MissingPage } from "./pages/MissingPage/MissingPage";
+import { Giveaway } from "./pages/GiveawayPage/GiveawayPage";
 import { GlobalProvider } from "./context/GlobalContext";
 
 import "./scss/main.scss"
+
 
 function App() {
     return (
         <GlobalProvider>
             <BrowserRouter>
                 <Routes>
-                    <Route path="/" element={<Layout/>}>
-                        <Route exact path="/" element={<HomePage/>}/>
-                        <Route path="login" element={<LoginPage/>}/>
-                        <Route path="logout" element={<LogoutPage/>}/>
-                        <Route path="register" element={<RegisterPage/>}/>
-                        <Route path="*" element={<MissingPage/>}/>
+                    <Route path="/" element={<Layout />}>
+                        <Route exact path="/" element={<HomePage />} />
+                        <Route path="login" element={<LoginPage />} />
+                        <Route path="logged-out" element={<LogoutPage />} />
+                        <Route path="register" element={<Giveaway />} />
+                        <Route path="giveaway" element={<RegisterPage />} />
+                        <Route path="*" element={<MissingPage />} />
                     </Route>
                 </Routes>
             </BrowserRouter>
