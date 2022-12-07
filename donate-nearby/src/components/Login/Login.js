@@ -48,7 +48,7 @@ export function Login() {
                     <input
                         className="login__form-container__input"
                         required={true}
-                        type="text"
+                        type="email"
                         value={email}
                         onChange={event => setEmail(event.target.value)}
                         autoCorrect={"on"}
