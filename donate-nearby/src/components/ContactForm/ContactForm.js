@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 
+import image from "../../assets/images/Background-Form.jpg"
+
 export function ContactForm() {
 
     const [ name,               setName                 ] = useState("");
@@ -7,7 +9,10 @@ export function ContactForm() {
     const [ message,            setMessage              ] = useState("");
 
     return(
-        <section className="contact-form">
+        <section
+            className="contact-form"
+            style={{backgroundImage: `url(${image})`}}
+        >
                 <h2 className="contact-form-container__header">
                     Skontaktuj się z nami
                 </h2>
@@ -57,11 +62,11 @@ export function ContactForm() {
                         className="contact-form__form__input"
                         name="message"
                         id="message"
-                        maxLength={250}
+                        maxLength={500}
                         value={message}
                         onChange={event => setMessage(event.target.value)}
                         autoCorrect="on"
-                        placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+                        placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat (for 500 characters)"
                     />
                     <button className="contact-form__form__button">
                         Wyślij
