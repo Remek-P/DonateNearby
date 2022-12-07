@@ -8,7 +8,7 @@ export function Register() {
 
     const [ email,              setEmail                            ] = useState("");
     const [ password,           setPassword                         ] = useState("");
-    const [ rePassword,           setRePassword                         ] = useState("");
+    const [ rePassword,           setRePassword                     ] = useState("");
     const [ emailValidation,    setEmailValidation                  ]= useState("pass");
     const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState("pass");
 

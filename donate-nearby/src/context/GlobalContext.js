@@ -23,6 +23,13 @@ export const GlobalProvider = ({ children }) => {
     //     })
     // }
 
+    function registerUser(userData) {
+        dispatch({
+            type: "Register-user",
+            payload: userData,
+        })
+    }
+
     function logoutUser(login) {
         dispatch({
             type: "Logout-user",
@@ -45,7 +52,8 @@ export const GlobalProvider = ({ children }) => {
                 // validateUserEmail,
                 logoutUser,
                 loginUser,
-            }}>
+            }}
+        >
             {children}
         </GlobalContext.Provider>
     )

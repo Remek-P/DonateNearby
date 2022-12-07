@@ -23,8 +23,8 @@ function App() {
                         <Route exact path="/" element={<HomePage />} />
                         <Route path="login" element={<LoginPage />} />
                         <Route path="logged-out" element={<LogoutPage />} />
-                        <Route path="register" element={<Giveaway />} />
-                        <Route path="giveaway" element={<RegisterPage />} />
+                        <Route path="register" element={<RegisterPage />} />
+                        <Route path="giveaway" element={<Giveaway />} />
                         <Route path="*" element={<MissingPage />} />
                     </Route>
                 </Routes>
