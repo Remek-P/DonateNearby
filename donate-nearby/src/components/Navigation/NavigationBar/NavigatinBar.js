@@ -53,7 +53,6 @@ export function NavigationBar() {
                             smooth="easeInOutQuad"
                             delay={100}
                             duration={1000}
-                            offset={65}
                         >
                             Kontakt
                         </Link>
