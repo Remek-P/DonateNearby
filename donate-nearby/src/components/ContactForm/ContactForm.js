@@ -13,6 +13,7 @@ export function ContactForm() {
     return (
         <section
             className="contact-form"
+            id="contact"
         >
             <h2 className="contact-form__header">
                 Skontaktuj się z nami
