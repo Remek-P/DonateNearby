@@ -1,31 +1,33 @@
 import React, {useState} from "react";
 
-import image from "../../assets/images/Background-Form.jpg"
-
 export function ContactForm() {
 
     const [ name,               setName                 ] = useState("");
     const [ email,              setEmail                ] = useState("");
     const [ message,            setMessage              ] = useState("");
 
-    return(
+    const handleSubmit = (e) => {
+        e.preventDefault();
+    }
+
+    return (
         <section
             className="contact-form"
-            style={{backgroundImage: `url(${image})`}}
         >
-                <h2 className="contact-form-container__header">
-                    Skontaktuj się z nami
-                </h2>
-                <form className="contact-form__form">
-                    <div className="contact-form__form-container">
+            <h2 className="contact-form__header">
+                Skontaktuj się z nami
+            </h2>
+            <form className="contact-form__form">
+                <div className="contact-form__form-container">
+                    <div className="contact-form__form-container-field">
                         <label
-                            className="contact-form__form-container__label"
+                            className="contact-form__form-container-field__label label"
                             htmlFor="name"
                         >
                             Wpisz swoje imię
                         </label>
                         <input
-                            className="contact-form__form-container__input"
+                            className="contact-form__form-container-field__input input"
                             required={true}
                             type="text"
                             value={name}
@@ -35,14 +37,16 @@ export function ContactForm() {
                             name="name"
                             id="name"
                         />
+                    </div>
+                    <div className="contact-form__form-container-field">
                         <label
-                            className="contact-form__form-container__label"
+                            className="contact-form__form-container-field__label label"
                             htmlFor="email"
                         >
                             Wpisz swój email
                         </label>
                         <input
-                            className="contact-form__form-container__input"
+                            className="contact-form__form-container-field__input input"
                             required={true}
                             type="email"
                             value={email}
@@ -53,25 +57,35 @@ export function ContactForm() {
                             id="email"
                         />
                     </div>
-                    <label className="contact-form__form-container__label"
-                           htmlFor="message"
+                </div>
+                <div className="contact-form__form__textarea">
+                    <label
+                        className="contact-form__form__textarea__label label"
+                        htmlFor="message"
                     >
                         Wpisz swoją wiadomość
                     </label>
                     <textarea
-                        className="contact-form__form__input"
+                        className="contact-form__form__textarea__input input"
                         name="message"
                         id="message"
+                        required={true}
+                        rows="4"
+                        minLength={250}
                         maxLength={500}
                         value={message}
                         onChange={event => setMessage(event.target.value)}
                         autoCorrect="on"
                         placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat (for 500 characters)"
                     />
-                    <button className="contact-form__form__button">
-                        Wyślij
-                    </button>
-                </form>
+                </div>
+                <button
+                    className="contact-form__form__button"
+                    onClick={handleSubmit}
+                >
+                    Wyślij
+                </button>
+            </form>
         </section>
     )
 }

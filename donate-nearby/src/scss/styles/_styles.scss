@@ -8,7 +8,25 @@ body {
   box-sizing: border-box;
 }
 
+h2 {
+  font-size: $font-size-38;
+  line-height: $line-height-55;
+  letter-spacing: -0.76px;
+}
+
+input, textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid $font-color-main;
+  font-family: $font-base;
+  font-weight: $font-weight-regular;
+}
+
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button {
+  cursor: pointer;
 }

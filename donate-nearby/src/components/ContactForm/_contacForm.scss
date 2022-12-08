@@ -1,3 +1,88 @@
 .contact-form {
+  position: relative;
 
+  &:before {
+    content: "";
+    background-image: url("../../assets/images/Background-Contact-Form.jpg");
+    background-repeat: no-repeat;
+    background-color: bisque;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.25;
+    z-index: -1;
+  }
+
+  &__header {
+    margin: 0 236px 0 1306px;
+    padding: 200px 0 128px 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      background-image: url("../../../src/assets/decorations/Decoration.svg");
+      background-repeat: no-repeat;
+      width: 253px;
+      height: 33px;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, 50%);
+    }
+  }
+
+  &__form {
+    padding: 0 142px 319px 1230px;
+    text-align: left;
+
+    &-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+
+      &-field {
+        display: flex;
+        flex-direction: column;
+        min-width: 48%;
+      }
+    }
+
+    &__textarea {
+      display: flex;
+      flex-direction: column;
+      margin-top: 40px;
+
+      &__input {
+        resize: none;
+      }
+    }
+
+    &__button {
+      margin: 40px 0 0 378px;
+      padding: 13px 52px;
+      border: 0.75px solid #3C3C3C;
+      font-size: $font-size-18;
+      font-weight: $font-weight-light;
+      color: $font-color-send;
+      line-height: $line-height-32;
+    }
+  }
+}
+
+.label, .input {
+  font-size: $font-size-16;
+  line-height: $line-height-24;
+}
+
+.label {
+  font-weight: $font-weight-semibold;
+}
+
+.input {
+  padding-top: 12px;
+  &::placeholder {
+    color: #3C3C3C26;
+  }
 }

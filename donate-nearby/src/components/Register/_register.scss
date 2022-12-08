@@ -50,13 +50,8 @@
       &__input {
         min-width: 250px;
         padding-top: 20px;
-        font-family: $font-base;
         font-size: $font-size-14;
-        font-weight: $font-weight-regular;
         line-height: $line-height-14;
-        background-color: $background-color-alt;
-        border: none;
-        border-bottom: 1px solid $font-color-main;
       }
 
       &-validation {
