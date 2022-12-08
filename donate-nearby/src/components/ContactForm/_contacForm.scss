@@ -45,7 +45,7 @@
       &-field {
         display: flex;
         flex-direction: column;
-        min-width: 48%;
+        flex-grow: 1;
       }
     }
 
@@ -59,14 +59,19 @@
       }
     }
 
-    &__button {
-      margin: 40px 0 0 378px;
-      padding: 13px 52px;
-      border: 0.75px solid #3C3C3C;
-      font-size: $font-size-18;
-      font-weight: $font-weight-light;
-      color: $font-color-send;
-      line-height: $line-height-32;
+    &-button-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 40px;
+
+      &__button {
+        padding: 13px 52px;
+        border: 0.75px solid #3C3C3C;
+        font-size: $font-size-18;
+        font-weight: $font-weight-light;
+        color: $font-color-send;
+        line-height: $line-height-24;
+      }
     }
   }
 }

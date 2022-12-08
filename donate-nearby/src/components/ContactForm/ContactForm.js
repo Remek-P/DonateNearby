@@ -72,7 +72,7 @@ export function ContactForm() {
                         id="message"
                         required={true}
                         rows="4"
-                        minLength={250}
+                        minLength={150}
                         maxLength={500}
                         value={message}
                         onChange={event => setMessage(event.target.value)}
@@ -80,12 +80,14 @@ export function ContactForm() {
                         placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat (for 500 characters)"
                     />
                 </div>
-                <button
-                    className="contact-form__form__button"
-                    onClick={handleSubmit}
-                >
-                    Wyślij
-                </button>
+                <div className="contact-form__form-button-container">
+                    <button
+                        className="contact-form__form-button-container__button"
+                        onClick={handleSubmit}
+                    >
+                        Wyślij
+                    </button>
+                </div>
             </form>
         </section>
     )
