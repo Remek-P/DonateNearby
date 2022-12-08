@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
-import {NavLink} from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export function NavigationBar() {
 
