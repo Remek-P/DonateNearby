@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import {NavLink} from "react-router-dom";
 
 export function NavigationBar() {
 
@@ -7,23 +8,17 @@ export function NavigationBar() {
             <div className="navbar-section">
                 <ul className="navbar-section__ul">
                     <li className="navbar-section__ul__li">
-                        <Link
-                            to="/"
-                            spy={true}
-                            smooth={true}
-                            delay={100}
-                            duration={500}
-                        >
+                        <NavLink to="/">
                             Start
-                        </Link>
+                        </NavLink>
                     </li>
                     <li className="navbar-section__ul__li">
                         <Link
                             to="statistics"
                             spy={true}
-                            smooth="easeInOutQuad"
+                            smooth="easeInQuad"
                             delay={100}
-                            duration={500}
+                            duration={1000}
                         >
                             O co chodzi?
                         </Link>
@@ -32,9 +27,9 @@ export function NavigationBar() {
                         <Link
                             to="about"
                             spy={true}
-                            smooth="easeInOutQuad"
+                            smooth="easeInQuad"
                             delay={100}
-                            duration={500}
+                            duration={1000}
                             offset={-10}
                         >
                             O nas
@@ -44,9 +39,9 @@ export function NavigationBar() {
                         <Link
                             to="partners"
                             spy={true}
-                            smooth="easeInOutQuad"
+                            smooth="easeInQuad"
                             delay={100}
-                            duration={500}
+                            duration={1000}
                         >
                             Fundacje i organizacje
                         </Link>
@@ -56,7 +51,8 @@ export function NavigationBar() {
                             to="contact"
                             spy={true}
                             smooth="easeInOutQuad"
-                            delay={100} duration={500}
+                            delay={100}
+                            duration={1000}
                         >
                             Kontakt
                         </Link>
