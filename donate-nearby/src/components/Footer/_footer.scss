@@ -1,0 +1,24 @@
+
+
+.footer {
+  --icon-size: 30px;
+  display: flex;
+  gap: 587px;
+  margin: calc((var(--icon-size) + 22px) * -1) 120px 22px 886px;
+
+  &__r {
+    font-size: $font-size-18;
+    line-height: $line-height-24;
+
+  }
+
+  &-icons {
+    display: flex;
+    gap: 20px;
+
+    &__icon1, &__icon2 {
+      width: var(--icon-size);
+      height: var(--icon-size);
+    }
+  }
+}
