@@ -5,7 +5,7 @@ import { HomeCTA } from "../../components/HomeCTA/HomeCTA";
 import { HomeAbout } from "../../components/HomeAbout/HomeAbout";
 import { HomePartners } from "../../components/HomePartners/HomePartners";
 import { ContactForm } from "../../components/ContactForm/ContactForm";
-import { HomeFooter } from "../../components/HomeFooter/HomeFooter";
+import { Footer } from "../../components/Footer/Footer";
 
 export function HomePage() {
 
@@ -17,7 +17,7 @@ export function HomePage() {
             <HomeAbout />
             <HomePartners />
             <ContactForm />
-            <HomeFooter />
+            <Footer />
         </main>
     )
 }

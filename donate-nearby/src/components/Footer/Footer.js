@@ -3,7 +3,7 @@ import React from "react";
 import facebookIcon from "../../assets/icons/Facebook.svg";
 import instagramIcon from "../../assets/icons/Instagram.svg";
 
-export function HomeFooter() {
+export function Footer() {
     return (
         <section className="footer">
             <div className="footer__r">Copyright by Coders Lab</div>
