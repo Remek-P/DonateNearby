@@ -1,0 +1,78 @@
+.giveaway-hero {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 0 left 0;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 257px 311px 141px 951px;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-bottom: 27px;
+
+      & > h2 {
+        position: relative;
+
+        &::after {
+          content: "";
+          background-image: url("../../../src/assets/decorations/Decoration.svg");
+          background-repeat: no-repeat;
+          width: 253px;
+          height: 33px;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translate(-50%, 80%);
+        }
+      }
+
+      & > h3 {
+        padding-top: 77px;
+        font-size: $font-size-40;
+        font-weight: $font-weight-light;
+        line-height: $line-height-55;
+      }
+    }
+
+    &__steps {
+      display: flex;
+      gap: 2.75rem;
+      padding-top: 25.8px;
+      font-size: $font-size-36;
+      line-height: $line-height-45;
+      font-weight: $font-weight-light;
+
+      &__step {
+        min-width: 120px;
+        min-height: 120px;
+        margin: 0 -5px;
+        padding: 15px;
+        border: 0.75px solid $font-color-main;
+        rotate: 45deg;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+
+        & :where(*) {
+          font-weight: $font-weight-light;
+          line-height: $line-height-27;
+          rotate: -45deg;
+        }
+
+        & :where(h5) {
+          align-self: flex-start;
+          font-size: $font-size-32;
+        }
+
+        & > :where(div) {
+          font-size: $font-size-22;
+        }
+      }
+    }
+  }
+}

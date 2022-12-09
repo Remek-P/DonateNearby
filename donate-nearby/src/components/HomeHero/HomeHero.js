@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import image from "../../assets/images/Home-Hero-Image.jpg";
 
 export function HomeHero() {
     return (
-        <section className="hero" id="start" style={{
-            backgroundImage: `url(${image})`
-        }}>
+        <section
+            className="hero"
+            id="start"
+            style={{backgroundImage: `url(${image})`}}
+        >
             <div className={"hero-container"}>
                 <header className="hero-container__header">
                     <h2>Zacznij pomagać!</h2>
