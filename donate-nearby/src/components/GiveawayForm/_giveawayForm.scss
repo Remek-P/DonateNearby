@@ -1,0 +1,19 @@
+.giveaway-form {
+
+  &__notification {
+    padding: 50px 683px 50px 141px;
+    background-color: $border-color-alt;
+    text-align: left;
+
+    &__header {
+      font-size: $font-size-36;
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-49;
+    }
+
+    &__paragraph {
+      font-size: $font-size-22;
+      line-height: $line-height-30;
+    }
+  }
+}
