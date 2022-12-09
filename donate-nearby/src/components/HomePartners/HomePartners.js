@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Partners() {
+export function HomePartners() {
     return(
         <section>
             <div>

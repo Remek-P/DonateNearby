@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-export function CTA() {
+export function HomeCTA() {
     return (
         <section className="cta" id="cta">
             <header className="cta__header">

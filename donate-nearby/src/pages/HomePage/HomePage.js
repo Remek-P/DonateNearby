@@ -1,23 +1,23 @@
 import React from "react";
-import { Hero } from "../../components/Hero/Hero";
-import { Statistics } from "../../components/Statistics/Statistics";
-import { CTA } from "../../components/CTA/CTA";
-import { About } from "../../components/About/About";
-import { Partners } from "../../components/Partners/Partners";
+import { HomeHero } from "../../components/HomeHero/HomeHero";
+import { HomeStatistics } from "../../components/HomeStatistics/HomeStatistics";
+import { HomeCTA } from "../../components/HomeCTA/HomeCTA";
+import { HomeAbout } from "../../components/HomeAbout/HomeAbout";
+import { HomePartners } from "../../components/HomePartners/HomePartners";
 import { ContactForm } from "../../components/ContactForm/ContactForm";
-import { Footer } from "../../components/Footer/Footer";
+import { HomeFooter } from "../../components/HomeFooter/HomeFooter";
 
 export function HomePage() {
 
     return(
         <main className="main-container">
-            <Hero />
-            <Statistics />
-            <CTA />
-            <About />
-            <Partners />
+            <HomeHero />
+            <HomeStatistics />
+            <HomeCTA />
+            <HomeAbout />
+            <HomePartners />
             <ContactForm />
-            <Footer />
+            <HomeFooter />
         </main>
     )
 }

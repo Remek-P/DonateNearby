@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import image from "../../assets/images/Home-Hero-Image.jpg";
 
-export function Hero() {
+export function HomeHero() {
     return (
         <section className="hero" id="start" style={{
             backgroundImage: `url(${image})`
