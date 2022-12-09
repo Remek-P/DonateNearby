@@ -41,16 +41,12 @@
 
     &__steps {
       display: flex;
-      gap: 2.75rem;
       padding-top: 25.8px;
-      font-size: $font-size-36;
-      line-height: $line-height-45;
-      font-weight: $font-weight-light;
 
       &__step {
         width: 120px;
         height: 120px;
-        margin: 0 -5px;
+        margin: 10px;
         padding: 15px;
         border: 0.75px solid $font-color-main;
         rotate: 45deg;
