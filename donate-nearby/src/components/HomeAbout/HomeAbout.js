@@ -1,7 +1,7 @@
 import React from "react";
 import image from "../../assets/images/People.jpg";
 
-export function HomeAbout() {
+export default function HomeAbout() {
     return(
         <section
             className="about"

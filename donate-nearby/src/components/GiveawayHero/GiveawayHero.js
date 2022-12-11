@@ -2,7 +2,7 @@ import React from "react";
 
 import image from "../../assets/images/Form-Hero-Image.jpg"
 
-export function GiveawayHero() {
+export default function GiveawayHero() {
 
     return (
         <section

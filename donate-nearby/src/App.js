@@ -1,18 +1,19 @@
-import React from "react";
+import React, { lazy } from "react";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import { HomePage } from "./pages/HomePage/HomePage";
-import { Layout } from "./components/Layout/Layout";
-import { LoginPage } from "./pages/LoginPage/LoginPage";
-import { LogoutPage } from "./pages/LogoutPage/LogoutPage";
-import { RegisterPage } from "./pages/RegisterPage/RegisterPage";
-import { MissingPage } from "./pages/MissingPage/MissingPage";
-import { Giveaway } from "./pages/GiveawayPage/GiveawayPage";
+import HomePage from "./pages/HomePage/HomePage";
+import Layout from "./components/Layout/Layout";
+
 import { GlobalProvider } from "./context/GlobalContext";
 
 import "./scss/main.scss"
 
+const LoginPage = lazy(() => import("./pages/LoginPage/LoginPage"));
+const LogoutPage = lazy(() => import("./pages/LogoutPage/LogoutPage"));
+const RegisterPage = lazy(() => import("./pages/RegisterPage/RegisterPage"));
+const MissingPage = lazy(() => import("./pages/MissingPage/MissingPage"));
+const Giveaway = lazy(() => import("./pages/GiveawayPage/GiveawayPage"));
 
 function App() {
     return (

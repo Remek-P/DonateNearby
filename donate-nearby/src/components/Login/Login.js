@@ -1,8 +1,9 @@
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+
 import { GlobalContext } from "../../context/GlobalContext";
 
-export function Login() {
+export default function Login() {
 
     const { loginUser, loggedUser, validateUserEmail } = useContext(GlobalContext);
 

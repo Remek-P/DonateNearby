@@ -1,7 +1,7 @@
 import React from "react";
-import { LoggedOut } from "../../components/LoggedOut/LoggedOut";
+import LoggedOut from "../../components/LoggedOut/LoggedOut";
 
-export function LogoutPage() {
+export default function LogoutPage() {
     return(
         <LoggedOut />
     )

@@ -1,8 +1,8 @@
 import React from "react";
-import {LoginBar} from "./LoginBar/LoginBar";
-import {NavigationBar} from "./NavigationBar/NavigatinBar";
+import LoginBar from "./LoginBar/LoginBar";
+import NavigationBar from "./NavigationBar/NavigatinBar";
 
-export function Navigation() {
+export default function Navigation() {
 
     return (
             <nav className="navbar">

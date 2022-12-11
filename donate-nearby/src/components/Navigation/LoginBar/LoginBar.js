@@ -2,9 +2,9 @@ import React, {useContext} from "react";
 import { NavLink } from "react-router-dom";
 
 import { GlobalContext } from "../../../context/GlobalContext";
-import {Logout} from "./Logout/Logout";
+import Logout from "./Logout/Logout";
 
-export function LoginBar() {
+export default function LoginBar() {
 
     const { loggedUser } = useContext(GlobalContext)
 

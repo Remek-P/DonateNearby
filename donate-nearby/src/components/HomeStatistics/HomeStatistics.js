@@ -1,6 +1,6 @@
 import React from "react";
 
-export function HomeStatistics() {
+export default function HomeStatistics() {
     return(
     <section className="statistics" id="statistics">
         <ul className="statistics-ul">

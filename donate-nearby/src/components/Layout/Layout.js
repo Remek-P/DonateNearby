@@ -1,15 +1,15 @@
-import React from "react";
+import React, { Suspense } from "react";
 import { Outlet } from "react-router-dom";
 
-import { Navigation } from "../Navigation/Navigation";
+import Navigation from "../Navigation/Navigation";
 
-export function Layout() {
+export default function Layout() {
     return (
         <>
             <Navigation />
-
+            <Suspense>
                 <Outlet />
-
+            </Suspense>
         </>
     )
 }

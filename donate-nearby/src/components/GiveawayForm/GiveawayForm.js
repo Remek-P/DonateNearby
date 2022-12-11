@@ -1,6 +1,6 @@
 import React from "react";
 
-export function GiveawayForm() {
+export default function GiveawayForm() {
 
     return (
         <section className="giveaway-form">

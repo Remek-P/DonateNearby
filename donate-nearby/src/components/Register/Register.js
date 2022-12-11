@@ -1,8 +1,9 @@
 import React, {useContext, useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
+
 import { GlobalContext } from "../../context/GlobalContext";
 
-export function Register() {
+export default function Register() {
 
     const { registerUser, validateUserEmail, registerDatabase } = useContext(GlobalContext);
 

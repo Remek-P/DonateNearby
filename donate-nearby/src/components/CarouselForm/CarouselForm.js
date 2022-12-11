@@ -1,6 +1,6 @@
 import React from "react";
 
-export function CarouselForm() {
+export default function CarouselForm() {
     return(
         <div></div>
     )

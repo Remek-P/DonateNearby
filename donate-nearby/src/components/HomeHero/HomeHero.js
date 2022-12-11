@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import image from "../../assets/images/Home-Hero-Image.jpg";
 
-export function HomeHero() {
+export default function HomeHero() {
     return (
         <section
             className="hero"
