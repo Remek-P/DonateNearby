@@ -33,7 +33,7 @@ export default function CarouselForm() {
         },
     });
 
-    console.log(formData.giveaway)
+    console.log(formData.bagNumber)
 
     const DisplayStep = () => {
         if (step === 0) {

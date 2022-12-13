@@ -1,0 +1,35 @@
+.carouselFormStep2 {
+  --radio-size: clamp(15px, 2.5vw, 40px);
+  color: $font-color-send;
+  font-weight: $font-weight-light;
+  font-size: $font-size-24;
+  line-height: $line-height-27;
+
+  &__stepCount {
+    color: $font-color-main;
+  }
+
+  &__header {
+    margin-top: 70px;
+    font-size: $font-size-36;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-45;
+  }
+
+  &_container {
+    padding-top: 40px;
+
+  }
+
+  &-next {
+    margin-top: 158px;
+    padding: 23px 63px;
+    border: 0.75px solid $font-color-main;
+    text-align: center;
+  }
+}
+
+//visualising the selection of custom "radio" input
+.carouselFormStep1_container input[type="radio"]:checked + label:before {
+  background-color: $border-color-alt;
+}
