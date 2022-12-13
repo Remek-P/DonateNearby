@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function GiveawayForm() {
+export default function CarouselFormNotificationBar() {
 
     return (
         <section className="giveaway-form">

@@ -1,0 +1,14 @@
+.carouselForm-container {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: top left;
+  aspect-ratio: 1900 / 883;
+  position: relative;
+
+  &__steps {
+    position: absolute;
+    top: 36px;
+    left: 142px;
+    text-align: left;
+  }
+}
