@@ -47,3 +47,8 @@
   border: 0.75px solid $font-color-main;
   font: inherit;
 }
+
+.carouselFormStep2 select:active {
+
+  background-color: red;
+}

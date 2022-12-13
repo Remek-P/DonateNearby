@@ -25,6 +25,7 @@ export default function CarouselFormStep1({ formData, setFormData, setStep }) {
                             name="giveawayForm"
                             value="clothesReusable"
                             onChange={event => setFormData({ ...formData, giveaway: event.target.value})}
+                            checked={formData.giveaway === "clothesReusable"}
                         />
                         <label
                             htmlFor="clothesReusable"
@@ -40,6 +41,7 @@ export default function CarouselFormStep1({ formData, setFormData, setStep }) {
                             name="giveawayForm"
                             value="clothesGarbage"
                             onChange={event => setFormData({ ...formData, giveaway: event.target.value})}
+                            checked={formData.giveaway === "clothesGarbage"}
                         />
                         <label
                             htmlFor="clothesGarbage"
@@ -55,6 +57,7 @@ export default function CarouselFormStep1({ formData, setFormData, setStep }) {
                             name="giveawayForm"
                             value="toys"
                             onChange={event => setFormData({ ...formData, giveaway: event.target.value})}
+                            checked={formData.giveaway === "toys"}
                         />
                         <label
                             htmlFor="toys"
@@ -70,6 +73,7 @@ export default function CarouselFormStep1({ formData, setFormData, setStep }) {
                             name="giveawayForm"
                             value="books"
                             onChange={event => setFormData({ ...formData, giveaway: event.target.value})}
+                            checked={formData.giveaway === "books"}
                         />
                         <label
                             htmlFor="books"
@@ -85,6 +89,7 @@ export default function CarouselFormStep1({ formData, setFormData, setStep }) {
                             name="giveawayForm"
                             value="other"
                             onChange={event => setFormData({ ...formData, giveaway: event.target.value})}
+                            checked={formData.giveaway === "other"}
                         />
                         <label
                             htmlFor="other"
