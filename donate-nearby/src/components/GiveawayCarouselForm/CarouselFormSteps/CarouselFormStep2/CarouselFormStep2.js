@@ -27,26 +27,28 @@ export default function CarouselFormStep2({ formData, setFormData, setStep }) {
                         className="carouselFormStep2_container"
                         onChange={event => setFormData({ ...formData, bagNumber: event.target.value})}
                     >
+                        <option value={0}>— wybierz —</option>
                         <option value={1}>1</option>
                         <option value={2}>2</option>
                         <option value={3}>3</option>
                         <option value={4}>4</option>
                         <option value={5}>5</option>
                     </select>
-                <button
-                    disabled={formData.giveaway === ""}
-                    className="carouselFormStep2-next"
-                    onClick={handlePrevious}
-                >
-                    Dalej
-                </button>
-                <button
-                    disabled={formData.giveaway === ""}
-                    className="carouselFormStep2-next"
-                    onClick={handleNext}
-                >
-                    Dalej
-                </button>
+                <div className="carouselFormStep2-buttonContainer">
+                    <button
+                        className="carouselFormStep2-buttonContainer-previous"
+                        onClick={handlePrevious}
+                    >
+                        Wstecz
+                    </button>
+                    <button
+                        disabled={formData.bagNumber === ""}
+                        className="carouselFormStep2-buttonContainer-next"
+                        onClick={handleNext}
+                    >
+                        Dalej
+                    </button>
+                </div>
             </form>
         </div>
     )

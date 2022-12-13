@@ -17,19 +17,33 @@
   }
 
   &_container {
-    padding-top: 40px;
+    margin-top: 49px;
 
   }
 
-  &-next {
-    margin-top: 158px;
-    padding: 23px 63px;
-    border: 0.75px solid $font-color-main;
-    text-align: center;
+  &-buttonContainer {
+    display: flex;
+    gap: 50px;
+    margin-top: 468px;
+
+    &-previous, &-next {
+      padding: 23px 63px;
+      border: 0.75px solid $font-color-main;
+      text-align: center;
+    }
+
+    &-previous {
+      padding: 23px 52px;
+    }
   }
 }
 
-//visualising the selection of custom "radio" input
-.carouselFormStep1_container input[type="radio"]:checked + label:before {
-  background-color: $border-color-alt;
+.carouselFormStep2 select {
+  margin-left: 26px;
+  padding-left: 18px;
+  width: 300px;
+  height: 49px;
+  background-color: transparent;
+  border: 0.75px solid $font-color-main;
+  font: inherit;
 }
