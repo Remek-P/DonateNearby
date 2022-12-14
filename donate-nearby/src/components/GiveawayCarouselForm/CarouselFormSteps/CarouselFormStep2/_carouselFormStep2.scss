@@ -1,5 +1,4 @@
 .carouselFormStep2 {
-  --radio-size: clamp(15px, 2.5vw, 40px);
   color: $font-color-send;
   font-weight: $font-weight-light;
   font-size: $font-size-24;
@@ -46,9 +45,4 @@
   background-color: transparent;
   border: 0.75px solid $font-color-main;
   font: inherit;
-}
-
-.carouselFormStep2 select:active {
-
-  background-color: red;
 }

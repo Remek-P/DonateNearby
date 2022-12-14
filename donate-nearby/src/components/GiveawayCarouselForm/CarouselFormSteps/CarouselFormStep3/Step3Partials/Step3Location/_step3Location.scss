@@ -1,0 +1,22 @@
+.carouselFormStep3Location {
+  color: $font-color-send;
+  font-weight: $font-weight-semibold;
+  font-size: $font-size-36;
+  line-height: $line-height-45;
+
+  &_container {
+    margin-top: 20px;
+  }
+}
+
+.carouselFormStep3Location select {
+  display: block;
+  padding-left: 18px;
+  width: 300px;
+  height: 49px;
+  background-color: transparent;
+  border: 0.75px solid $font-color-main;
+  font-weight: $font-weight-light;
+  font-size: $font-size-24;
+  line-height: $line-height-33;
+}

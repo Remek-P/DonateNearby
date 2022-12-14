@@ -12,7 +12,7 @@ import image from "../../assets/images/Background-Form.jpg"
 
 export default function CarouselForm() {
 
-    const [ step,       setStep         ] = useState(0)
+    const [ step,       setStep         ] = useState(3)
     const [ formData,   setFormData    ] = useState({
         // id,
         giveaway: "",
@@ -27,13 +27,14 @@ export default function CarouselForm() {
             phoneNumber: 0,
         },
         schedulePackage: {
-            date: new Date(),
-            time: new Date().getTime(),
+            date: 0,
+            time: 0,
             notes: "",
         },
     });
 
-    console.log(formData.bagNumber)
+    console.log("formData:", formData)
+    console.log("bagNumber:", typeof formData.bagNumber)
 
     const DisplayStep = () => {
         if (step === 0) {

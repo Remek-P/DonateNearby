@@ -13,7 +13,7 @@ export default function CarouselFormStep2({ formData, setFormData, setStep }) {
     };
 
     console.log("Step2: ", formData.giveaway);
-    console.log("Step2: ", formData.bagNumber);
+    console.log("Step2: ", typeof formData.bagNumber);
 
     return (
         <div className="carouselFormStep2">
@@ -29,11 +29,36 @@ export default function CarouselFormStep2({ formData, setFormData, setStep }) {
                         onChange={event => setFormData({ ...formData, bagNumber: event.target.value})}
                     >
                         <option value={0}>— wybierz —</option>
-                        <option value={1}>1</option>
-                        <option value={2}>2</option>
-                        <option value={3}>3</option>
-                        <option value={4}>4</option>
-                        <option value={5}>5</option>
+                        <option
+                            value={1}
+                            selected={formData.bagNumber === "1"}
+                        >
+                            1
+                        </option>
+                        <option
+                            value={2}
+                            selected={formData.bagNumber === "2"}
+                        >
+                            2
+                        </option>
+                        <option
+                            value={3}
+                            selected={formData.bagNumber === "3"}
+                        >
+                            3
+                        </option>
+                        <option
+                            value={4}
+                            selected={formData.bagNumber === "4"}
+                        >
+                            4
+                        </option>
+                        <option
+                            value={5}
+                            selected={formData.bagNumber === "5"}
+                        >
+                            5
+                        </option>
                     </select>
                 <div className="carouselFormStep2-buttonContainer">
                     <button

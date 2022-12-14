@@ -1,0 +1,37 @@
+.carouselFormStep3AidTarget {
+  font-size: $font-size-24;
+  line-height: $line-height-32;
+
+  & > div {
+    display: flex;
+    gap: 35px 24px;
+    flex-wrap: wrap;
+    margin-top: 24px;
+    max-width: 650px;
+  }
+
+  &__header {
+    margin-top: 50px;
+    font-weight: $font-weight-semibold;
+  }
+
+  &-container {
+    padding: 11px 0;
+    background-color: transparent;
+
+    &__label {
+      padding: 11px 22px;
+      border: 0.75px solid $font-color-main;
+      cursor: pointer;
+    }
+  }
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+//visualising the selection of custom "radio" input
+.carouselFormStep3AidTarget-container input[type="radio"]:checked + label {
+  background-color: $border-color-alt;
+}
