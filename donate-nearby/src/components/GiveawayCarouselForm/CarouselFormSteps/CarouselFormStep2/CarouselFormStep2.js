@@ -5,14 +5,15 @@ export default function CarouselFormStep2({ formData, setFormData, setStep }) {
     const handlePrevious = (e) => {
         e.preventDefault();
         setStep((previousStep) => previousStep - 1)
-    }
+    };
 
     const handleNext = (e) => {
         e.preventDefault();
         setStep((previousStep) => previousStep + 1)
-    }
+    };
 
-    console.log(formData.giveaway)
+    console.log("Step2: ", formData.giveaway);
+    console.log("Step2: ", formData.bagNumber);
 
     return (
         <div className="carouselFormStep2">
@@ -42,7 +43,7 @@ export default function CarouselFormStep2({ formData, setFormData, setStep }) {
                         Wstecz
                     </button>
                     <button
-                        disabled={formData.bagNumber === ""}
+                        disabled={formData.bagNumber === 0 || formData.bagNumber === "0"}
                         className="carouselFormStep2-buttonContainer-next"
                         onClick={handleNext}
                     >
