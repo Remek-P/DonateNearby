@@ -26,8 +26,8 @@ function App() {
                         <Route path="logged-out" element={<LogoutPage />} />
                         <Route path="register" element={<RegisterPage />} />
                         <Route path="giveaway" element={<Giveaway />} />
-                        <Route path="*" element={<MissingPage />} />
                     </Route>
+                    <Route path="*" element={<MissingPage />} />
                 </Routes>
             </BrowserRouter>
         </GlobalProvider>
