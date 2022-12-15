@@ -128,8 +128,11 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                         />
                     </div>
                 </div>
-                <PreviousButton handlePrevious={handlePrevious}/>
-                <NextButton/>
+                <div className="CarouselForm-buttonContainer">
+                    <PreviousButton handlePrevious={handlePrevious}/>
+                    <NextButton/>
+                </div>
+
             </form>
         </section>
     )
