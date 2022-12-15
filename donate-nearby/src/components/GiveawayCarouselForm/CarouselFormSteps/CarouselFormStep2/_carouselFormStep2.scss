@@ -24,16 +24,6 @@
     display: flex;
     gap: 50px;
     margin-top: 403px;
-
-    &-previous, &-next {
-      padding: 23px 63px;
-      border: 0.75px solid $font-color-main;
-      text-align: center;
-    }
-
-    &-previous {
-      padding: 23px 52px;
-    }
   }
 }
 

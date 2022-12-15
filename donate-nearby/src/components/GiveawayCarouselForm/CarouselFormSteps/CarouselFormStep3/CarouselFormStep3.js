@@ -2,8 +2,11 @@ import React from "react";
 import Step3Location from "./Step3Partials/Step3Location/Step3Location";
 import Step3AidTarget from "./Step3Partials/Step3AidTarget/Step3AidTarget";
 import Step3NGO from "./Step3Partials/Step3NGO/Step3NGO";
+import PreviousButton from "../../GiveawayCarouselFormButtons/PreviousButton/PreviousButton";
+import NextButton from "../../GiveawayCarouselFormButtons/NextButton/NextButton";
+import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/GiveawayCarouselFormStepCount";
 
-export default function CarouselFormStep3({ formData, setFormData, setStep }) {
+export default function CarouselFormStep3({ formData, setFormData, step, setStep }) {
 
     const handlePrevious = (e) => {
         e.preventDefault();
@@ -16,33 +19,30 @@ export default function CarouselFormStep3({ formData, setFormData, setStep }) {
     };
 
     return (
-        <div>
-           <Step3Location
-               formData={formData}
-               setFormData={setFormData}
-           />
-            <Step3AidTarget
-                formData={formData}
-                setFormData={setFormData}
-            />
-            <Step3NGO
-                formData={formData}
-                setFormData={setFormData}
-            />
-            <button
-                className="carouselFormStep2-buttonContainer-previous"
-                onClick={handlePrevious}
+        <>
+            <GiveawayCarouselFormStepCount step={step} />
+            <form
+                name="giveawayForm"
+                onSubmit={handleNext}
             >
-                Wstecz
-            </button>
-            <button
-                disabled={formData.bagNumber === 0 || formData.bagNumber === "0"}
-                className="carouselFormStep2-buttonContainer-next"
-                onClick={handleNext}
-            >
-                Dalej
-            </button>
-        </div>
+                <Step3Location
+                    formData={formData}
+                    setFormData={setFormData}
+                />
+                <Step3AidTarget
+                    formData={formData}
+                    setFormData={setFormData}
+                />
+                <Step3NGO
+                    formData={formData}
+                    setFormData={setFormData}
+                />
+                <div className="carouselFormStep3-buttonContainer">
+                    <PreviousButton handlePrevious={handlePrevious}/>
+                    <NextButton/>
+                </div>
 
+            </form>
+        </>
     )
 }

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Step3AidTarget({ formData, setFormData }) {
     return (
-        <fieldset className="carouselFormStep3AidTarget">
+        <div className="carouselFormStep3AidTarget">
             <legend className="carouselFormStep3AidTarget__header">
                 Komu chcesz pomóc?
             </legend>
@@ -15,6 +15,7 @@ export default function Step3AidTarget({ formData, setFormData }) {
                         value="children"
                         onChange={event => setFormData({...formData, aidTarget: event.target.value})}
                         checked={formData.aidTarget === "children"}
+                        required
                     />
                     <label
                         htmlFor="children"
@@ -88,6 +89,6 @@ export default function Step3AidTarget({ formData, setFormData }) {
                     </label>
                 </div>
             </div>
-        </fieldset>
+        </div>
     )
 }

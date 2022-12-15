@@ -12,19 +12,19 @@ import image from "../../assets/images/Background-Form.jpg"
 
 export default function CarouselForm() {
 
-    const [ step,       setStep         ] = useState(3)
+    const [ step,       setStep         ] = useState(0)
     const [ formData,   setFormData    ] = useState({
         // id,
         giveaway: "",
-        bagNumber: 0,
+        bagNumber: "",
         location: "",
         aidTarget: "",
         NGO: "",
         address: {
             street: "",
             city: "",
-            postalCode: 0,
-            phoneNumber: 0,
+            postalCode: "",
+            phoneNumber: "",
         },
         schedulePackage: {
             date: 0,
@@ -43,6 +43,7 @@ export default function CarouselForm() {
                     formData={formData}
                     setFormData={setFormData}
                     setStep={setStep}
+                    step={step}
                 />
             )
         } else if (step === 1) {
@@ -51,6 +52,7 @@ export default function CarouselForm() {
                     formData={formData}
                     setFormData={setFormData}
                     setStep={setStep}
+                    step={step}
                 />
             )
         } else if (step === 2) {
@@ -59,6 +61,7 @@ export default function CarouselForm() {
                     formData={formData}
                     setFormData={setFormData}
                     setStep={setStep}
+                    step={step}
                 />
             )
         } else if (step === 3) {
@@ -67,6 +70,7 @@ export default function CarouselForm() {
                     formData={formData}
                     setFormData={setFormData}
                     setStep={setStep}
+                    step={step}
                 />
             )
         } else if (step === 4) {

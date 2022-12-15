@@ -1,6 +1,9 @@
 import React from "react";
+import NextButton from "../../GiveawayCarouselFormButtons/NextButton/NextButton";
+import PreviousButton from "../../GiveawayCarouselFormButtons/PreviousButton/PreviousButton";
+import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/GiveawayCarouselFormStepCount";
 
-export default function CarouselFormStep2({ formData, setFormData, setStep }) {
+export default function CarouselFormStep2({ formData, setFormData, step, setStep }) {
 
     const handlePrevious = (e) => {
         e.preventDefault();
@@ -17,8 +20,12 @@ export default function CarouselFormStep2({ formData, setFormData, setStep }) {
 
     return (
         <div className="carouselFormStep2">
-            <h4 className="carouselFormStep2__stepCount">Krok 2/4</h4>
-            <form className="carouselFormStep2">
+            <GiveawayCarouselFormStepCount step={step} />
+            <form
+                className="carouselFormStep2"
+                name="giveawayForm"
+                onSubmit={handleNext}
+            >
                     <h3 className="carouselFormStep2__header">
                         Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
                     </h3>
@@ -27,8 +34,9 @@ export default function CarouselFormStep2({ formData, setFormData, setStep }) {
                         name="location"
                         className="carouselFormStep2_container"
                         onChange={event => setFormData({ ...formData, bagNumber: event.target.value})}
+                        required
                     >
-                        <option value={0}>— wybierz —</option>
+                        <option value="">— wybierz —</option>
                         <option
                             value={1}
                             selected={formData.bagNumber === "1"}
@@ -61,19 +69,8 @@ export default function CarouselFormStep2({ formData, setFormData, setStep }) {
                         </option>
                     </select>
                 <div className="carouselFormStep2-buttonContainer">
-                    <button
-                        className="carouselFormStep2-buttonContainer-previous"
-                        onClick={handlePrevious}
-                    >
-                        Wstecz
-                    </button>
-                    <button
-                        disabled={formData.bagNumber === 0 || formData.bagNumber === "0"}
-                        className="carouselFormStep2-buttonContainer-next"
-                        onClick={handleNext}
-                    >
-                        Dalej
-                    </button>
+                    <PreviousButton handlePrevious={handlePrevious}/>
+                    <NextButton />
                 </div>
             </form>
         </div>
