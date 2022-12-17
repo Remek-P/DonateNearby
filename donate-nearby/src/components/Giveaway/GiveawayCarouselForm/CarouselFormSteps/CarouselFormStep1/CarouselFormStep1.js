@@ -17,8 +17,6 @@ export default function CarouselFormStep1({ formData, setFormData, step, setStep
         setStep((previousStep) => previousStep + 1)
     }
 
-    console.log(formData.giveaway)
-
     return (
         <div className="carouselFormStep1">
             <GiveawayCarouselFormStepCount step={step} />

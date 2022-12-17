@@ -2,7 +2,7 @@
   --icon-size: 30px;
   display: flex;
   gap: 587px;
-  margin: calc((var(--icon-size) + 68px) * -1) 120px 22px 886px;
+  margin: calc(68px * -1) 120px 22px 886px;
 
   &__r {
     font-size: $font-size-18;

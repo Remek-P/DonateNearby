@@ -33,9 +33,6 @@ export default function CarouselForm() {
         },
     });
 
-    console.log("formData:", formData)
-    console.log("bagNumber:", typeof formData.bagNumber)
-
     const DisplayStep = () => {
         if (step === 0) {
             return (

@@ -27,6 +27,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
     return (
         <section className="CarouselFormStep4">
             <GiveawayCarouselFormStepCount step={step} />
+            {/*TODO: do I need id and name everywhere*/}
             <form
                 id="giveawayForm"
                 name="giveawayForm"

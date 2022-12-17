@@ -7,7 +7,7 @@
   letter-spacing: -0.8px;
   position: relative;
 
-  ::after {
+  &::after {
     content: "";
     background-image: url("../../../../../assets/decorations/Decoration.svg");
     background-repeat: no-repeat;
