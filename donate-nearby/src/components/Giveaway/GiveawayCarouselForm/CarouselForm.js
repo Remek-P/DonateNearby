@@ -18,7 +18,7 @@ export default function CarouselForm() {
         giveaway: "",
         bagNumber: "",
         location: "",
-        aidTarget: "",
+        aidTarget: new Set(),
         NGO: "",
         address: {
             street: "",
@@ -84,11 +84,7 @@ export default function CarouselForm() {
             )
         } else if (step === 5) {
             return (
-                <CarouselFormStepThankYou
-                    formData={formData}
-                    setFormData={setFormData}
-                    setStep={setStep}
-                />
+                <CarouselFormStepThankYou />
             )
         }
     }

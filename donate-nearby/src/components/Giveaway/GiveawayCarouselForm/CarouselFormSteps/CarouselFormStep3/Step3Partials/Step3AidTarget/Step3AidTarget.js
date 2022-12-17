@@ -8,6 +8,17 @@ export default function Step3AidTarget({ formData, setFormData }) {
     const aidOption4 = "niepełnosprawnym";
     const aidOption5 = "osobom starszym";
 
+    const handleChange = (event) => {
+
+        const { checked } = event.target
+
+        if (checked) {
+           setFormData({...formData, ...formData.aidTarget.add(event.target.value)})
+        } else {
+            setFormData({...formData, ...formData.aidTarget.delete(event.target.value)})
+        }
+    };
+
     return (
         <div className="carouselFormStep3AidTarget">
             <legend className="carouselFormStep3AidTarget__header">
@@ -16,12 +27,11 @@ export default function Step3AidTarget({ formData, setFormData }) {
             <div>
                 <div className="carouselFormStep3AidTarget-container">
                     <input
-                        type="radio"
+                        type="checkbox"
                         id={aidOption1}
                         name="aidTarget"
                         value={aidOption1}
-                        onChange={event => setFormData({...formData, aidTarget: event.target.value})}
-                        checked={formData.aidTarget === "dzieciom"}
+                        onChange={handleChange}
                         required
                     />
                     <label
@@ -33,12 +43,11 @@ export default function Step3AidTarget({ formData, setFormData }) {
                 </div>
                 <div className="carouselFormStep3AidTarget-container">
                     <input
-                        type="radio"
+                        type="checkbox"
                         id={aidOption2}
                         name="aidTarget"
                         value={aidOption2}
-                        onChange={event => setFormData({...formData, aidTarget: event.target.value})}
-                        checked={formData.aidTarget === aidOption2}
+                        onChange={handleChange}
                     />
                     <label
                         htmlFor={aidOption2}
@@ -49,12 +58,11 @@ export default function Step3AidTarget({ formData, setFormData }) {
                 </div>
                 <div className="carouselFormStep3AidTarget-container">
                     <input
-                        type="radio"
+                        type="checkbox"
                         id={aidOption3}
                         name="aidTarget"
                         value={aidOption3}
-                        onChange={event => setFormData({...formData, aidTarget: event.target.value})}
-                        checked={formData.aidTarget === aidOption3}
+                        onChange={handleChange}
                     />
                     <label
                         htmlFor={aidOption3}
@@ -65,12 +73,11 @@ export default function Step3AidTarget({ formData, setFormData }) {
                 </div>
                 <div className="carouselFormStep3AidTarget-container">
                     <input
-                        type="radio"
+                        type="checkbox"
                         id={aidOption4}
                         name="aidTarget"
                         value={aidOption4}
-                        onChange={event => setFormData({...formData, aidTarget: event.target.value})}
-                        checked={formData.aidTarget === aidOption4}
+                        onChange={handleChange}
                     />
                     <label
                         htmlFor={aidOption4}
@@ -81,12 +88,11 @@ export default function Step3AidTarget({ formData, setFormData }) {
                 </div>
                 <div className="carouselFormStep3AidTarget-container">
                     <input
-                        type="radio"
+                        type="checkbox"
                         id={aidOption5}
                         name="aidTarget"
                         value={aidOption5}
-                        onChange={event => setFormData({...formData, aidTarget: event.target.value})}
-                        checked={formData.aidTarget === aidOption5}
+                        onChange={handleChange}
                     />
                     <label
                         htmlFor={aidOption5}

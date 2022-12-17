@@ -27,11 +27,11 @@
   }
 }
 
-input[type="radio"] {
+input[type="checkbox"] {
   display: none;
 }
 
 //visualising the selection of custom "radio" input
-.carouselFormStep3AidTarget-container input[type="radio"]:checked + label {
+.carouselFormStep3AidTarget-container input[type="checkbox"]:checked + label {
   background-color: $border-color-alt;
 }

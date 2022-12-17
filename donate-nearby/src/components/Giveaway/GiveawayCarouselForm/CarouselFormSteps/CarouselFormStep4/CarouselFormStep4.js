@@ -13,8 +13,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
     const date = "date";
     const time = "time";
     const notes = "notes";
-
-
+    
     const handlePrevious = (e) => {
         e.preventDefault();
         setStep((previousStep) => previousStep - 1)
@@ -65,7 +64,8 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                     <div className="CarouselFormStep4">
                         <label htmlFor={postalCode}>Kod pocztowy</label>
                         <input
-                            type="number"
+                            type="text"
+                            pattern="(\d{2})-(\d{3})"
                             value={formData.address.postalCode}
                             onChange={event => setFormData({
                                 ...formData,
@@ -80,6 +80,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                         <label htmlFor={phoneNumber}>Numer telefonu</label>
                         <input
                             type="tel"
+                            pattern="((\+|00)\d{1,2})?(\s|-)?(\d{3})(\s|-)?(\d{3})(\s|-)?(\d{3})"
                             value={formData.address.phoneNumber}
                             onChange={event => setFormData({
                                 ...formData,

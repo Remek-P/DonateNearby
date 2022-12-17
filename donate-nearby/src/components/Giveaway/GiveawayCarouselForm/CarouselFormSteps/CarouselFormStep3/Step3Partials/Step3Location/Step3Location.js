@@ -15,7 +15,6 @@ export default function Step3Location({ formData, setFormData }) {
                 name="location"
                 className="carouselFormStep3Location_container"
                 onChange={event => setFormData({...formData, location: event.target.value})}
-                required
             >
                 <option value="">— wybierz —</option>
                 <option
