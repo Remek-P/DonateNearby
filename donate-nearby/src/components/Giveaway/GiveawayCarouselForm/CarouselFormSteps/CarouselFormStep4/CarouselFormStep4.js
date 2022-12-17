@@ -8,7 +8,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
 
     const street = "street";
     const city = "city";
-    const postal = "postal";
+    const postalCode = "postal";
     const phoneNumber = "phoneNumber";
     const date = "date";
     const time = "time";
@@ -35,7 +35,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                 <legend>Podaj adres oraz termin odbioru rzecz przez kuriera</legend>
                 <div>
                     <div className="CarouselFormStep4">
-                        <label htmlFor="street">Ulica</label>
+                        <label htmlFor={street}>Ulica</label>
                         <input
                             type="text"
                             value={formData.address.street}
@@ -63,7 +63,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                         />
                     </div>
                     <div className="CarouselFormStep4">
-                        <label htmlFor={postal}>Kod pocztowy</label>
+                        <label htmlFor={postalCode}>Kod pocztowy</label>
                         <input
                             type="number"
                             value={formData.address.postalCode}
@@ -71,8 +71,8 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                                 ...formData,
                                 address: {...formData.address, postalCode: event.target.value}
                             })}
-                            name={postal}
-                            id={postal}
+                            name={postalCode}
+                            id={postalCode}
                             required
                         />
                     </div>
@@ -94,7 +94,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                 <h5></h5>
                 <div>
                     <div className="CarouselFormStep4">
-                        <label htmlFor="date">Data</label>
+                        <label htmlFor={date}>Data</label>
                         <input
                             type={date}
                             value={formData.schedulePackage.date}
@@ -108,7 +108,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                         />
                     </div>
                     <div className="CarouselFormStep4">
-                        <label htmlFor="time">Godzina</label>
+                        <label htmlFor={time}>Godzina</label>
                         <input
                             type={time}
                             value={formData.schedulePackage.time}

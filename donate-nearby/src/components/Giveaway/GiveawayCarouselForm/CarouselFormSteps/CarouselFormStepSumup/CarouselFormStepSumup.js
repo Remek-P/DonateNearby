@@ -7,9 +7,9 @@ import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirm
 export default function CarouselFormStepSumup({ formData, setFormData, step, setStep }) {
 
     const bagDeclination = () => {
-        if (formData.bagNumber === 1) {
+        if (formData.bagNumber <= 4) {
             return "worek"
-        } else if (formData.bagNumber <= 4) {
+        } else if (formData.bagNumber === 1) {
             return "worki"
         } else {
             return "worków"
@@ -44,31 +44,41 @@ export default function CarouselFormStepSumup({ formData, setFormData, step, set
                         </li>
                         <li>
                             <div>
-
+                                dla lokalizacji: {formData.location}
                             </div>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h5 className="">Adres odbioru:</h5>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5 className="">Termin odbioru:</h5>
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
+                    <div>
+                        <h5 className="">Adres odbioru:</h5>
+                        <ul>
+                            <li>
+                                Ulica {formData.address.street}
+                            </li>
+                            <li>
+                                Miasto {formData.address.city}
+                            </li>
+                            <li>
+                                Kod<br/> pocztowy {formData.address.postalCode}
+                            </li>
+                            <li>
+                                Numer<br/> telefonu {formData.address.phoneNumber}
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h5 className="">Termin odbioru:</h5>
+                        <ul>
+                            <li>Data {formData.schedulePackage.date}</li>
+                            <li>Godzina {formData.schedulePackage.time}</li>
+                            <li>Uwagi<br/> dla kuriera {formData.schedulePackage.notes}</li>
+                        </ul>
+                    </div>
                 </div>
                 <div className="buttonContainer">
                     <PreviousButton handlePrevious={handlePrevious}/>
-                    <NextOrConfirmButton />
+                    <NextOrConfirmButton/>
                 </div>
             </form>
         </section>
