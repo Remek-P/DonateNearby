@@ -1,9 +1,9 @@
 import React from "react";
-import HomeHero from "../../components/HomeHero/HomeHero";
-import HomeStatistics from "../../components/HomeStatistics/HomeStatistics";
-import HomeCTA from "../../components/HomeCTA/HomeCTA";
-import HomeAbout from "../../components/HomeAbout/HomeAbout";
-import HomePartners from "../../components/HomePartners/HomePartners";
+import HomeHero from "../../components/Home/HomeHero/HomeHero";
+import HomeStatistics from "../../components/Home/HomeStatistics/HomeStatistics";
+import HomeCTA from "../../components/Home/HomeCTA/HomeCTA";
+import HomeAbout from "../../components/Home/HomeAbout/HomeAbout";
+import HomePartners from "../../components/Home/HomePartners/HomePartners";
 import ContactForm from "../../components/ContactForm/ContactForm";
 import Footer from "../../components/Footer/Footer";
 

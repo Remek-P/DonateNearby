@@ -1,0 +1,52 @@
+.hero {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top 0 left -25.4210526315789vw;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 342px 275px 271px 951px;
+
+    &__header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-image: url("../../../assets/decorations/Decoration.svg");
+        background-repeat: no-repeat;
+        width: 253px;
+        height: 33px;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translate(-50%, 80%);
+      }
+    }
+
+    &__links {
+      display: flex;
+      gap: 2.75rem;
+      padding-top: 12.7726vh;
+      font-size: $font-size-36;
+      line-height: $line-height-45;
+      font-weight: $font-weight-light;
+      text-transform: uppercase;
+    }
+
+    &__link-stuff, &__link-organise {
+      border: 0.75px solid $font-color-main;
+    }
+
+    &__link-stuff{
+      padding: 13px 93px;
+    }
+    &__link-organise {
+      padding: 13px 51px;
+    }
+  }
+}

@@ -1,0 +1,48 @@
+.about {
+  background-color: $background-color-alt;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right -365px top;
+
+  &-container {
+    display: flex;
+    flex-direction: column;
+    padding: 186px calc(152px + 942px) 374px 149px;
+
+    &__header {
+      padding-bottom: 114px;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-image: url("../../../assets/decorations/Decoration.svg");
+        background-repeat: no-repeat;
+        width: 253px;
+        height: 33px;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+      }
+    }
+
+    &__description {
+      font-size: $font-size-30;
+      line-height: $line-height-54;
+      letter-spacing: -0.6px;
+      position: relative;
+
+      &::after {
+        content: "";
+        background-image: url("../../../assets/decorations/Signature.svg");
+        background-repeat: no-repeat;
+        width: 209px;
+        height: 149px;
+        position: absolute;
+        top: 80%;
+        right: 0;
+        transform: translateY(50%);
+      }
+    }
+  }
+}
