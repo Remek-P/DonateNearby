@@ -32,7 +32,8 @@ export default function Step3AidTarget({ formData, setFormData }) {
                         name="aidTarget"
                         value={aidOption1}
                         onChange={handleChange}
-                        required
+                        checked={formData.aidTarget.has(aidOption1)}
+                        required={formData.aidTarget.size === 0}
                     />
                     <label
                         htmlFor={aidOption1}
@@ -48,6 +49,7 @@ export default function Step3AidTarget({ formData, setFormData }) {
                         name="aidTarget"
                         value={aidOption2}
                         onChange={handleChange}
+                        checked={formData.aidTarget.has(aidOption2)}
                     />
                     <label
                         htmlFor={aidOption2}
@@ -63,6 +65,7 @@ export default function Step3AidTarget({ formData, setFormData }) {
                         name="aidTarget"
                         value={aidOption3}
                         onChange={handleChange}
+                        checked={formData.aidTarget.has(aidOption3)}
                     />
                     <label
                         htmlFor={aidOption3}
@@ -78,6 +81,7 @@ export default function Step3AidTarget({ formData, setFormData }) {
                         name="aidTarget"
                         value={aidOption4}
                         onChange={handleChange}
+                        checked={formData.aidTarget.has(aidOption4)}
                     />
                     <label
                         htmlFor={aidOption4}
@@ -93,6 +97,7 @@ export default function Step3AidTarget({ formData, setFormData }) {
                         name="aidTarget"
                         value={aidOption5}
                         onChange={handleChange}
+                        checked={formData.aidTarget.has(aidOption5)}
                     />
                     <label
                         htmlFor={aidOption5}

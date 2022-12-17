@@ -13,7 +13,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
     const date = "date";
     const time = "time";
     const notes = "notes";
-    
+
     const handlePrevious = (e) => {
         e.preventDefault();
         setStep((previousStep) => previousStep - 1)
@@ -28,6 +28,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
         <section className="CarouselFormStep4">
             <GiveawayCarouselFormStepCount step={step} />
             <form
+                id="giveawayForm"
                 name="giveawayForm"
                 onSubmit={handleNext}
             >
