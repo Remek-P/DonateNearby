@@ -1,8 +1,10 @@
 .footer {
   --icon-size: 30px;
   display: flex;
+  justify-content: flex-end;
   gap: 587px;
-  margin: calc(68px * -1) 120px 22px 886px;
+  margin-top: calc(68px * -1);
+  margin-right: 142px;;
 
   &__r {
     font-size: $font-size-18;
