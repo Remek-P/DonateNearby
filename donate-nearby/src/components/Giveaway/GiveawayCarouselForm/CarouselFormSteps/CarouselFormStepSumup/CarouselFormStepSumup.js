@@ -38,33 +38,47 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
                 onSubmit={handleNext}
             >
                 <legend className="carouselFormSumup__header">Podsumowanie Twojej darowizny</legend>
-                <div className="carouselFormSumup-container">
+                <div>
                     <div>
                         <h5 className="">Oddajesz</h5>
                         <ul>
-                            <li>
-                                <div>{formData.bagNumber} {bagDeclination()}, {formData.giveaway}{showAidTarget()}</div>
-                            </li>
-                            <li>
-                                <div>dla lokalizacji: {formData.location}</div>
-                            </li>
+                            <li>{formData.bagNumber} {bagDeclination()}, {formData.giveaway}{showAidTarget()}</li>
+                            <li>dla lokalizacji: {formData.location}</li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="carouselFormSumup-container">
                         <div>
                             <h5 className="">Adres odbioru:</h5>
                             <ul>
-                                <li>Ulica {formData.address.street}</li>
-                                <li>Miasto {formData.address.city}</li>
-                                <li>Numer<br/> telefonu {formData.address.phoneNumber}</li>
+                                <li>
+                                    <h6>Ulica</h6>
+                                    <div>{formData.address.street}</div>
+                                </li>
+                                <li>
+                                    <h6>Miasto</h6>
+                                    <div>{formData.address.city}</div>
+                                </li>
+                                <li>
+                                    <h6>Numer<br/> telefonu</h6>
+                                    <div>{formData.address.phoneNumber}</div>
+                                </li>
                             </ul>
                         </div>
                         <div>
                             <h5 className="">Termin odbioru:</h5>
                             <ul>
-                                <li>Data {formData.schedulePackage.date}</li>
-                                <li>Godzina {formData.schedulePackage.time}</li>
-                                <li>Uwagi<br/> dla kuriera {formData.schedulePackage.notes}</li>
+                                <li>
+                                    <h6>Data</h6>
+                                    <div>{formData.schedulePackage.date}</div>
+                                </li>
+                                <li>
+                                    <h6>Godzina<br/> telefonu</h6>
+                                    <div>{formData.schedulePackage.time}</div>
+                                </li>
+                                <li>
+                                    <h6>Uwagi<br/> dla kuriera</h6>
+                                    <div>{formData.schedulePackage.notes}</div>
+                                </li>
                             </ul>
                         </div>
                     </div>

@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
 import CarouselFormNotificationBar from "./CarouselFormNotificationBar/CarouselFormNotificationBar";
 import CarouselFormStep1 from "./CarouselFormSteps/CarouselFormStep1/CarouselFormStep1";
@@ -12,13 +12,39 @@ import image from "../../../assets/images/Background-Form.jpg"
 
 export default function CarouselForm() {
 
-    const [ step,       setStep         ] = useState(4)
+    const [ step,       setStep         ] = useState(2)
+    // const [ formData,   setFormData    ] = useState({
+    //     // id,
+    //     giveaway: "",
+    //     bagNumber: "",
+    //     location: "",
+    //     aidTarget: [
+    //         {name: "dzieciom", value: false},
+    //         {name: "samotnym matkom", value: false},
+    //         {name: "bezdomnym", value: false},
+    //         {name: "niepełnosprawnym", value: false},
+    //         {name: "osobom starszym", value: false},
+    //     ],
+    //     NGO: "",
+    //     address: {
+    //         street: "",
+    //         city: "",
+    //         postalCode: "",
+    //         phoneNumber: "",
+    //     },
+    //     schedulePackage: {
+    //         date: 0,
+    //         time: 0,
+    //         notes: "",
+    //     },
+    // });
+
     const [ formData,   setFormData    ] = useState({
         // id,
         giveaway: "",
         bagNumber: "",
         location: "",
-        aidTarget: new Set(),
+        aidTarget: [],
         NGO: "",
         address: {
             street: "",
@@ -32,6 +58,8 @@ export default function CarouselForm() {
             notes: "",
         },
     });
+
+    console.log(formData)
 
     const DisplayStep = () => {
         if (step === 0) {

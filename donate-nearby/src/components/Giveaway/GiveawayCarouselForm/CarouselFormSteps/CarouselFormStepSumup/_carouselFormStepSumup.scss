@@ -11,10 +11,42 @@
     line-height: $line-height-45;
   }
 
+  & :where(* h5) {
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-45;
+  }
+
   &-container {
     display: flex;
     justify-content: space-between;
-    padding-top: 50px;
-    column-gap: 150px;
+    align-items: center;
+    column-gap: 35px;
+    padding-top: 20px;
   }
+
+  & :where(li) {
+    display: flex;
+    justify-content: space-between;
+
+    & :where(li > h6) {
+      line-height: $line-height-32;
+      color: $font-color-send;
+    }
+  }
+
+  & :where(input) {
+
+    width: clamp(200px, 20vw, 280px);
+    border: 0.75px solid $font-color-main;
+    font-size: $font-size-22;
+    font-weight: $font-weight-light;
+    line-height: $line-height-40;
+    text-align: center;
+  }
+}
+
+.buttonContainer {
+  display: flex;
+  gap: 50px;
+  margin-top: 205px;
 }

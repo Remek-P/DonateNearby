@@ -68,7 +68,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                             <label htmlFor={postalCode}>Kod pocztowy</label>
                             <input
                                 type="text"
-                                pattern="(\d{2})-(\d{3})"
+                                pattern="(\d{2})-?(\d{3})"
                                 value={formData.address.postalCode}
                                 onChange={event => setFormData({
                                     ...formData,
