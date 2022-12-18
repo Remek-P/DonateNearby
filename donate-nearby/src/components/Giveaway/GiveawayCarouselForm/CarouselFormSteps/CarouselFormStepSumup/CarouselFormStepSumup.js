@@ -4,7 +4,7 @@ import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirm
 
 
 
-export default function CarouselFormStepSumup({ formData, setFormData, step, setStep }) {
+export default function CarouselFormStepSumup({ formData, setStep }) {
 
     const bagDeclination = () => {
         if (formData.bagNumber <= 4) {

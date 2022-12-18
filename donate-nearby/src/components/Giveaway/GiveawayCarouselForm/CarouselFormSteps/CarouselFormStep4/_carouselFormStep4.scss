@@ -1,6 +1,70 @@
-//&-buttonContainer {
-//  display: flex;
-//  gap: 50px;
-//  margin-top: 403px;
-//}
+.carouselFormStep4 {
+  color: $font-color-send;
+  font-weight: $font-weight-light;
+  font-size: $font-size-24;
+  line-height: $line-height-27;
+
+  &__header {
+    font-size: $font-size-36;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-45;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    column-gap: 150px;
+
+    & :where(div > h5) {
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-45;
+    }
+
+    & :where(div > div > div){
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      column-gap: 35px;
+      padding-top: 20px;
+
+      & :where(:last-child > label){
+        align-self: start;
+      }
+
+      & > label {
+        max-width: 101px;
+        line-height: $line-height-32;
+        color: $font-color-send;
+      }
+
+      & > input, & > textarea {
+        width: clamp(200px, 20vw, 280px);
+        border: 0.75px solid $font-color-main;
+        font-size: $font-size-22;
+        font-weight: $font-weight-light;
+        line-height: $line-height-40;
+        text-align: center;
+      }
+
+      & > input {
+        max-height: $line-height-40;
+
+        //TODO: hide or use type="text" with pattern
+        //&:invalid {
+        //  color: transparent;
+        //}
+      }
+      & > textarea {
+        resize: none;
+      }
+    }
+  }
+
+  &-buttonContainer {
+    display: flex;
+    gap: 50px;
+    margin-top: 205px;
+  }
+}
 

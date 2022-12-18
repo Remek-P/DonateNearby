@@ -12,7 +12,7 @@ import image from "../../../assets/images/Background-Form.jpg"
 
 export default function CarouselForm() {
 
-    const [ step,       setStep         ] = useState(0)
+    const [ step,       setStep         ] = useState(3)
     const [ formData,   setFormData    ] = useState({
         // id,
         giveaway: "",
@@ -74,9 +74,7 @@ export default function CarouselForm() {
             return (
                 <CarouselFormStepSumup
                     formData={formData}
-                    setFormData={setFormData}
                     setStep={setStep}
-                    step={step}
                 />
             )
         } else if (step === 5) {

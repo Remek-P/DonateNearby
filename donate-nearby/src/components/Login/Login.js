@@ -7,10 +7,10 @@ export default function Login() {
 
     const { loginUser, loggedUser, validateUserEmail } = useContext(GlobalContext);
 
-    const [ email,              setEmail                ] = useState("");
-    const [ password,           setPassword             ] = useState("");
-    const [ emailValidation,    setEmailValidation      ] = useState("pass");
-    const [ passwordLengthValidation, setPasswordLengthValidation ] = useState("pass");
+    const [ email,              setEmail                            ] = useState("");
+    const [ password,           setPassword                         ] = useState("");
+    const [ emailValidation,    setEmailValidation                  ] = useState("pass");
+    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState("pass");
 
     const navigate = useNavigate();
 

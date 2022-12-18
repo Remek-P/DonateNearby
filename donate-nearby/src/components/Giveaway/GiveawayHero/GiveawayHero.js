@@ -7,7 +7,6 @@ export default function GiveawayHero() {
     return (
         <section
             className="giveaway-hero"
-            id="start"
             style={{backgroundImage: `url(${image})`}}
         >
             <div className={"giveaway-hero-container"}>

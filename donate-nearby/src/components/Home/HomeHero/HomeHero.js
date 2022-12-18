@@ -1,9 +1,14 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 
 import image from "../../../assets/images/Home-Hero-Image.jpg";
+import {GlobalContext} from "../../../context/GlobalContext";
 
 export default function HomeHero() {
+
+    const { loggedUser } = useContext(GlobalContext);
+
+    const link = loggedUser === "" ? "/login" : "/giveaway"
     return (
         <section
             className="hero"
@@ -16,7 +21,7 @@ export default function HomeHero() {
                     <h2>Oddaj niechciane rzeczy w zaufane ręce</h2>
                 </header>
                 <div className="hero-container__links">
-                    <Link className="hero-container__link-stuff" to="/login">
+                    <Link className="hero-container__link-stuff" to={link}>
                         Oddaj<br/> rzeczy
                     </Link>
                     <Link className="hero-container__link-organise" to="/login">

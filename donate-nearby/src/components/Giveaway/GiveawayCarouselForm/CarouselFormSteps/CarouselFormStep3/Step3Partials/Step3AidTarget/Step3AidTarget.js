@@ -9,7 +9,7 @@ export default function Step3AidTarget({ formData, setFormData }) {
     const aidOption5 = "osobom starszym";
 
     const handleChange = (event) => {
-
+        //TODO:Without Set
         const { checked } = event.target
 
         if (checked) {

@@ -1,7 +1,13 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import {GlobalContext} from "../../../context/GlobalContext";
 
 export default function HomeCTA() {
+
+    const { loggedUser } = useContext(GlobalContext);
+
+    const link = loggedUser === "" ? "/login" : "/giveaway"
+
     return (
         <section className="cta" id="cta">
             <header className="cta__header">
@@ -41,7 +47,7 @@ export default function HomeCTA() {
                     </p>
                 </li>
             </ul>
-            <Link to="/login" className="cta-link">
+            <Link to={link} className="cta-link">
                 oddaj<br/> rzeczy
             </Link>
         </section>
