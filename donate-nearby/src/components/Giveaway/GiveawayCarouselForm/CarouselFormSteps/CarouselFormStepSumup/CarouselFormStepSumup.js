@@ -18,7 +18,7 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
 
     const showAidTarget = () => {
         const aidTargetArray = [...formData.aidTarget];
-        return  aidTargetArray.map(target => ` ,${target}`)
+        return  aidTargetArray.map(target => `, ${target}`)
     }
 
     const handlePrevious = (e) => {
