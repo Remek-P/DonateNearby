@@ -7,9 +7,9 @@ import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirm
 export default function CarouselFormStepSumup({ formData, setStep }) {
 
     const bagDeclination = () => {
-        if (formData.bagNumber <= 4) {
+        if (formData.bagNumber === "1") {
             return "worek"
-        } else if (formData.bagNumber === 1) {
+        } else if (formData.bagNumber <= "4") {
             return "worki"
         } else {
             return "worków"
@@ -27,53 +27,41 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
     };
 
     return (
-        <section className="CarouselFormStep4">
+        <section className="carouselFormSumup">
             <form
                 name="giveawayForm"
                 onSubmit={handleNext}
             >
-                <legend>Podsumowanie Twojej darowizny</legend>
-
-                <div>
-                    <h5 className="">Oddajesz</h5>
-                    <ul>
-                        <li>
-                            <div>
-                                {formData.bagNumber} {bagDeclination()}, {formData.giveaway}, {formData.aidTarget}
-                            </div>
-                        </li>
-                        <li>
-                            <div>
-                                dla lokalizacji: {formData.location}
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div>
+                <legend className="carouselFormSumup__header">Podsumowanie Twojej darowizny</legend>
+                <div className="carouselFormSumup-container">
                     <div>
-                        <h5 className="">Adres odbioru:</h5>
+                        <h5 className="">Oddajesz</h5>
                         <ul>
                             <li>
-                                Ulica {formData.address.street}
+                                <div>{formData.bagNumber} {bagDeclination()}, {formData.giveaway}, {formData.aidTarget}</div>
                             </li>
                             <li>
-                                Miasto {formData.address.city}
-                            </li>
-                            <li>
-                                Kod<br/> pocztowy {formData.address.postalCode}
-                            </li>
-                            <li>
-                                Numer<br/> telefonu {formData.address.phoneNumber}
+                                <div>dla lokalizacji: {formData.location}</div>
                             </li>
                         </ul>
                     </div>
                     <div>
-                        <h5 className="">Termin odbioru:</h5>
-                        <ul>
-                            <li>Data {formData.schedulePackage.date}</li>
-                            <li>Godzina {formData.schedulePackage.time}</li>
-                            <li>Uwagi<br/> dla kuriera {formData.schedulePackage.notes}</li>
-                        </ul>
+                        <div>
+                            <h5 className="">Adres odbioru:</h5>
+                            <ul>
+                                <li>Ulica {formData.address.street}</li>
+                                <li>Miasto {formData.address.city}</li>
+                                <li>Numer<br/> telefonu {formData.address.phoneNumber}</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h5 className="">Termin odbioru:</h5>
+                            <ul>
+                                <li>Data {formData.schedulePackage.date}</li>
+                                <li>Godzina {formData.schedulePackage.time}</li>
+                                <li>Uwagi<br/> dla kuriera {formData.schedulePackage.notes}</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div className="buttonContainer">

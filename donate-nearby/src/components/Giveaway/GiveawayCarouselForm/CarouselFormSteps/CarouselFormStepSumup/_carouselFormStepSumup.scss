@@ -1,0 +1,20 @@
+.carouselFormSumup {
+  color: $font-color-send;
+  font-weight: $font-weight-light;
+  font-size: $font-size-24;
+  line-height: $line-height-27;
+
+  &__header {
+    margin-top: 70px;
+    font-size: $font-size-36;
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-45;
+  }
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    column-gap: 150px;
+  }
+}
