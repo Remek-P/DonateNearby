@@ -16,6 +16,11 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
         }
     }
 
+    const showAidTarget = () => {
+        const aidTargetArray = [...formData.aidTarget];
+        return  aidTargetArray.map(target => `${target}, `)
+    }
+
     const handlePrevious = (e) => {
         e.preventDefault();
         setStep((previousStep) => previousStep - 1)
@@ -38,7 +43,7 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
                         <h5 className="">Oddajesz</h5>
                         <ul>
                             <li>
-                                <div>{formData.bagNumber} {bagDeclination()}, {formData.giveaway}, {formData.aidTarget}</div>
+                                <div>{formData.bagNumber} {bagDeclination()}, {formData.giveaway}, {showAidTarget()}</div>
                             </li>
                             <li>
                                 <div>dla lokalizacji: {formData.location}</div>
