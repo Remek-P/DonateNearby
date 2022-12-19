@@ -2,16 +2,11 @@
   color: $font-color-send;
   font-weight: $font-weight-light;
   font-size: $font-size-24;
-  line-height: $line-height-27;
 
   &__header {
-    margin-top: 70px;
+    margin-top: 20px;
+    padding-bottom: 45px;
     font-size: $font-size-36;
-    font-weight: $font-weight-semibold;
-    line-height: $line-height-45;
-  }
-
-  & :where(* h5) {
     font-weight: $font-weight-semibold;
     line-height: $line-height-45;
   }
@@ -19,34 +14,78 @@
   &-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    column-gap: 35px;
-    padding-top: 20px;
-  }
+    align-items: start;
+    gap: 271px;
+    width: max-content;
+    padding-top: 50px;
 
-  & :where(li) {
-    display: flex;
-    justify-content: space-between;
+    &__ul__li {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px 50px;
+      max-width: 500px;
+      padding-top: 20px;
+      align-items: center;
 
-    & :where(li > h6) {
-      line-height: $line-height-32;
-      color: $font-color-send;
+
+      & :where(li > h6) {
+        line-height: $line-height-32;
+      }
+
+      & :where(li > div) {
+        min-width: 200px;
+        max-height: 130px;
+        font-size: $font-size-22;
+        font-weight: $font-weight-light;
+        line-height: $line-height-40;
+        overflow-y: scroll;
+      }
     }
   }
 
-  & :where(input) {
+  &__ul-giveaway {
+    max-width: 60%;
+    --icon-size: 50px;
 
-    width: clamp(200px, 20vw, 280px);
-    border: 0.75px solid $font-color-main;
-    font-size: $font-size-22;
-    font-weight: $font-weight-light;
-    line-height: $line-height-40;
-    text-align: center;
+    & :where(li) {
+      margin-top: 20px;
+      padding-left: calc(var(--icon-size) + 19px);
+      line-height: $line-height-45;
+      font-weight: $font-weight-regular;
+      position: relative;
+
+      &::before {
+        content: "";
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+        &:first-of-type::before {
+          background-image: url("../../../../../assets/icons/Icon-1.svg");
+        }
+
+        &:last-of-type::before {
+          background-image: url("../../../../../assets/icons/Icon-4.svg");
+        }
+    }
+  }
+
+  & :where(* h5) {
+    font-weight: $font-weight-semibold;
+    line-height: $line-height-45;
   }
 }
+
+
 
 .buttonContainer {
   display: flex;
   gap: 50px;
-  margin-top: 205px;
+  margin-top: 59px;
 }

@@ -4,7 +4,7 @@ import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirm
 
 
 
-export default function CarouselFormStepSumup({ formData, setStep }) {
+export default function CarouselFormStepSumup({ formData, setStep, step }) {
 
     const bagDeclination = () => {
         if (formData.bagNumber === "1") {
@@ -41,7 +41,7 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
                 <div>
                     <div>
                         <h5 className="">Oddajesz</h5>
-                        <ul>
+                        <ul className="carouselFormSumup__ul-giveaway">
                             <li>{formData.bagNumber} {bagDeclination()}, {formData.giveaway}{showAidTarget()}</li>
                             <li>dla lokalizacji: {formData.location}</li>
                         </ul>
@@ -50,15 +50,19 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
                         <div>
                             <h5 className="">Adres odbioru:</h5>
                             <ul>
-                                <li>
+                                <li className="carouselFormSumup-container__ul__li">
                                     <h6>Ulica</h6>
                                     <div>{formData.address.street}</div>
                                 </li>
-                                <li>
+                                <li className="carouselFormSumup-container__ul__li">
                                     <h6>Miasto</h6>
                                     <div>{formData.address.city}</div>
                                 </li>
-                                <li>
+                                <li className="carouselFormSumup-container__ul__li">
+                                    <h6>Kod<br/> pocztowy</h6>
+                                    <div>{formData.address.postalCode}</div>
+                                </li>
+                                <li className="carouselFormSumup-container__ul__li">
                                     <h6>Numer<br/> telefonu</h6>
                                     <div>{formData.address.phoneNumber}</div>
                                 </li>
@@ -67,15 +71,15 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
                         <div>
                             <h5 className="">Termin odbioru:</h5>
                             <ul>
-                                <li>
+                                <li className="carouselFormSumup-container__ul__li">
                                     <h6>Data</h6>
                                     <div>{formData.schedulePackage.date}</div>
                                 </li>
-                                <li>
+                                <li className="carouselFormSumup-container__ul__li">
                                     <h6>Godzina<br/> telefonu</h6>
                                     <div>{formData.schedulePackage.time}</div>
                                 </li>
-                                <li>
+                                <li className="carouselFormSumup-container__ul__li">
                                     <h6>Uwagi<br/> dla kuriera</h6>
                                     <div>{formData.schedulePackage.notes}</div>
                                 </li>
@@ -85,7 +89,7 @@ export default function CarouselFormStepSumup({ formData, setStep }) {
                 </div>
                 <div className="buttonContainer">
                     <PreviousButton handlePrevious={handlePrevious}/>
-                    <NextOrConfirmButton/>
+                    <NextOrConfirmButton step={step} />
                 </div>
             </form>
         </section>

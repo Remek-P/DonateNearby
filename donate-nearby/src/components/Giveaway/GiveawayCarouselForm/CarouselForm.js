@@ -12,7 +12,7 @@ import image from "../../../assets/images/Background-Form.jpg"
 
 export default function CarouselForm() {
 
-    const [ step,       setStep         ] = useState(2)
+    const [ step,       setStep         ] = useState(4)
     // const [ formData,   setFormData    ] = useState({
     //     // id,
     //     giveaway: "",
@@ -39,23 +39,43 @@ export default function CarouselForm() {
     //     },
     // });
 
+    // const [ formData,   setFormData    ] = useState({
+    //     // id,
+    //     giveaway: "",
+    //     bagNumber: "",
+    //     location: "",
+    //     aidTarget: [],
+    //     NGO: "",
+    //     address: {
+    //         street: "",
+    //         city: "",
+    //         postalCode: "",
+    //         phoneNumber: "",
+    //     },
+    //     schedulePackage: {
+    //         date: 0,
+    //         time: 0,
+    //         notes: "",
+    //     },
+    // });
+
     const [ formData,   setFormData    ] = useState({
         // id,
-        giveaway: "",
-        bagNumber: "",
-        location: "",
-        aidTarget: [],
-        NGO: "",
+        giveaway: "ubrania, które nadają się do ponownego użycia",
+        bagNumber: "3",
+        location: "Warszawa",
+        aidTarget: ["dzieciom", "samotnym matkom", "bezdomnym", "niepełnosprawnym", "osobom starszym" ],
+        NGO: "Jakiś",
         address: {
-            street: "",
-            city: "",
-            postalCode: "",
-            phoneNumber: "",
+            street: "Leszczynowa 268",
+            city: "Inowrocław",
+            postalCode: "00-000",
+            phoneNumber: "600606060",
         },
         schedulePackage: {
-            date: 0,
-            time: 0,
-            notes: "",
+            date: "2022-12-22",
+            time: "04:06",
+            notes: "asdada ad aasd d",
         },
     });
 
@@ -103,6 +123,7 @@ export default function CarouselForm() {
                 <CarouselFormStepSumup
                     formData={formData}
                     setStep={setStep}
+                    step={step}
                 />
             )
         } else if (step === 5) {
