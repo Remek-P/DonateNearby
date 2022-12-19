@@ -126,7 +126,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                             />
                         </div>
                         <div>
-                            <label htmlFor={notes}>Uwagi dla kuriera</label>
+                            <label htmlFor={notes}>Uwagi<br/> dla kuriera</label>
                             <textarea
                                 value={formData.schedulePackage.notes}
                                 onChange={event => setFormData({

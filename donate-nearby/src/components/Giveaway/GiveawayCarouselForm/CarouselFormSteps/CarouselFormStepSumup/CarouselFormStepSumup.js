@@ -76,12 +76,12 @@ export default function CarouselFormStepSumup({ formData, setStep, step }) {
                                     <div>{formData.schedulePackage.date}</div>
                                 </li>
                                 <li className="carouselFormSumup-container__ul__li">
-                                    <h6>Godzina<br/> telefonu</h6>
+                                    <h6>Godzina</h6>
                                     <div>{formData.schedulePackage.time}</div>
                                 </li>
-                                <li className="carouselFormSumup-container__ul__li">
-                                    <h6>Uwagi<br/> dla kuriera</h6>
-                                    <div>{formData.schedulePackage.notes}</div>
+                                <li className="carouselFormSumup-container__ul__li last">
+                                    <h6 className="carouselFormSumup-container__ul__li__last">Uwagi<br/> dla kuriera</h6>
+                                    <div className="carouselFormSumup-container__ul__li__last">{formData.schedulePackage.notes}</div>
                                 </li>
                             </ul>
                         </div>

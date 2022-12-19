@@ -14,7 +14,8 @@
     display: flex;
     justify-content: space-between;
     padding-top: 50px;
-    column-gap: 150px;
+    column-gap: 100px;
+    max-width: 500px;
 
     & :where(div > h5) {
       font-weight: $font-weight-semibold;
@@ -33,7 +34,7 @@
       }
 
       & > label {
-        max-width: 101px;
+        width: 115px;
         line-height: $line-height-32;
         color: $font-color-send;
       }

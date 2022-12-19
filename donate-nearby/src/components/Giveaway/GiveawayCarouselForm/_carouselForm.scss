@@ -1,18 +1,18 @@
-.carouselForm-container {
+.carouselForm{
+  position: relative;
+
+&-container {
+  background-color: #eeedeb;
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: contain;
   background-position: top left;
   aspect-ratio: 1900 / 883;
   position: relative;
 
+
   &__steps {
-    position: absolute;
-    top: 36px;
-    left: 142px;
+    padding: 36px 20px 20px 142px;
     text-align: left;
   }
 }
-
-.carouselForm {
-  position: relative;
 }
