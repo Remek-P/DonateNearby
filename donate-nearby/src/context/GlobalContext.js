@@ -17,13 +17,6 @@ export const GlobalProvider = ({ children }) => {
 
     const [ state, dispatch ] = useReducer(AppReducer, initialState);
 
-    // function validateUserEmail(userData) {
-    //     dispatch({
-    //         type: "Validate-user-email",
-    //         payload: userData,
-    //     })
-    // }
-
     function registerUser(userData) {
         dispatch({
             type: "Register-user",
@@ -50,7 +43,6 @@ export const GlobalProvider = ({ children }) => {
             value={{
                 loginDatabase: state.loginDatabase,
                 loggedUser: state.loggedUser,
-                // validateUserEmail,
                 logoutUser,
                 loginUser,
                 registerUser,

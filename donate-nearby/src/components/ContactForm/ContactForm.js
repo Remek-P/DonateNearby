@@ -17,23 +17,33 @@ export default function ContactForm() {
     const checkMessage = contactMessage.length >= 120 && contactMessage.length <= 500;
 
     const nameValidation = () => {
-        checkName ? setNameValidate("hiddenContactForm") : setNameValidate("visibleContactForm")
+        checkName
+            ? setNameValidate("hiddenContactForm")
+            : setNameValidate("visibleContactForm")
     };
 
     const emailValidation = () => {
-        checkEmail ? setEmailValidate("hiddenContactForm") : setEmailValidate("visibleContactForm")
+        checkEmail
+            ? setEmailValidate("hiddenContactForm")
+            : setEmailValidate("visibleContactForm")
     };
 
     const contactMessageLength = () => {
-        checkMessage ? setContactMessageValidate("hiddenContactForm") : setContactMessageValidate("visibleContactForm")
+        checkMessage
+            ? setContactMessageValidate("hiddenContactForm")
+            : setContactMessageValidate("visibleContactForm")
     };
 
     const hideContactForm = () => {
-        success ? setContactForm("hiddenContactForm") : setContactForm("visibleContactForm")
+        success
+            ? setContactForm("hiddenContactForm")
+            : setContactForm("visibleContactForm")
     };
 
     const displaySuccessMessage = () => {
-        success ? setSuccessMessage("visibleContactForm") : setSuccessMessage("hiddenContactForm")
+        success
+            ? setSuccessMessage("visibleContactForm")
+            : setSuccessMessage("hiddenContactForm")
     };
 
     const passTest = () => {

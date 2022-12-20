@@ -5,29 +5,53 @@ import { GlobalContext } from "../../context/GlobalContext";
 
 export default function Register() {
 
-    const { registerUser, validateUserEmail, registerDatabase } = useContext(GlobalContext);
+    const { registerUser } = useContext(GlobalContext);
+
+    const navigate = useNavigate();
 
     const [ email,              setEmail                            ] = useState("");
     const [ password,           setPassword                         ] = useState("");
     const [ rePassword,           setRePassword                     ] = useState("");
-    const [ emailValidation,    setEmailValidation                  ]= useState("pass");
-    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState("pass");
+    const [ emailValidation,    setEmailValidation                  ]= useState("passRegistration");
+    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState("passRegistration");
+    const [ repasswordValidation, setRepasswordValidation   ] = useState("passRegistration");
 
-    const navigate = useNavigate();
+    const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
+    const isPasswordLength = password.length <= 6;
+    const isRepassword = password !== rePassword
+
+    const checkEmail = () => {
+        checkEmailRegEx
+            ? setEmailValidation("passRegistration")
+            : setEmailValidation("failRegistration")
+    }
+
+    const checkPasswordLength = () => {
+        isPasswordLength
+            ? setPasswordLengthValidation("failRegistration")
+            : setPasswordLengthValidation("passRegistration")
+    };
+
+    const checkRepassword = () => {
+        isRepassword
+            ? setRepasswordValidation("failRegistration")
+            : setRepasswordValidation("passRegistration")
+    }
 
     const handleRegister = event => {
         event.preventDefault();
-        setPasswordLengthValidation(
-            password.length <= 6
-                ? "fail"
-                : "pass"
-        );
-        const userData = {
-            email,
-            password,
+        checkEmail();
+        checkPasswordLength();
+        checkRepassword();
+        if (checkEmailRegEx === true && isPasswordLength === true && isRepassword === true) {
+            const userData = {
+                email,
+                password,
+                isLogged: true,
+            }
+            registerUser(userData);
+            navigate("/");
         }
-        registerUser(userData);
-        navigate("/");
     }
 
     return (
@@ -89,9 +113,9 @@ export default function Register() {
                            name="password"
                            id="password"
                     />
-                    <div className={`register__form-container-validation ${passwordLengthValidation}`}
+                    <div className={`register__form-container-validation ${repasswordValidation}`}
                     >
-                        Hasło powinno być dłuższe niż 6 znaków
+                        Podane hasła nie zgadzają się
                     </div>
                 </div>
             </form>

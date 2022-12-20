@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, {useContext, useEffect, useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { GlobalContext } from "../../context/GlobalContext";
@@ -14,7 +14,14 @@ export default function Login() {
 
     const navigate = useNavigate();
 
-
+    useEffect(() => {
+        if (loggedUser === email) {
+            navigate("/");
+        } else {
+            //TODO: prevent from firing on mount
+            setEmailValidation("fail");
+        }
+    },[loginUser])
 
     const handleLogin = () => {
         if (password.length <= 6) {
@@ -26,12 +33,6 @@ export default function Login() {
                 password,
             };
             loginUser(userData);
-            //TODO: this requires double cklick to work
-            if (loggedUser.length !== 0) {
-                navigate("/");
-            } else {
-                setEmailValidation("fail");
-            }
         }
     }
 
