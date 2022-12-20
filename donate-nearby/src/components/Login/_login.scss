@@ -26,7 +26,7 @@
       transform: translate(-50%, 50%);
     }
   }
-  //
+
   &__form {
     display: flex;
     flex-direction: column;
@@ -83,10 +83,10 @@
 }
 
 //Classes for passing or failing validation
-.pass {
+.passLogin {
   color: transparent;
 }
 
-.fail {
+.failLogin {
   color: $warning-color;
 }

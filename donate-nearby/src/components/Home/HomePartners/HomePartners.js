@@ -4,11 +4,11 @@ export default function HomePartners() {
     return(
         <section>
             <div>
-                <h2>s</h2>
+                <h2></h2>
                 <div>
-                    <h3>s</h3>
-                    <h3>s</h3>
-                    <h3>s</h3>
+                    <h3></h3>
+                    <h3></h3>
+                    <h3></h3>
                 </div>
             </div>
             <div></div>

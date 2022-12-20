@@ -5,12 +5,12 @@ import { GlobalContext } from "../../context/GlobalContext";
 
 export default function Login() {
 
-    const { loginUser, loggedUser, validateUserEmail } = useContext(GlobalContext);
+    const { loginUser, loggedUser } = useContext(GlobalContext);
 
     const [ email,              setEmail                            ] = useState("");
     const [ password,           setPassword                         ] = useState("");
-    const [ emailValidation,    setEmailValidation                  ] = useState("pass");
-    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState("pass");
+    const [ emailValidation,    setEmailValidation                  ] = useState("passLogin");
+    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState("passLogin");
 
     const navigate = useNavigate();
 
@@ -18,9 +18,9 @@ export default function Login() {
 
     const handleLogin = () => {
         if (password.length <= 6) {
-            setPasswordLengthValidation("fail");
+            setPasswordLengthValidation("failLogin");
         } else if (password.length > 6) {
-            setPasswordLengthValidation("pass")
+            setPasswordLengthValidation("passLogin")
             const userData = {
                 email,
                 password,
@@ -48,13 +48,13 @@ export default function Login() {
                     </label>
                     <input
                         className="login__form-container__input"
-                        required={true}
                         type="email"
                         value={email}
                         onChange={event => setEmail(event.target.value)}
                         autoCorrect={"on"}
                         name="email"
                         id="email"
+                        required
                     />
                     <div className={`login__form-container-validation ${emailValidation}`}
                     >
@@ -71,12 +71,12 @@ export default function Login() {
                     </label>
                     <input
                         className="login__form-container__input"
-                        required={true}
                         type="password"
                         value={password}
                         onChange={event => setPassword(event.target.value)}
                         name="password"
                         id="password"
+                        required
                     />
                     <div className={`login__form-container-validation ${passwordLengthValidation}`}
                     >

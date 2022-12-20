@@ -35,6 +35,12 @@
     }
   }
 
+  &-successMessage {
+    margin: 0 12.421% 0 68.737%;
+    font-size: $font-size-18;
+    color: green;
+  }
+
   &__form {
     //padding: 0 142px 319px 1230px;
     padding: 0 7.474% 16.794% 64.737%;
@@ -50,6 +56,12 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
+
+        &-validation {
+          color: $warning-color;
+          font-size: $font-size-13;
+          line-height: $line-height-14;
+        }
       }
     }
 
@@ -97,4 +109,12 @@
   &::placeholder {
     color: #3C3C3C26;
   }
+}
+
+.hiddenContactForm {
+  visibility: hidden;
+}
+
+.visibleContactForm {
+  visibility: visible
 }
