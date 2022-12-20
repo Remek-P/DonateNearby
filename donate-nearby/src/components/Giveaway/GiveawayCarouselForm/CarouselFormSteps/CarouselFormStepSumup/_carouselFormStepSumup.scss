@@ -13,7 +13,7 @@
   &-container {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
     //gap: clamp(100px, 25vw, 150px);
     gap: 100px;
     width: max-content;
@@ -31,6 +31,10 @@
         align-self: flex-start;
       }
 
+      & > div {
+        overflow: auto;
+        scrollbar-color: initial transparent;
+      }
 
       & :where(li > h6) {
         line-height: $line-height-32;
@@ -43,7 +47,6 @@
         font-size: $font-size-22;
         font-weight: $font-weight-light;
         line-height: $line-height-40;
-        overflow-y: scroll;
       }
     }
   }
