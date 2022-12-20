@@ -36,9 +36,6 @@ export default function ContactForm() {
         success ? setSuccessMessage("visibleContactForm") : setSuccessMessage("hiddenContactForm")
     };
 
-    console.log(success);
-    console.log(contactForm);
-
     const passTest = () => {
         if (checkName === true && checkEmail === true && checkMessage === true) {
             const contactRequest = {name, email, message: contactMessage};
