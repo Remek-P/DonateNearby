@@ -14,13 +14,8 @@ export function AppReducer(state, action) {
         case "Register-user":
             return {
                 ...state,
-                loginDatabase: state.loginDatabase.map(user => {
-                    if (user.login === action.payload) {
-                        user.isLogged = false;
-                    }
-                    return user;
-                }),
-                loggedUser: []
+                loginDatabase: [action.payload, ...state.loginDatabase],
+                loggedUser: [action.payload.email]
             };
         case "Login-user":
             return {

@@ -1,7 +1,17 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect } from "react";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function LoggedOut() {
+
+    const navigate = useNavigate()
+
+    useEffect(() => {
+        const timerId = setTimeout(() => {
+            navigate("/");
+        }, 5000);
+
+        return () => clearTimeout(timerId);
+    }, []);
 
     return (
         <section className="loggedOut">

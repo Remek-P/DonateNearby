@@ -53,6 +53,7 @@ export const GlobalProvider = ({ children }) => {
                 // validateUserEmail,
                 logoutUser,
                 loginUser,
+                registerUser,
             }}
         >
             {children}
