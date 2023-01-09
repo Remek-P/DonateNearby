@@ -7,14 +7,19 @@ export default function Login() {
 
     const { loginUser, loggedUser } = useContext(GlobalContext);
 
+    const pass = "passLogin";
+    const fail = "failLogin";
+
     const [ email,              setEmail                            ] = useState("");
     const [ password,           setPassword                         ] = useState("");
-    const [ emailValidation,    setEmailValidation                  ] = useState("passLogin");
-    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState("passLogin");
+    const [ emailValidation,    setEmailValidation                  ] = useState(pass);
+    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState(pass);
 
     const navigate = useNavigate();
 
     const didMount = useRef(true)
+
+    const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
 
     useEffect(() => {
         if (loggedUser === email && email.length !== 0) {
@@ -22,15 +27,21 @@ export default function Login() {
         } else if (didMount.current) {
             didMount.current = false
         } else {
-            setEmailValidation("failLogin");
+            setEmailValidation(fail);
         }
-    },[loginUser])
+    },[loginUser]);
+
+    const verifyEmail = () => {
+        checkEmailRegEx
+            ? setEmailValidation(pass)
+            : setEmailValidation(fail)
+    }
 
     const handleLogin = () => {
         if (password.length <= 6) {
-            setPasswordLengthValidation("failLogin");
+            setPasswordLengthValidation(fail);
         } else if (password.length > 6) {
-            setPasswordLengthValidation("passLogin")
+            setPasswordLengthValidation(pass)
             const userData = {
                 email,
                 password,

@@ -9,33 +9,36 @@ export default function Register() {
 
     const navigate = useNavigate();
 
+    const pass = "passRegistration";
+    const fail = "failRegistration";
+
     const [ email,              setEmail                            ] = useState("");
     const [ password,           setPassword                         ] = useState("");
     const [ rePassword,           setRePassword                     ] = useState("");
-    const [ emailValidation,    setEmailValidation                  ]= useState("passRegistration");
-    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState("passRegistration");
-    const [ repasswordValidation, setRepasswordValidation   ] = useState("passRegistration");
+    const [ emailValidation,    setEmailValidation                  ]= useState(pass);
+    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState(pass);
+    const [ repasswordValidation, setRepasswordValidation   ] = useState(pass);
 
     const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
     const isPasswordLength = password.length <= 6;
-    const isRepassword = password !== rePassword
+    const isRepassword = password !== rePassword;
 
     const checkEmail = () => {
         checkEmailRegEx
-            ? setEmailValidation("passRegistration")
-            : setEmailValidation("failRegistration")
+            ? setEmailValidation(pass)
+            : setEmailValidation(fail)
     }
 
     const checkPasswordLength = () => {
         isPasswordLength
-            ? setPasswordLengthValidation("failRegistration")
-            : setPasswordLengthValidation("passRegistration")
+            ? setPasswordLengthValidation(fail)
+            : setPasswordLengthValidation(pass)
     };
 
     const checkRepassword = () => {
         isRepassword
-            ? setRepasswordValidation("failRegistration")
-            : setRepasswordValidation("passRegistration")
+            ? setRepasswordValidation(fail)
+            : setRepasswordValidation(pass)
     }
 
     const handleRegister = event => {
