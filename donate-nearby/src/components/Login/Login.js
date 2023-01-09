@@ -1,4 +1,4 @@
-import React, {useContext, useEffect, useState} from "react";
+import React, {useContext, useEffect, useRef, useState} from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 import { GlobalContext } from "../../context/GlobalContext";
@@ -14,12 +14,15 @@ export default function Login() {
 
     const navigate = useNavigate();
 
+    const didMount = useRef(true)
+
     useEffect(() => {
-        if (loggedUser === email) {
+        if (loggedUser === email && email.length !== 0) {
             navigate("/");
+        } else if (didMount.current) {
+            didMount.current = false
         } else {
-            //TODO: prevent from firing on mount
-            setEmailValidation("fail");
+            setEmailValidation("failLogin");
         }
     },[loginUser])
 
