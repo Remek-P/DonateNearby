@@ -28,8 +28,11 @@ export default function Login() {
             navigate("/");
         } else if (didMount.current) {
             didMount.current = false
+            console.log(didMount.current)
+            console.log(1)
         } else {
             setEmailValidation(fail);
+            console.log(2)
         }
     },[loginUser]);
 
@@ -40,7 +43,10 @@ export default function Login() {
     }
 
     const handleLogin = () => {
-        if (password.length <= 6) {
+        if (password.length <= 6 && email.length === 0) {
+            setPasswordLengthValidation(fail);
+            setEmailValidation(fail);
+        } else if (password.length <= 6) {
             setPasswordLengthValidation(fail);
         } else if (password.length > 6) {
             setPasswordLengthValidation(pass)
