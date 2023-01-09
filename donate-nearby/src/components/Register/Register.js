@@ -12,16 +12,21 @@ export default function Register() {
     const pass = "passRegistration";
     const fail = "failRegistration";
 
+
     const [ email,              setEmail                            ] = useState("");
     const [ password,           setPassword                         ] = useState("");
     const [ rePassword,           setRePassword                     ] = useState("");
     const [ emailValidation,    setEmailValidation                  ]= useState(pass);
     const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState(pass);
-    const [ repasswordValidation, setRepasswordValidation   ] = useState(pass);
+    const [ rePasswordValidation, setRePasswordValidation   ] = useState(pass);
 
     const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
     const isPasswordLength = password.length <= 6;
     const isRePassword = password !== rePassword;
+
+    const emailAlert = "Podany email jest nieprawidłowy";
+    const passwordAlert = "Hasło powinno być dłuższe niż 6 znaków";
+    const rePasswordAlert = "Podane hasła nie zgadzają się";
 
     const checkEmail = () => {
         checkEmailRegEx
@@ -35,17 +40,17 @@ export default function Register() {
             : setPasswordLengthValidation(pass)
     };
 
-    const checkRepassword = () => {
+    const checkRePassword = () => {
         isRePassword
-            ? setRepasswordValidation(fail)
-            : setRepasswordValidation(pass)
+            ? setRePasswordValidation(fail)
+            : setRePasswordValidation(pass)
     }
 
     const handleRegister = event => {
         event.preventDefault();
         checkEmail();
         checkPasswordLength();
-        checkRepassword();
+        checkRePassword();
         if (checkEmailRegEx === true && isPasswordLength === true && isRePassword === true) {
             const userData = {
                 email,
@@ -80,7 +85,7 @@ export default function Register() {
                     />
                     <div className={`register__form-container-validation ${emailValidation}`}
                     >
-                        Podany email jest nieprawidłowy
+                        {emailAlert}
                     </div>
                 </div>
                 <div className="register__form-container">
@@ -99,7 +104,7 @@ export default function Register() {
                     />
                     <div className={`register__form-container-validation ${passwordLengthValidation}`}
                     >
-                        Hasło powinno być dłuższe niż 6 znaków
+                        {passwordAlert}
                     </div>
                 </div>
                 <div className="register__form-container">
@@ -116,9 +121,9 @@ export default function Register() {
                            name="password"
                            id="password"
                     />
-                    <div className={`register__form-container-validation ${repasswordValidation}`}
+                    <div className={`register__form-container-validation ${rePasswordValidation}`}
                     >
-                        Podane hasła nie zgadzają się
+                        {rePasswordAlert}
                     </div>
                 </div>
             </form>

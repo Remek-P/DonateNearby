@@ -20,6 +20,8 @@ export default function Login() {
     const didMount = useRef(true)
 
     const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
+    const emailAlert = "Podane hasło lub email nie są poprawne";
+    const passwordAlert = "Hasło powinno być dłuższe niż 6 znaków";
 
     useEffect(() => {
         if (loggedUser === email && email.length !== 0) {
@@ -69,12 +71,11 @@ export default function Login() {
                         autoCorrect={"on"}
                         name="email"
                         id="email"
-                        required
                     />
                     <div className={`login__form-container-validation ${emailValidation}`}
                     >
                         {/*Propose a change, to avoid indicating which data is incorrect, but rather explain the combination is incorrect*/}
-                        Podane hasło lub email nie są poprawne
+                        {emailAlert}
                     </div>
                 </div>
                 <div className="login__form-container">
@@ -91,11 +92,10 @@ export default function Login() {
                         onChange={event => setPassword(event.target.value)}
                         name="password"
                         id="password"
-                        required
                     />
                     <div className={`login__form-container-validation ${passwordLengthValidation}`}
                     >
-                        Hasło powinno być dłuższe niż 6 znaków
+                        {passwordAlert}
                     </div>
                 </div>
             </form>
