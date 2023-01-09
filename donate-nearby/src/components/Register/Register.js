@@ -21,7 +21,7 @@ export default function Register() {
 
     const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
     const isPasswordLength = password.length <= 6;
-    const isRepassword = password !== rePassword;
+    const isRePassword = password !== rePassword;
 
     const checkEmail = () => {
         checkEmailRegEx
@@ -36,7 +36,7 @@ export default function Register() {
     };
 
     const checkRepassword = () => {
-        isRepassword
+        isRePassword
             ? setRepasswordValidation(fail)
             : setRepasswordValidation(pass)
     }
@@ -46,7 +46,7 @@ export default function Register() {
         checkEmail();
         checkPasswordLength();
         checkRepassword();
-        if (checkEmailRegEx === true && isPasswordLength === true && isRepassword === true) {
+        if (checkEmailRegEx === true && isPasswordLength === true && isRePassword === true) {
             const userData = {
                 email,
                 password,
