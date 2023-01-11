@@ -14,6 +14,27 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
     const time = "time";
     const notes = "notes";
 
+    const title = "Proszę wypełnić pole";
+    const titlePostal = "Proszę podać prawidłowy kod pocztowy 00-000 lub 00000";
+    const titleNumber = "Proszę podać prawidłowy numer telefonu";
+    const titleTime = "Proszę podać godziny między 8:00 a 22:00";
+
+    // const minDate = new Date().toISOString().split("T")[0];
+    const today = new Date();
+    const minDate = today.toLocaleDateString('en-ca');
+    const nextYear = new Date(new Date().getFullYear() + 1, today.getMonth(), today.getDay());
+    const maxDate = nextYear.toLocaleDateString('en-ca');
+
+    const minTime = "08:00";
+    const maxTime = "22:00";
+
+    //TODO: if maxDate changes from 2024-01-03
+    console.log(minDate);
+    console.log(nextYear);
+    console.log(maxDate);
+    console.log(minTime);
+    console.log(maxTime);
+
     const handlePrevious = (e) => {
         e.preventDefault();
         setStep((previousStep) => previousStep - 1)
@@ -45,6 +66,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                                     ...formData,
                                     address: {...formData.address, street: event.target.value}
                                 })}
+                                title={title}
                                 name={street}
                                 id={street}
                                 required
@@ -59,6 +81,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                                     ...formData,
                                     address: {...formData.address, city: event.target.value}
                                 })}
+                                title={title}
                                 name={city}
                                 id={city}
                                 required
@@ -74,6 +97,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                                     ...formData,
                                     address: {...formData.address, postalCode: event.target.value}
                                 })}
+                                title={titlePostal}
                                 name={postalCode}
                                 id={postalCode}
                                 required
@@ -89,6 +113,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                                     ...formData,
                                     address: {...formData.address, phoneNumber: event.target.value}
                                 })}
+                                title={titleNumber}
                                 name={phoneNumber}
                                 id={phoneNumber}
                                 required
@@ -106,6 +131,9 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                                     ...formData,
                                     schedulePackage: {...formData.schedulePackage, date: event.target.value}
                                 })}
+                                min={minDate}
+                                max={maxDate}
+                                title={title}
                                 name={date}
                                 id={date}
                                 required
@@ -120,6 +148,9 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
                                     ...formData,
                                     schedulePackage: {...formData.schedulePackage, time: event.target.value}
                                 })}
+                                min={minTime}
+                                max={maxTime}
+                                title={titleTime}
                                 name={time}
                                 id={time}
                                 required

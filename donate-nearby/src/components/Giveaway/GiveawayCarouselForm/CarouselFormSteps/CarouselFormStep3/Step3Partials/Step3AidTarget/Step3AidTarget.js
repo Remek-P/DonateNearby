@@ -43,7 +43,7 @@ export default function Step3AidTarget({ formData, setFormData }) {
     return (
         <div className="carouselFormStep3AidTarget">
             <legend className="carouselFormStep3AidTarget__header">
-                Komu chcesz pomóc?
+                Komu chcesz pomóc? *
             </legend>
             <div>
                 <div className="carouselFormStep3AidTarget-container">
