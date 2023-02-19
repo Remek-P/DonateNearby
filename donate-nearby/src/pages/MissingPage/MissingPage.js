@@ -9,7 +9,7 @@ export default function MissingPage() {
 
     useEffect(() => {
         const timerID = setTimeout(() => {
-            navigate(-1)
+            navigate("/")
         }, 5000)
 
         return () => clearTimeout(timerID)

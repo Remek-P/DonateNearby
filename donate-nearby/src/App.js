@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import HomePage from "./pages/HomePage/HomePage";
 import Layout from "./components/Layout/Layout";
+//The rest is lazy loaded
 
 import { GlobalProvider } from "./context/GlobalContext";
 

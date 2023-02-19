@@ -27,12 +27,9 @@ export default function Login() {
         if (loggedUser === email && email.length !== 0) {
             navigate("/");
         } else if (didMount.current) {
-            didMount.current = false
-            console.log(didMount.current)
-            console.log(1)
+            didMount.current = false;
         } else {
             setEmailValidation(fail);
-            console.log(2)
         }
     },[loginUser]);
 
@@ -74,7 +71,7 @@ export default function Login() {
                         type="email"
                         value={email}
                         onChange={event => setEmail(event.target.value)}
-                        autoCorrect={"on"}
+                        autoCorrect="on"
                         name="email"
                         id="email"
                     />
