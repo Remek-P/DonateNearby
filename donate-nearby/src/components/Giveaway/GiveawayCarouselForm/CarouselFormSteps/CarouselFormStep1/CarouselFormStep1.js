@@ -3,19 +3,13 @@ import React from "react";
 import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirmButton/NextOrConfirmButton";
 import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/GiveawayCarouselFormStepCount";
 
-export default function CarouselFormStep1({ formData, setFormData, step, setStep }) {
+export default function CarouselFormStep1({ formData, setFormData, step, handleNext }) {
 
     const giveawayOption1 = "ubrania, które nadają się do ponownego użycia";
     const giveawayOption2 = "ubrania, do wyrzucenia";
     const giveawayOption3 = "zabawki";
     const giveawayOption4 = "książki";
     const giveawayOption5 = "inne";
-
-
-    const handleNext = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep + 1)
-    }
 
     return (
         <div className="carouselFormStep1">

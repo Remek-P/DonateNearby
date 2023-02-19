@@ -12,7 +12,8 @@ import image from "../../../assets/images/Background-Form.jpg"
 
 export default function CarouselForm() {
 
-    const [ step,       setStep         ] = useState(0)
+    const [ step,       setStep         ] = useState(0);
+
     // const [ formData,   setFormData    ] = useState({
     //     // id,
     //     giveaway: "",
@@ -79,14 +80,24 @@ export default function CarouselForm() {
     //     },
     // });
 
+    const handlePrevious = (e) => {
+        e.preventDefault();
+        setStep((previousStep) => previousStep - 1)
+    };
+
+    const handleNext = (e) => {
+        e.preventDefault();
+        setStep((previousStep) => previousStep + 1)
+    };
+
     const DisplayStep = () => {
         if (step === 0) {
             return (
                 <CarouselFormStep1
                     formData={formData}
                     setFormData={setFormData}
-                    setStep={setStep}
                     step={step}
+                    handleNext={handleNext}
                 />
             )
         } else if (step === 1) {
@@ -94,8 +105,9 @@ export default function CarouselForm() {
                 <CarouselFormStep2
                     formData={formData}
                     setFormData={setFormData}
-                    setStep={setStep}
                     step={step}
+                    handlePrevious={handlePrevious}
+                    handleNext={handleNext}
                 />
             )
         } else if (step === 2) {
@@ -103,8 +115,9 @@ export default function CarouselForm() {
                 <CarouselFormStep3
                     formData={formData}
                     setFormData={setFormData}
-                    setStep={setStep}
                     step={step}
+                    handlePrevious={handlePrevious}
+                    handleNext={handleNext}
                 />
             )
         } else if (step === 3) {
@@ -112,16 +125,18 @@ export default function CarouselForm() {
                 <CarouselFormStep4
                     formData={formData}
                     setFormData={setFormData}
-                    setStep={setStep}
                     step={step}
+                    handlePrevious={handlePrevious}
+                    handleNext={handleNext}
                 />
             )
         } else if (step === 4) {
             return (
                 <CarouselFormStepSumup
                     formData={formData}
-                    setStep={setStep}
                     step={step}
+                    handlePrevious={handlePrevious}
+                    handleNext={handleNext}
                 />
             )
         } else if (step === 5) {

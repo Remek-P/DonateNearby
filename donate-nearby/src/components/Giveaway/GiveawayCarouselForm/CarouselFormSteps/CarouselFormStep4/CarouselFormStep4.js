@@ -4,7 +4,7 @@ import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/G
 import PreviousButton from "../../GiveawayCarouselFormButtons/PreviousButton/PreviousButton";
 import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirmButton/NextOrConfirmButton";
 
-export default function CarouselFormStep4({ formData, setFormData, step, setStep }) {
+export default function CarouselFormStep4({ formData, setFormData, step, handleNext, handlePrevious }) {
 
     const street = "street";
     const city = "city";
@@ -34,16 +34,6 @@ export default function CarouselFormStep4({ formData, setFormData, step, setStep
     console.log(maxDate);
     console.log(minTime);
     console.log(maxTime);
-
-    const handlePrevious = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep - 1)
-    };
-
-    const handleNext = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep + 1)
-    };
 
     return (
         <section className="carouselFormStep4">

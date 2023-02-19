@@ -3,19 +3,9 @@ import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirm
 import PreviousButton from "../../GiveawayCarouselFormButtons/PreviousButton/PreviousButton";
 import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/GiveawayCarouselFormStepCount";
 
-export default function CarouselFormStep2({ formData, setFormData, step, setStep }) {
+export default function CarouselFormStep2({ formData, setFormData, step, handlePrevious, handleNext }) {
     
     const bagNoOption = [1, 2, 3, 4, 5]
-
-    const handlePrevious = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep - 1)
-    };
-
-    const handleNext = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep + 1)
-    };
 
     return (
         <div className="carouselFormStep2">

@@ -6,17 +6,7 @@ import PreviousButton from "../../GiveawayCarouselFormButtons/PreviousButton/Pre
 import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/GiveawayCarouselFormStepCount";
 import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirmButton/NextOrConfirmButton";
 
-export default function CarouselFormStep3({ formData, setFormData, step, setStep }) {
-
-    const handlePrevious = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep - 1)
-    };
-
-    const handleNext = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep + 1)
-    };
+export default function CarouselFormStep3({ formData, setFormData, step, handleNext, handlePrevious }) {
 
     return (
         <>
