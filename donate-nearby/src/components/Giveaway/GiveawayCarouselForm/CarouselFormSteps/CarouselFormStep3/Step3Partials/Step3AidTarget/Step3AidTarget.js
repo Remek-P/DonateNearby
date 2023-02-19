@@ -27,7 +27,7 @@ export default function Step3AidTarget({ formData, setFormData }) {
 
     const handleChange = (event) => {
 
-        const {checked} = event.target
+        const { checked } = event.target
 
         if (checked) {
             setFormData({...formData, aidTarget: [...formData.aidTarget, event.target.value]})
