@@ -4,12 +4,8 @@ import PreviousButton from "../../GiveawayCarouselFormButtons/PreviousButton/Pre
 import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/GiveawayCarouselFormStepCount";
 
 export default function CarouselFormStep2({ formData, setFormData, step, setStep }) {
-
-    const bagNoOption1 = "1";
-    const bagNoOption2 = "2";
-    const bagNoOption3 = "3";
-    const bagNoOption4 = "4";
-    const bagNoOption5 = "5";
+    
+    const bagNoOption = [1, 2, 3, 4, 5]
 
     const handlePrevious = (e) => {
         e.preventDefault();
@@ -41,34 +37,34 @@ export default function CarouselFormStep2({ formData, setFormData, step, setStep
                     >
                         <option value="">— wybierz —</option>
                         <option
-                            value={bagNoOption1}
-                            selected={formData.bagNumber === bagNoOption1}
+                            value={bagNoOption[0]}
+                            selected={formData.bagNumber === bagNoOption[0]}
                         >
-                            {bagNoOption1}
+                            {bagNoOption[0]}
                         </option>
                         <option
-                            value={bagNoOption2}
-                            selected={formData.bagNumber === bagNoOption2}
+                            value={bagNoOption[1]}
+                            selected={formData.bagNumber === bagNoOption[1]}
                         >
-                            {bagNoOption2}
+                            {bagNoOption[1]}
                         </option>
                         <option
-                            value={bagNoOption3}
-                            selected={formData.bagNumber === bagNoOption3}
+                            value={bagNoOption[2]}
+                            selected={formData.bagNumber === bagNoOption[2]}
                         >
-                            {bagNoOption3}
+                            {bagNoOption[2]}
                         </option>
                         <option
-                            value={bagNoOption4}
-                            selected={formData.bagNumber === bagNoOption4}
+                            value={bagNoOption[3]}
+                            selected={formData.bagNumber === bagNoOption[3]}
                         >
-                            {bagNoOption4}
+                            {bagNoOption[3]}
                         </option>
                         <option
-                            value={bagNoOption5}
-                            selected={formData.bagNumber === bagNoOption5}
+                            value={bagNoOption[4]}
+                            selected={formData.bagNumber === bagNoOption[4]}
                         >
-                            {bagNoOption5}
+                            {bagNoOption[4]}
                         </option>
                     </select>
                 <div className="carouselFormStep2-buttonContainer">
