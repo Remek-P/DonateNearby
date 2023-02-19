@@ -79,8 +79,6 @@ export default function CarouselForm() {
     //     },
     // });
 
-    console.log(formData)
-
     const DisplayStep = () => {
         if (step === 0) {
             return (
@@ -133,7 +131,7 @@ export default function CarouselForm() {
         }
     }
 
-    return(
+    return (
         <section className="carouselForm">
             <CarouselFormNotificationBar step={step} />
             <div
