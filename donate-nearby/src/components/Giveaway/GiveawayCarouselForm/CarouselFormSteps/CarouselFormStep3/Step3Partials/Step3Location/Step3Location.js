@@ -8,6 +8,8 @@ export default function Step3Location({ formData, setFormData }) {
     const locationNoOption4 = "Wrocław";
     const locationNoOption5 = "Katowice";
 
+    const locationNoOptions = [locationNoOption1, locationNoOption2, locationNoOption3, locationNoOption4, locationNoOption5]
+
     return (
         <div className="carouselFormStep3Location">
             <label htmlFor="location" id="location">Lokalizacja:</label>
@@ -17,36 +19,15 @@ export default function Step3Location({ formData, setFormData }) {
                 onChange={event => setFormData({...formData, location: event.target.value})}
             >
                 <option value="">— wybierz —</option>
-                <option
-                    value={locationNoOption1}
-                    selected={formData.location === locationNoOption1}
-                >
-                    {locationNoOption1}
-                </option>
-                <option
-                    value={locationNoOption2}
-                    selected={formData.location === locationNoOption2}
-                >
-                    {locationNoOption2}
-                </option>
-                <option
-                    value={locationNoOption3}
-                    selected={formData.location === locationNoOption3}
-                >
-                    {locationNoOption3}
-                </option>
-                <option
-                    value={locationNoOption4}
-                    selected={formData.location === locationNoOption4}
-                >
-                    {locationNoOption4}
-                </option>
-                <option
-                    value={locationNoOption5}
-                    selected={formData.location === locationNoOption5}
-                >
-                    {locationNoOption5}
-                </option>
+                {locationNoOptions.map((el, index) =>
+                    <option
+                        key={index}
+                        value={locationNoOptions[index]}
+                        selected={formData.location === locationNoOptions[index]}
+                    >
+                        {locationNoOptions[index]}
+                    </option>)
+                }
             </select>
         </div>
     )

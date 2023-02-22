@@ -26,14 +26,15 @@ export default function CarouselFormStep2({ formData, setFormData, step, handleP
                         required
                     >
                         <option value="" selected hidden>— wybierz —</option>
-                        {bagNoOption.map(el =>
+                        {bagNoOption.map((el, index) =>
                             <option
-                                key={el}
-                                value={bagNoOption[el-1]}
-                                selected={formData.bagNumber === bagNoOption[el-1]}
+                                key={index}
+                                value={bagNoOption[index]}
+                                selected={formData.bagNumber === bagNoOption[index]}
                             >
-                                {bagNoOption[el-1]}
-                            </option>)}
+                                {bagNoOption[index]}
+                            </option>)
+                        }
                     </select>
                 <div className="carouselFormStep2-buttonContainer">
                     <PreviousButton handlePrevious={handlePrevious}/>
