@@ -12,11 +12,11 @@ export default function HomePartners() {
     const Option2 = "Organizacjom pozarządowym";
     const Option3 = "Lokalnym zbiórkom";
 
-    const picker = () => {
-        if (option === Option1) {
-            return
-        }
-    }
+    // const picker = () => {
+    //     if (option === Option1) {
+    //         return
+    //     }
+    // }
 
     return(
         <section>
