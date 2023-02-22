@@ -5,7 +5,7 @@ import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/G
 
 export default function CarouselFormStep2({ formData, setFormData, step, handlePrevious, handleNext }) {
     
-    const bagNoOption = [1, 2, 3, 4, 5]
+    const bagNoOption = ["1", "2", "3", "4", "5"];
 
     return (
         <div className="carouselFormStep2">
@@ -25,37 +25,15 @@ export default function CarouselFormStep2({ formData, setFormData, step, handleP
                         onChange={event => setFormData({ ...formData, bagNumber: event.target.value})}
                         required
                     >
-                        <option value="">— wybierz —</option>
-                        <option
-                            value={bagNoOption[0]}
-                            selected={formData.bagNumber === bagNoOption[0]}
-                        >
-                            {bagNoOption[0]}
-                        </option>
-                        <option
-                            value={bagNoOption[1]}
-                            selected={formData.bagNumber === bagNoOption[1]}
-                        >
-                            {bagNoOption[1]}
-                        </option>
-                        <option
-                            value={bagNoOption[2]}
-                            selected={formData.bagNumber === bagNoOption[2]}
-                        >
-                            {bagNoOption[2]}
-                        </option>
-                        <option
-                            value={bagNoOption[3]}
-                            selected={formData.bagNumber === bagNoOption[3]}
-                        >
-                            {bagNoOption[3]}
-                        </option>
-                        <option
-                            value={bagNoOption[4]}
-                            selected={formData.bagNumber === bagNoOption[4]}
-                        >
-                            {bagNoOption[4]}
-                        </option>
+                        <option value="" selected hidden>— wybierz —</option>
+                        {bagNoOption.map(el =>
+                            <option
+                                key={el}
+                                value={bagNoOption[el-1]}
+                                selected={formData.bagNumber === bagNoOption[el-1]}
+                            >
+                                {bagNoOption[el-1]}
+                            </option>)}
                     </select>
                 <div className="carouselFormStep2-buttonContainer">
                     <PreviousButton handlePrevious={handlePrevious}/>

@@ -4,7 +4,7 @@ import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirm
 
 
 
-export default function CarouselFormStepSumup({ formData, setStep, step }) {
+export default function CarouselFormStepSumup({ formData, step, handlePrevious, handleNext }) {
 
     const bagDeclination = () => {
         if (formData.bagNumber === "1") {
@@ -20,16 +20,6 @@ export default function CarouselFormStepSumup({ formData, setStep, step }) {
         const aidTargetArray = [...formData.aidTarget];
         return  aidTargetArray.map(target => `, ${target}`)
     }
-
-    const handlePrevious = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep - 1)
-    };
-
-    const handleNext = (e) => {
-        e.preventDefault();
-        setStep((previousStep) => previousStep + 1)
-    };
 
     return (
         <section className="carouselFormSumup">
