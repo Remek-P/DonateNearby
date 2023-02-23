@@ -8,6 +8,8 @@ export default function Step3AidTarget({ formData, setFormData }) {
     const aidOption4 = "niepełnosprawnym";
     const aidOption5 = "osobom starszym";
 
+    const aidOptions = [aidOption1, aidOption2, aidOption3, aidOption4, aidOption5];
+
     // const handleChange = (event) => {
     //     setFormData(prev => {
     //         const { aidTarget } = formData;
@@ -40,95 +42,39 @@ export default function Step3AidTarget({ formData, setFormData }) {
         }
     };
 
+    const chooseAidTarget = () => {
+        return (
+            aidOptions.map(el =>
+                <div key={el} className="carouselFormStep3AidTarget-container">
+                    <input
+                        type="checkbox"
+                        id={el}
+                        name="aidTarget"
+                        // value={formData.aidTarget.find(el => el.name === aidOption1).name}
+                        value={el}
+                        onChange={handleChange}
+                        // checked={formData.aidTarget.find(el => el.name === aidOption1).value}
+                        checked={formData.aidTarget.find(target => target === el)}
+                        required={formData.aidTarget.length === 0}
+                    />
+                    <label
+                        htmlFor={el}
+                        className="carouselFormStep3AidTarget-container__label"
+                    >
+                        {el}
+                    </label>
+                </div>)
+
+        )
+    }
+
     return (
         <div className="carouselFormStep3AidTarget">
             <legend className="carouselFormStep3AidTarget__header">
                 Komu chcesz pomóc? *
             </legend>
             <div>
-                <div className="carouselFormStep3AidTarget-container">
-                    <input
-                        type="checkbox"
-                        id={aidOption1}
-                        name="aidTarget"
-                        // value={formData.aidTarget.find(el => el.name === aidOption1).name}
-                        value={aidOption1}
-                        onChange={handleChange}
-                        // checked={formData.aidTarget.find(el => el.name === aidOption1).value}
-                        checked={formData.aidTarget.find(target => target === aidOption1)}
-                        required={formData.aidTarget.length === 0}
-                    />
-                    <label
-                        htmlFor={aidOption1}
-                        className="carouselFormStep3AidTarget-container__label"
-                    >
-                        {aidOption1}
-                    </label>
-                </div>
-                <div className="carouselFormStep3AidTarget-container">
-                    <input
-                        type="checkbox"
-                        id={aidOption2}
-                        name="aidTarget"
-                        value={aidOption2}
-                        onChange={handleChange}
-                        checked={formData.aidTarget.find(target => target === aidOption2)}
-                    />
-                    <label
-                        htmlFor={aidOption2}
-                        className="carouselFormStep3AidTarget-container__label"
-                    >
-                        {aidOption2}
-                    </label>
-                </div>
-                <div className="carouselFormStep3AidTarget-container">
-                    <input
-                        type="checkbox"
-                        id={aidOption3}
-                        name="aidTarget"
-                        value={aidOption3}
-                        onChange={handleChange}
-                        checked={formData.aidTarget.find(target => target === aidOption3)}
-                    />
-                    <label
-                        htmlFor={aidOption3}
-                        className="carouselFormStep3AidTarget-container__label"
-                    >
-                        {aidOption3}
-                    </label>
-                </div>
-                <div className="carouselFormStep3AidTarget-container">
-                    <input
-                        type="checkbox"
-                        id={aidOption4}
-                        name="aidTarget"
-                        value={aidOption4}
-                        onChange={handleChange}
-                        checked={formData.aidTarget.find(target => target === aidOption4)}
-                    />
-                    <label
-                        htmlFor={aidOption4}
-                        className="carouselFormStep3AidTarget-container__label"
-                    >
-                        {aidOption4}
-                    </label>
-                </div>
-                <div className="carouselFormStep3AidTarget-container">
-                    <input
-                        type="checkbox"
-                        id={aidOption5}
-                        name="aidTarget"
-                        value={aidOption5}
-                        onChange={handleChange}
-                        checked={formData.aidTarget.find(target => target === aidOption5)}
-                    />
-                    <label
-                        htmlFor={aidOption5}
-                        className="carouselFormStep3AidTarget-container__label"
-                    >
-                        {aidOption5}
-                    </label>
-                </div>
+                {chooseAidTarget()}
             </div>
         </div>
     )
