@@ -11,7 +11,7 @@ export default function CarouselFormStep2({ formData, setFormData, step, handleP
         return (
             bagNoOption.map((el, index) =>
                 <option
-                    key={index}
+                    key={el}
                     value={bagNoOption[index]}
                     selected={formData.bagNumber === bagNoOption[index]}
                 >
