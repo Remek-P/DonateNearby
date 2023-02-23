@@ -10,6 +10,19 @@ export default function Step3Location({ formData, setFormData }) {
 
     const locationNoOptions = [locationNoOption1, locationNoOption2, locationNoOption3, locationNoOption4, locationNoOption5]
 
+    const chooseLocationOption = () => {
+        return (
+            locationNoOptions.map((el, index) =>
+                <option
+                    key={index}
+                    value={locationNoOptions[index]}
+                    selected={formData.location === locationNoOptions[index]}
+                >
+                    {locationNoOptions[index]}
+                </option>)
+        )
+    }
+
     return (
         <div className="carouselFormStep3Location">
             <label htmlFor="location" id="location">Lokalizacja:</label>
@@ -19,14 +32,8 @@ export default function Step3Location({ formData, setFormData }) {
                 onChange={event => setFormData({...formData, location: event.target.value})}
             >
                 <option value="">— wybierz —</option>
-                {locationNoOptions.map((el, index) =>
-                    <option
-                        key={index}
-                        value={locationNoOptions[index]}
-                        selected={formData.location === locationNoOptions[index]}
-                    >
-                        {locationNoOptions[index]}
-                    </option>)
+                {
+                    chooseLocationOption()
                 }
             </select>
         </div>

@@ -7,6 +7,19 @@ export default function CarouselFormStep2({ formData, setFormData, step, handleP
     
     const bagNoOption = ["1", "2", "3", "4", "5"];
 
+    const choseBagNo = () => {
+        return (
+            bagNoOption.map((el, index) =>
+                <option
+                    key={index}
+                    value={bagNoOption[index]}
+                    selected={formData.bagNumber === bagNoOption[index]}
+                >
+                    {bagNoOption[index]}
+                </option>)
+        )
+    }
+
     return (
         <div className="carouselFormStep2">
             <GiveawayCarouselFormStepCount step={step} />
@@ -26,14 +39,8 @@ export default function CarouselFormStep2({ formData, setFormData, step, handleP
                         required
                     >
                         <option value="" selected hidden>— wybierz —</option>
-                        {bagNoOption.map((el, index) =>
-                            <option
-                                key={index}
-                                value={bagNoOption[index]}
-                                selected={formData.bagNumber === bagNoOption[index]}
-                            >
-                                {bagNoOption[index]}
-                            </option>)
+                        {
+                            choseBagNo()
                         }
                     </select>
                 <div className="carouselFormStep2-buttonContainer">
