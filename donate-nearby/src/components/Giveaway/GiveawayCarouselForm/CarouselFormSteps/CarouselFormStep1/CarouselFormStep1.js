@@ -11,6 +11,32 @@ export default function CarouselFormStep1({ formData, setFormData, step, handleN
     const giveawayOption4 = "książki";
     const giveawayOption5 = "inne";
 
+    const giveawayOptions = [giveawayOption1, giveawayOption2, giveawayOption3, giveawayOption4, giveawayOption5]
+
+    const chooseGiveawayOption = () => {
+        return (
+            giveawayOptions.map(el =>
+                <div key={el} className="carouselFormStep1_container">
+                    <input
+                        type="radio"
+                        id={el}
+                        name="giveawayForm"
+                        value={el}
+                        onChange={event => setFormData({...formData, giveaway: event.target.value})}
+                        checked={formData.giveaway === el}
+                        required
+                    />
+                    <label
+                        htmlFor={el}
+                        className="carouselFormStep1_container__label"
+                    >
+                        {el}
+                    </label>
+                </div>
+            )
+        )
+    }
+
     return (
         <div className="carouselFormStep1">
             <GiveawayCarouselFormStepCount step={step} />
@@ -22,87 +48,9 @@ export default function CarouselFormStep1({ formData, setFormData, step, handleN
                 <legend className="carouselFormStep1__header">
                     Zaznacz co chcesz oddać:
                 </legend>
-                <div className="carouselFormStep1_container">
-                    <input
-                        type="radio"
-                        id="giveawayOption1"
-                        name="giveawayForm"
-                        value={giveawayOption1}
-                        onChange={event => setFormData({...formData, giveaway: event.target.value})}
-                        checked={formData.giveaway === giveawayOption1}
-                        required
-                    />
-                    <label
-                        htmlFor="giveawayOption1"
-                        className="carouselFormStep1_container__label"
-                    >
-                        {giveawayOption1}
-                    </label>
-                </div>
-                <div className="carouselFormStep1_container">
-                    <input
-                        type="radio"
-                        id="giveawayOption2"
-                        name="giveawayForm"
-                        value={giveawayOption2}
-                        onChange={event => setFormData({...formData, giveaway: event.target.value})}
-                        checked={formData.giveaway === giveawayOption2}
-                    />
-                    <label
-                        htmlFor="giveawayOption2"
-                        className="carouselFormStep1_container__label"
-                    >
-                        {giveawayOption2}
-                    </label>
-                </div>
-                <div className="carouselFormStep1_container">
-                    <input
-                        type="radio"
-                        id="giveawayOption3"
-                        name="giveawayForm"
-                        value={giveawayOption3}
-                        onChange={event => setFormData({...formData, giveaway: event.target.value})}
-                        checked={formData.giveaway === giveawayOption3}
-                    />
-                    <label
-                        htmlFor="giveawayOption3"
-                        className="carouselFormStep1_container__label"
-                    >
-                        {giveawayOption3}
-                    </label>
-                </div>
-                <div className="carouselFormStep1_container">
-                    <input
-                        type="radio"
-                        id="giveawayOption4"
-                        name="giveawayForm"
-                        value={giveawayOption4}
-                        onChange={event => setFormData({...formData, giveaway: event.target.value})}
-                        checked={formData.giveaway === giveawayOption4}
-                    />
-                    <label
-                        htmlFor="giveawayOption4"
-                        className="carouselFormStep1_container__label"
-                    >
-                        {giveawayOption4}
-                    </label>
-                </div>
-                <div className="carouselFormStep1_container">
-                    <input
-                        type="radio"
-                        id="giveawayOption5"
-                        name="giveawayForm"
-                        value={giveawayOption5}
-                        onChange={event => setFormData({...formData, giveaway: event.target.value})}
-                        checked={formData.giveaway === giveawayOption5}
-                    />
-                    <label
-                        htmlFor="giveawayOption5"
-                        className="carouselFormStep1_container__label"
-                    >
-                        {giveawayOption5}
-                    </label>
-                </div>
+                {
+                    chooseGiveawayOption()
+                }
                 <div className="carouselFormStep1-buttonContainer">
                     <NextOrConfirmButton />
                 </div>

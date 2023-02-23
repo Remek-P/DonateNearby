@@ -74,7 +74,9 @@ export default function Step3AidTarget({ formData, setFormData }) {
                 Komu chcesz pomóc? *
             </legend>
             <div>
-                {chooseAidTarget()}
+                {
+                    chooseAidTarget()
+                }
             </div>
         </div>
     )
