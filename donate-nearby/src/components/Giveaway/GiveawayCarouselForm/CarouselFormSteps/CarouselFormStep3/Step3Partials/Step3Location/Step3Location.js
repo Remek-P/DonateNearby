@@ -12,13 +12,13 @@ export default function Step3Location({ formData, setFormData }) {
 
     const chooseLocationOption = () => {
         return (
-            locationNoOptions.map((el, index) =>
+            locationNoOptions.map((el) =>
                 <option
                     key={el}
-                    value={locationNoOptions[index]}
-                    selected={formData.location === locationNoOptions[index]}
+                    value={el}
+                    selected={formData.location === el}
                 >
-                    {locationNoOptions[index]}
+                    {el}
                 </option>)
         )
     }

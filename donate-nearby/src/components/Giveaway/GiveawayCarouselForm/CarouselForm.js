@@ -60,6 +60,7 @@ export default function CarouselForm() {
         },
     });
 
+
     // const [ formData,   setFormData    ] = useState({
     //     // id,
     //     giveaway: "ubrania, które nadają się do ponownego użycia",

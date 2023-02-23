@@ -9,13 +9,13 @@ export default function CarouselFormStep2({ formData, setFormData, step, handleP
 
     const choseBagNo = () => {
         return (
-            bagNoOption.map((el, index) =>
+            bagNoOption.map((el) =>
                 <option
                     key={el}
-                    value={bagNoOption[index]}
-                    selected={formData.bagNumber === bagNoOption[index]}
+                    value={el}
+                    selected={formData.bagNumber === el}
                 >
-                    {bagNoOption[index]}
+                    {el}
                 </option>)
         )
     }
