@@ -1,12 +1,10 @@
 import React from "react";
 
-function Option1 () {
+export function Option1 () {
     return (
         <>
-            <h3>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</h3>
+            <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad at cum deserunt expedita iusto nobis possimus rerum ullam! Corporis, quaerat.</div>
         </>
 
     )
 }
-
-export default Option1;

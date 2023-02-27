@@ -1,35 +1,51 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
+import { Option1 } from "./Option1/Option1";
 
 export default function HomePartners() {
 
-    let [option, setOption] = useState("Option1");
+    const option1 = "Fundacje";
+    const option2 = "Organizacjom pozarządowym";
+    const option3 = "Lokalnym zbiórkom";
+
+    const [option, setOption] = useState(option1);
 
     const handleOption = (e) => {
         setOption(e.target.innerText)
     }
 
-    const Option1 = "Fundacje";
-    const Option2 = "Organizacjom pozarządowym";
-    const Option3 = "Lokalnym zbiórkom";
+    const descriptionPicker = () => {
+        if (option === option1) {
+            return (
+                <>
+                    <p>W naszej bazie znajdziesz listę zweryfikowanych Fundacji, z którymi współpracujemy. Możesz sprawdzić czym się zajmują, komu pomagają i czego potrzebują.</p>
+                    <Option1 />
+                </>
 
-    // const picker = () => {
-    //     if (option === Option1) {
-    //         return
-    //     }
-    // }
+            )
+        } else if (option === option2) {
+            return (
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+            )
+        } else if (option === option3) {
+            return (
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            )
+        }
+    }
+
+    console.log(option)
 
     return(
         <section>
             <div>
                 <h2>Komu pomagamy?</h2>
                 <div>
-                    <h3 onClick={handleOption}>{Option1}</h3>
-                    <h3 onClick={handleOption}>{Option2}</h3>
-                    <h3 onClick={handleOption}>{Option3}</h3>
+                    <h3 onClick={handleOption}>{option1}</h3>
+                    <h3 onClick={handleOption}>{option2}</h3>
+                    <h3 onClick={handleOption}>{option3}</h3>
                 </div>
                 <div>
-                    <p></p>
-
+                    {descriptionPicker()}
                 </div>
             </div>
             <div></div>
