@@ -14,6 +14,7 @@ export default function CarouselForm() {
 
     const date = new Date()
     const dateString = date.getFullYear() + '-' + ('0' + (date.getMonth() + 1)).slice(-2) + '-' + ('0' + date.getDate()).slice(-2);
+    const timeString = date.getHours() + ":" + date.getMinutes();
 
     const [ step,       setStep         ] = useState(0);
 
@@ -58,7 +59,7 @@ export default function CarouselForm() {
         },
         schedulePackage: {
             date: dateString,
-            time: 0,
+            time: timeString,
             notes: "",
         },
     });
