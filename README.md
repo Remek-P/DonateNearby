@@ -4,30 +4,30 @@ This project, created while taking a course at Coders Lab, ia a website which he
 
 
 
-Technologies used:
-React, 
-React Router v5, 
-SCSS, 
-CRA, 
-Material UI, 
-Google Fonts, 
-FontAwesome icons.
+## Technologies used:
+* React, 
+* React Router v5 (with lazy loading), 
+* SCSS, 
+* CRA, 
+* Material UI, 
+* Google Fonts, 
+* FontAwesome icons.
 
-Functionality description:
+##Functionality description:
 
-Form:
+### Form:
 multistep form with multiple custom input types;
 
-Caveat:
+### Caveat:
 The form data is currently not shared anywhere - demo purpose;
 
-Register an account:
+### Register an account:
 Validation:
-*Email - example@example.example;
-*Password - longer than 6 characters and repeated password must be same;
+* Email - example@example.example;
+* Password - longer than 6 characters and repeated password must be same;
 
-Caveat:
+### Caveat:
 The login and registration functionality is performed by useContext hook - demo purpose;
 
 
-Shout out to Grzegorz Kowalski - the course mentor.
+### Shout out to Grzegorz Kowalski - the course mentor.
