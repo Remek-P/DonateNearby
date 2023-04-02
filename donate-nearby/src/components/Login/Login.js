@@ -19,7 +19,6 @@ export default function Login() {
 
     const didMount = useRef(true)
 
-    const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
     const emailAlert = "Podane hasło lub email nie są poprawne";
     const passwordAlert = "Hasło powinno być dłuższe niż 6 znaków";
 
@@ -33,27 +32,38 @@ export default function Login() {
         }
     },[loginUser]);
 
-    const verifyEmail = () => {
-        checkEmailRegEx
+    const checkPasswordLength = (constant) => {
+        constant
+            ? setPasswordLengthValidation(pass)
+            : setPasswordLengthValidation(fail)
+    };
+
+    const checkEmail = (constant) => {
+        constant
             ? setEmailValidation(pass)
             : setEmailValidation(fail)
     }
 
-    const handleLogin = () => {
-        if (password.length <= 6 && email.length === 0) {
-            setPasswordLengthValidation(fail);
-            setEmailValidation(fail);
-        } else if (password.length <= 6) {
-            setPasswordLengthValidation(fail);
-        } else if (password.length > 6) {
+    const handleLogin = (event) => {
+        const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
+        const isEmailLength = email.length !== 0;
+        const isPasswordLength = password.length > 6;
+
+        event.preventDefault();
+
+        if (checkEmailRegEx && isEmailLength && isPasswordLength) {
             setPasswordLengthValidation(pass)
             const userData = {
                 email,
                 password,
             };
             loginUser(userData);
+        } else {
+            checkPasswordLength(isPasswordLength);
+            checkEmail(isEmailLength);
+            checkEmail(checkEmailRegEx);
         }
-    }
+    };
 
     return (
         <section className="login">
@@ -74,9 +84,9 @@ export default function Login() {
                         autoCorrect="on"
                         name="email"
                         id="email"
+                        required
                     />
-                    <div className={`login__form-container-validation ${emailValidation}`}
-                    >
+                    <div className={`login__form-container-validation ${emailValidation}`}>
                         {/*Propose a change, to avoid indicating which data is incorrect, but rather explain the combination is incorrect*/}
                         {emailAlert}
                     </div>
@@ -95,9 +105,9 @@ export default function Login() {
                         onChange={event => setPassword(event.target.value)}
                         name="password"
                         id="password"
+                        required
                     />
-                    <div className={`login__form-container-validation ${passwordLengthValidation}`}
-                    >
+                    <div className={`login__form-container-validation ${passwordLengthValidation}`}>
                         {passwordAlert}
                     </div>
                 </div>

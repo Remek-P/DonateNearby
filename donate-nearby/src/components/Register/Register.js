@@ -13,16 +13,16 @@ export default function Register() {
     const fail = "failRegistration";
 
 
-    const [ email,              setEmail                            ] = useState("");
-    const [ password,           setPassword                         ] = useState("");
-    const [ rePassword,           setRePassword                     ] = useState("");
-    const [ emailValidation,    setEmailValidation                  ]= useState(pass);
-    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState(pass);
-    const [ rePasswordValidation, setRePasswordValidation   ] = useState(pass);
+    const [ email,                      setEmail                            ] = useState("");
+    const [ password,                   setPassword                         ] = useState("");
+    const [ rePassword,                 setRePassword                       ] = useState("");
+    const [ emailValidation,            setEmailValidation                  ] = useState(pass);
+    const [ passwordLengthValidation,   setPasswordLengthValidation         ] = useState(pass);
+    const [ rePasswordValidation,       setRePasswordValidation             ] = useState(pass);
 
     const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
-    const isPasswordLength = password.length <= 6;
-    const isRePassword = password !== rePassword;
+    const isPasswordLength = password.length >= 6;
+    const isRePassword = password === rePassword;
 
     const emailAlert = "Podany email jest nieprawidłowy";
     const passwordAlert = "Hasło powinno być dłuższe niż 6 znaków";
@@ -36,14 +36,14 @@ export default function Register() {
 
     const checkPasswordLength = () => {
         isPasswordLength
-            ? setPasswordLengthValidation(fail)
-            : setPasswordLengthValidation(pass)
+            ? setPasswordLengthValidation(pass)
+            : setPasswordLengthValidation(fail)
     };
 
     const checkRePassword = () => {
         isRePassword
-            ? setRePasswordValidation(fail)
-            : setRePasswordValidation(pass)
+            ? setRePasswordValidation(pass)
+            : setRePasswordValidation(fail)
     }
 
     const handleRegister = event => {
@@ -53,7 +53,8 @@ export default function Register() {
         checkRePassword();
         if (checkEmailRegEx === true && isPasswordLength === true && isRePassword === true) {
             const userData = {
-                email,
+                id: 3,
+                login: email,
                 password,
                 isLogged: true,
             }
@@ -83,8 +84,7 @@ export default function Register() {
                         name="email"
                         id="email"
                     />
-                    <div className={`register__form-container-validation ${emailValidation}`}
-                    >
+                    <div className={`register__form-container-validation ${emailValidation}`}>
                         {emailAlert}
                     </div>
                 </div>
@@ -102,8 +102,7 @@ export default function Register() {
                            name="password"
                            id="password"
                     />
-                    <div className={`register__form-container-validation ${passwordLengthValidation}`}
-                    >
+                    <div className={`register__form-container-validation ${passwordLengthValidation}`}>
                         {passwordAlert}
                     </div>
                 </div>
@@ -121,8 +120,7 @@ export default function Register() {
                            name="password"
                            id="password"
                     />
-                    <div className={`register__form-container-validation ${rePasswordValidation}`}
-                    >
+                    <div className={`register__form-container-validation ${rePasswordValidation}`}>
                         {rePasswordAlert}
                     </div>
                 </div>

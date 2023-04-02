@@ -1,8 +1,10 @@
 import React, {useContext} from "react";
 import { NavLink } from "react-router-dom";
 
-import { GlobalContext } from "../../../context/GlobalContext";
 import Logout from "./Logout/Logout";
+
+import { GlobalContext } from "../../../context/GlobalContext";
+
 
 export default function LoginBar() {
 
@@ -10,7 +12,7 @@ export default function LoginBar() {
 
     const greeting = "Cześć"
 
-    if (loggedUser.length !== 0) {
+    if (loggedUser) {
         return (
             <div className="login-section">
                 <div className="login-section__logged">

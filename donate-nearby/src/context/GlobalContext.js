@@ -6,7 +6,6 @@ const initialState = {
     loginDatabase: [
         {id: 1, login: "wp@wp.pl", password: "password", isLogged: false},
         {id: 2, login: "gmail@gmail.com", password: "password1", isLogged: false},
-        {id: 3, login: "s", password: "d", isLogged: false},
     ],
     loggedUser: "",
 }

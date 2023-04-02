@@ -5,7 +5,7 @@ export function AppReducer(state, action) {
             return {
                 ...state,
                 loginDatabase: [action.payload, ...state.loginDatabase],
-                loggedUser: [action.payload.email]
+                loggedUser: action.payload.login,
             };
         case "Login-user":
             return {
@@ -16,7 +16,7 @@ export function AppReducer(state, action) {
                     }
                     return user;
                 }),
-                loggedUser: state.loginDatabase.some(user => user.isLogged === true) ? state.loginDatabase.filter(user => user.isLogged === true)[0].login : [],
+                loggedUser: state.loginDatabase.some(user => user.isLogged === true) ? state.loginDatabase.filter(user => user.isLogged === true)[0].login : "",
             };
         case "Logout-user":
             return {
@@ -27,7 +27,7 @@ export function AppReducer(state, action) {
                     }
                     return user;
                 }),
-                loggedUser: []
+                loggedUser: "",
             };
         default:
             return state;

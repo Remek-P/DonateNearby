@@ -9,7 +9,6 @@ export default function Logout() {
 
     const { logoutUser, loggedUser } = useContext(GlobalContext);
 
-    console.log(loggedUser)
     const logout = () => {
         logoutUser(loggedUser)
         navigate("/logged-out")

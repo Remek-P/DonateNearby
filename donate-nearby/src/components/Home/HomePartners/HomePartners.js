@@ -33,8 +33,6 @@ export default function HomePartners() {
         }
     }
 
-    console.log(option)
-
     return(
         <section>
             <div>

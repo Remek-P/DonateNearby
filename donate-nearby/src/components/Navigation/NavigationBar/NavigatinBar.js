@@ -35,17 +35,17 @@ export default function NavigationBar() {
                             O nas
                         </Link>
                     </li>
-                    <li className="navbar-section__ul__li">
-                        <Link
-                            to="partners"
-                            spy={true}
-                            smooth="easeInQuad"
-                            delay={100}
-                            duration={1000}
-                        >
-                            Fundacje i organizacje
-                        </Link>
-                    </li>
+                    {/*<li className="navbar-section__ul__li">*/}
+                    {/*    <Link*/}
+                    {/*        to="partners"*/}
+                    {/*        spy={true}*/}
+                    {/*        smooth="easeInQuad"*/}
+                    {/*        delay={100}*/}
+                    {/*        duration={1000}*/}
+                    {/*    >*/}
+                    {/*        Fundacje i organizacje*/}
+                    {/*    </Link>*/}
+                    {/*</li>*/}
                     <li className="navbar-section__ul__li">
                         <Link
                             to="contact"
