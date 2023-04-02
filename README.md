@@ -4,16 +4,16 @@ This project, created while taking a course at Coders Lab, ia a website which he
 
 
 
-##Technologies used:
-*React, 
-*React Router v5, 
-*SCSS, 
-*CRA, 
-*Material UI, 
-*Google Fonts, 
-*FontAwesome icons.
+Technologies used:
+React, 
+React Router v5, 
+SCSS, 
+CRA, 
+Material UI, 
+Google Fonts, 
+FontAwesome icons.
 
-##Functionality description:
+Functionality description:
 
 Form:
 multistep form with multiple custom input types;
