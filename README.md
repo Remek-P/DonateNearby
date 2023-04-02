@@ -16,16 +16,15 @@ This project, created while taking a course at Coders Lab, ia a website which he
 ### Form:
 multistep form with multiple custom input types;
 
-#### Caveat:
-The form data is currently not shared anywhere - demo purpose;
-
 ### Register an account:
 Validation:
 * Email - example@example.example;
 * Password - longer than 6 characters and repeated password must be same;
 
 #### Caveat:
-The login and registration functionality is performed by useContext hook - demo purpose;
+* The login and registration functionality is performed by useContext hook - demo purpose;
+* The form data is currently not shared anywhere - demo purpose;
+* RWD pending - please set the resolution to 1900 x 962.
 
 
 ### Shout out to Grzegorz Kowalski - the course mentor.
