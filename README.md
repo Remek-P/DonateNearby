@@ -2,18 +2,16 @@
 
 This project, created while taking a course at Coders Lab, ia a website which helps with organising the collection of donated unused clothes and other aid. The primary function is to enable sharing a form containing information of what, when, where, to and from whom to collect.
 
-
-
 ## Technologies used:
 * React, 
-* React Router v5 (with lazy loading), 
+* React Router v5, 
 * SCSS, 
 * CRA, 
 * Material UI, 
 * Google Fonts, 
 * FontAwesome icons.
 
-##Functionality description:
+## Functionality description:
 
 ### Form:
 multistep form with multiple custom input types;
@@ -30,4 +28,4 @@ Validation:
 The login and registration functionality is performed by useContext hook - demo purpose;
 
 
-#### Shout out to Grzegorz Kowalski - the course mentor.
+### Shout out to Grzegorz Kowalski - the course mentor.
