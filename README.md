@@ -4,7 +4,7 @@ This project, created while taking a course at Coders Lab, ia a website which he
 
 ## Technologies used:
 * React, 
-* React Router v5, 
+* React Router v6, 
 * SCSS, 
 * CRA, 
 * Material UI, 
