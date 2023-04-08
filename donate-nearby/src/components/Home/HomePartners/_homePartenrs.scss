@@ -1,0 +1,19 @@
+.homePartner__options {
+  display: flex;
+  justify-content: center;
+
+  &__option {
+    margin: 2vh 3vw 3vh;
+    padding: 10px;
+    border: 1px solid transparent;
+    cursor: pointer;
+
+    &:hover {
+      border: 1px solid $border-color-main;
+    }
+  }
+}
+
+.activeBorder {
+  border: 1px solid $border-color-main;
+}
