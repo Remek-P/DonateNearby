@@ -2,4 +2,8 @@
   padding: 0.5625rem 5px;
   font-size: $font-size-12;
   color: $font-color-login;
+
+  &:hover, &:focus {
+    opacity: 0.75;
+  }
 }

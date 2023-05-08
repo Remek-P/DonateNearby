@@ -17,9 +17,8 @@
     font-size: $font-size-18;
     line-height: $line-height-24;
     cursor: pointer;
-    &:hover {
-
-      //border-color: $font-color-main;
+    &:hover, &:focus {
+      opacity: 0.75;
     }
   }
 }
