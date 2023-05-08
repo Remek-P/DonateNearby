@@ -36,7 +36,8 @@
       //column-gap: 2.75rem;
       column-gap: 5vmin;
       padding-top: 12.7726vh;
-      font-size: $font-size-36;
+      //font-size: $font-size-36;
+      font-size: clamp(1.5rem, calc(2.08vmin + 1rem), 3rem);
       line-height: $line-height-45;
       font-weight: $font-weight-light;
       text-transform: uppercase;
