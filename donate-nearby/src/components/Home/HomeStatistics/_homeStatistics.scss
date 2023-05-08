@@ -1,5 +1,4 @@
 .statistics {
-  max-height: 384px;
   background-color: $border-color-alt;
   background-image: url("../../../assets/images/3 Columns Background.png");
   background-repeat: repeat;
@@ -7,7 +6,8 @@
   &-ul {
     display: flex;
     justify-content: space-around;
-    padding: 46px 0 86px 0;
+    //padding: 46px 0 86px 0;
+    padding: 2.42% 0 4.53% 0;
 
     &-li {
       display: flex;
