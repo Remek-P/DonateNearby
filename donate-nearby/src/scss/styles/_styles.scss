@@ -1,3 +1,10 @@
+html {
+  @media (min-width: $breakpointXXL) {
+    margin: 0 auto;
+    max-width: 2300px;
+  }
+}
+
 body {
   font-size: $font-size-16;
   font-family: $font-base;
@@ -7,9 +14,14 @@ body {
   color: $font-color-main;
   background-color: $background-color-main;
   box-sizing: border-box;
+  position: relative;
+
+  @media (max-width: $breakpointM) {
+    position: static;
+  }
 }
 
-h2 {
+h1 {
   font-size: $font-size-38;
   line-height: $line-height-55;
   letter-spacing: -0.76px;

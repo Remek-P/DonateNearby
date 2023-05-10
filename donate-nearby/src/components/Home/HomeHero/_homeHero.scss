@@ -1,30 +1,31 @@
 .hero {
   background-repeat: no-repeat;
-  background-size: 75%;
+  background-size: 72%;
 
-  background-position: bottom -3vh left -25.5vw;
+  background-position: bottom -5px left -90%;
 
   --height-link-button: 1.35vh;
 
-  @media (max-width: 768px) {
-    background-size: 0;
+  @media (max-width: $breakpointM) {
+    position: static;
+    background-image: none !important;
+    margin: 0 auto;
   }
 
   &-container {
     display: flex;
+    max-width: max-content;
     flex-direction: column;
-    align-items: center;
-    //padding: 342px 275px 271px 951px;
-    padding: 19.5% 10% 13% 49%;
+    align-items: stretch;
+    padding: 18% 7% 14.5% 50%;
 
-    @media (max-width: 768px) {
-      padding: 30% 10% 13% 10%;
+    @media (max-width: $breakpointM) {
+      max-width: 90%;
+      padding: 0;
+      margin: 35% auto 13% auto;
     }
 
     &__header {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
       position: relative;
 
       &::after {
@@ -42,8 +43,8 @@
 
     &__links {
       display: flex;
-      //column-gap: 2.75rem;
-      column-gap: 5vmin;
+      justify-content: space-between;
+      gap: 5vmin;
       padding-top: 12.7726vh;
       font-size: $font-size-36;
       line-height: $line-height-45;
@@ -53,13 +54,10 @@
 
     &__link-stuff, &__link-organise {
       border: 0.75px solid $font-color-main;
-    }
-
-    &__link-stuff{
-      padding: var(--height-link-button) clamp(1.5rem, 4.85vw, 8rem);
-    }
-    &__link-organise {
-      padding: var(--height-link-button) clamp(0.5rem, 2.7vw, 4.46rem);
+      flex-grow: 1;
+      flex-basis: 10%;
+      padding: var(--height-link-button) 0;
     }
   }
 }
+

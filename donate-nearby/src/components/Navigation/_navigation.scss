@@ -3,6 +3,10 @@
   flex-direction: column;
   align-items: flex-end;
   position: absolute;
-  top: 3.84%;
-  right: 7.47%;
+  top: 0.835%;
+  right: 6.37%;
+
+  @media (max-width: $breakpointM) {
+    top: 3%;
+  }
 }

@@ -8,7 +8,8 @@ export default function HomeHero() {
 
     const { loggedUser } = useContext(GlobalContext);
 
-    const link = loggedUser === "" ? "/login" : "/giveaway"
+    const link = loggedUser === "" ? "/login" : "/giveaway";
+
     return (
         <section
             className="hero"
@@ -16,16 +17,15 @@ export default function HomeHero() {
             style={{backgroundImage: `url(${image})`}}
         >
             <div className={"hero-container"}>
-                <header className="hero-container__header">
-                    <h2>Zacznij pomagać!</h2>
-                    <h2>Oddaj niechciane rzeczy w zaufane ręce</h2>
-                </header>
+                <h1 className="hero-container__header">Zacznij pomagać!<br/>Oddaj niechciane rzeczy
+                    w&nbsp;zaufane&nbsp;ręce
+                </h1>
                 <div className="hero-container__links">
                     <Link className="hero-container__link-stuff" to={link}>
                         Oddaj<br/> rzeczy
                     </Link>
                     <Link className="hero-container__link-organise" to="/login">
-                        Zorganizuj<br/> zbiórkę
+                        Zorganizuj<br/>zbiórkę
                     </Link>
                 </div>
             </div>

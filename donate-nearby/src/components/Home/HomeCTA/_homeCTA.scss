@@ -35,6 +35,10 @@
     column-gap: 10.11%;
     background-color: $background-color-alt;
 
+    @media (max-width: $breakpointM) {
+      flex-wrap: wrap;
+    }
+
     &-li {
       text-align: center;
       position: relative;
@@ -51,6 +55,11 @@
         top: -10%;
         left: 50%;
         transform: translate(-50%, -100%);
+
+        @media (max-width: $breakpointM) {
+          scale: 50%;
+          transform: translate(-100%, -150%);
+        }
       }
 
       &-icon1::before {
