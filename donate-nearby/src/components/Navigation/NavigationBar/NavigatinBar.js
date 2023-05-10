@@ -8,13 +8,17 @@ export default function NavigationBar() {
             <div className="navbar-section">
                 <ul className="navbar-section__ul">
                     <li className="navbar-section__ul__li">
-                        <NavLink to="/">
+                        <NavLink
+                            to="/"
+                            className="navbar-section__ul__li-text"
+                        >
                             Start
                         </NavLink>
                     </li>
                     <li className="navbar-section__ul__li">
                         <Link
                             to="statistics"
+                            className="navbar-section__ul__li-text"
                             spy={true}
                             smooth="easeInQuad"
                             delay={100}
@@ -26,6 +30,7 @@ export default function NavigationBar() {
                     <li className="navbar-section__ul__li">
                         <Link
                             to="about"
+                            className="navbar-section__ul__li-text"
                             spy={true}
                             smooth="easeInQuad"
                             delay={100}
@@ -49,6 +54,7 @@ export default function NavigationBar() {
                     <li className="navbar-section__ul__li">
                         <Link
                             to="contact"
+                            className="navbar-section__ul__li-text"
                             spy={true}
                             smooth="easeInOutQuad"
                             delay={100}
