@@ -9,4 +9,8 @@
   @media (max-width: $breakpointM) {
     top: 3%;
   }
+
+  @media (min-height: $breakpointXXL) {
+    top: 1%;
+  }
 }
