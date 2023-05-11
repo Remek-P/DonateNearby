@@ -40,6 +40,8 @@
 
     @media (max-width: $breakpointM) {
       flex-wrap: wrap;
+      padding-top: calc(2% + var(--icon-size));
+      row-gap: var(--icon-size);
     }
 
     &-li {
@@ -98,6 +100,10 @@
         top: 50%;
         left: 50%;
         transform: translateX(-50%);
+
+        @media (max-width: $breakpointM) {
+          top: 40%;
+        }
       }
 
       &__header {
@@ -122,5 +128,9 @@
     font-weight: $font-weight-light;
     text-align: center;
     text-transform: uppercase;
+
+    @media (max-width: $breakpointS) {
+      margin-top: 4%;
+    }
   }
 }
