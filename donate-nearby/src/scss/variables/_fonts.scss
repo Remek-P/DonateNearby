@@ -34,7 +34,7 @@ $line-height-55: 3.4375rem;
 $line-height-54: 3.3750rem;
 $line-height-49: 3.0625rem;
 $line-height-45: 4.99vh;
-$line-height-45: clamp($font-size-36, calc(3.6vh + 0.5rem), 2.9rem);
+$line-height-45: calc(#{$font-size-36} + 0.45rem);
 $line-height-40: 2.5rem;
 $line-height-33: 2.0625rem;
 $line-height-32: 2rem;

@@ -22,13 +22,16 @@
       top: 100%;
       left: 50%;
       transform: translate(-50%, 50%);
+
+      @media (max-width: $breakpointS) {
+        top: 80%;
+      }
     }
   }
 
   &-steps {
     display: flex;
     justify-content: center;
-    align-items: center;
     min-width: 100%;
     padding-top: calc(4.3% + var(--icon-size));
     padding-bottom: 4.21%;
@@ -40,8 +43,14 @@
     }
 
     &-li {
-      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
       position: relative;
+
+      @media (max-width: $breakpointM) {
+        width: 40%;
+      }
 
       &-icon1::before,
       &-icon2::before,
@@ -78,21 +87,23 @@
         background-image: url("../../../assets/icons/Icon-4.svg");
       }
 
+      &-icon1::after,
+      &-icon2::after,
+      &-icon3::after,
+      &-icon4::after {
+        content: "";
+        width: 70px;
+        border: 1px solid $border-color-main;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
       &__header {
-        padding-bottom: 21px;
         position: relative;
-
-        &::after {
-          content: "";
-          display: block;
-          width: 70px;
-          border: 1px solid $border-color-main;
-          position: absolute;
-          top: 75%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-
+        flex-grow: 1;
+        padding-bottom: 18%;
       }
 
       &__description {
@@ -104,7 +115,7 @@
 
   &-link {
     margin: 1.89% 10px 4.24% 10px;
-    padding: 1.35vh clamp(1rem, 4.85vw, 8rem);
+    padding: 2% clamp(1rem, 5%, 8rem);
     border: 0.75px solid $font-color-main;
     font-size: $font-size-36;
     line-height: $line-height-45;
