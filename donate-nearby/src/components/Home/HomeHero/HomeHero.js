@@ -17,9 +17,9 @@ export default function HomeHero() {
             style={{backgroundImage: `url(${image})`}}
         >
             <div className={"hero-container"}>
-                <h1 className="hero-container__header">Zacznij pomagać!<br/>Oddaj niechciane rzeczy
+                <h2 className="hero-container__header">Zacznij pomagać!<br/>Oddaj niechciane rzeczy
                     w&nbsp;zaufane&nbsp;ręce
-                </h1>
+                </h2>
                 <div className="hero-container__links">
                     <Link className="hero-container__link-stuff" to={link}>
                         Oddaj<br/> rzeczy

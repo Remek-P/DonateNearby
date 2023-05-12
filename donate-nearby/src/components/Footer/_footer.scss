@@ -2,9 +2,10 @@
   --icon-size: 30px;
   display: flex;
   justify-content: flex-end;
-  gap: 587px;
+  align-items: center;
+  gap: 35%;
   margin-top: calc(68px * -1);
-  margin-right: 142px;;
+  margin-right: $right;
 
   &__r {
     font-size: $font-size-18;
@@ -19,6 +20,10 @@
     &__icon1, &__icon2 {
       width: var(--icon-size);
       height: var(--icon-size);
+
+      @media (max-width: $breakpointS) {
+        scale: 80%;
+      }
     }
   }
 }

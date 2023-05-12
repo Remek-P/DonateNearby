@@ -15,7 +15,7 @@ export default function HomePage() {
             <HomeStatistics />
             <HomeCTA />
             <HomeAbout />
-            <HomePartners />
+            {/*<HomePartners />*/}
             <ContactForm />
             <Footer />
         </main>

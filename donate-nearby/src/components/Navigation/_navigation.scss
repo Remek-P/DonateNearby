@@ -4,7 +4,7 @@
   align-items: flex-end;
   position: absolute;
   top: 0.835%;
-  right: 6.37%;
+  right: $right;
 
   @media (max-width: $breakpointM) {
     top: 3%;

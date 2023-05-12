@@ -1,5 +1,28 @@
+.containerForm {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  @media (max-width: $breakpointL) {
+    max-width: 80%;
+  }
+}
+
 .contact-form {
+
+  --padding-right: $right;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: $right;
+  padding-bottom: calc(#{$line-height-24} * 5);
   position: relative;
+
+  @media (max-width: $breakpointL) {
+    align-items: stretch;
+    padding-left: $right;
+  }
 
   &:before {
     content: "";
@@ -17,9 +40,7 @@
   }
 
   &__header {
-    //margin: 0 236px 0 1306px;
-    margin: 0 12.421% 0 68.737%;
-    padding: 160px 0 128px 0;
+    padding: 34.48% 0 25.84% 0;
     position: relative;
 
     &::after {
@@ -36,21 +57,25 @@
   }
 
   &-successMessage {
-    margin: 0 12.421% 0 68.737%;
     font-size: $font-size-18;
     color: green;
   }
 
   &__form {
-    //padding: 0 142px 319px 1230px;
-    padding: 0 7.474% 16.794% 64.737%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    min-width: 60%;
     text-align: left;
 
     &-container {
       display: flex;
       flex-wrap: wrap;
       gap: 16px;
-      //gap: 3.03%;
+
+      @media (max-width: $breakpointL) {
+        flex-direction: column;
+      }
 
       &-field {
         display: flex;
@@ -68,8 +93,8 @@
     &__textarea {
       display: flex;
       flex-direction: column;
-      margin-top: 40px;
-      //margin-top: 7.576%;
+      margin-top: 8.65%;
+      flex-grow: 1;
 
       &__input {
         resize: none;
@@ -79,12 +104,10 @@
     &-button-container {
       display: flex;
       justify-content: flex-end;
-      margin-top: 40px;
-      //margin-top: 7.576%;
+      margin-top: 8.65%;
 
       &__button {
-        padding: 13px 52px;
-        //padding: 2.5% 9.9%;
+        padding: 2.8% 11.197%;
         border: 0.75px solid #3C3C3C;
         font-size: $font-size-18;
         font-weight: $font-weight-light;
@@ -113,8 +136,10 @@
 
 .hiddenContactForm {
   visibility: hidden;
+  //visibility: visible;
 }
 
 .visibleContactForm {
   visibility: visible
+  //visibility: hidden
 }
