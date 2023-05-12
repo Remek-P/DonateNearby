@@ -23,8 +23,10 @@ Validation:
 
 #### Caveat:
 * The login and registration functionality is performed by useContext hook - demo purpose;
-* The form data is currently not shared anywhere - demo purpose;
-* RWD pending - please set the resolution to 1900 x 962.
+* The form data is using fake API - demo purpose;
+* RWD pending:
+  * front page done 
+  * Multistep form is cooking - please set the resolution to 1900 x 962.
 
 
 ### Shout out to Grzegorz Kowalski - the course mentor.
