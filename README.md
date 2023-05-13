@@ -25,7 +25,8 @@ Validation:
 * The login and registration functionality is performed by useContext hook - demo purpose;
 * The form data is using fake API - demo purpose;
 * RWD pending:
-  * front page done 
+  * front page - done;
+  * Login/register - done;
   * Multistep form is cooking - please set the resolution to 1900 x 962.
 
 
