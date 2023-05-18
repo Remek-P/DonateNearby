@@ -1,11 +1,11 @@
 import {useContext} from "react";
 import {useNavigate} from "react-router-dom";
 
-import {GlobalContext} from "../../../../context/GlobalContext";
+import {GlobalContext} from "../../context/GlobalContext";
 
 export default function Logout() {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     const { logoutUser, loggedUser } = useContext(GlobalContext);
 

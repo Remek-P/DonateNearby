@@ -17,7 +17,7 @@ export default function MissingPage() {
 
     return (
         <>
-            <h2>This is not the page you are looking for</h2>
+            <h2>This is NOT the page you are looking for</h2>
             <div
                 className="missingPage"
                 style={{backgroundImage: `url(${image})`}}
