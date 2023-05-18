@@ -1,6 +1,6 @@
 # DonateNearby
 
-This project, created while taking a course at Coders Lab, ia a website which helps with organising the collection of donated clothes, toys and other aid. To request the pickup of donated aid, the user has to create and account and fill in a multistep form (custom input types). Additionally, a viewer can request a contact, by filling a contact form (communication with fake API).
+This project, created while taking a course at Coders Lab, is a website which helps with organising the collection of donated clothes, toys and other aid. To request the pickup of donated aid, the user has to create and account and fill in a multistep form (custom input types). Additionally, a viewer can request a contact, by filling a contact form (communication with fake API).
 
 ## Technologies used:
 * React;
