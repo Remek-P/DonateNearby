@@ -7,8 +7,7 @@ This project, created while taking a course at Coders Lab, is a website which he
 * React Router v6; 
 * React-scroll;
 * SCSS; 
-* CRA; 
-* Material UI; 
+* CRA;
 * Google Fonts; 
 * FontAwesome icons.
 
