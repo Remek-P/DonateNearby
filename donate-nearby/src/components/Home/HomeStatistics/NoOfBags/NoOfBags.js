@@ -1,30 +1,15 @@
 import React from "react";
+import DisplayNoOf from "../../../DisplayNoOf/DisplayNoOf";
 
 export default function NoOfBags({formDataSessionStorage}) {
 
-  const bagsArray = [];
+  let bagsArray = [];
 
   formDataSessionStorage.forEach((el) => bagsArray.push(+el.bagNumber));
 
-  const noOfBags = bagsArray.reduce((total, item) => {
-    return total + item
-  }, 10);
-
-  const displayNoOfBags = () => {
-    if (noOfBags <= 10000) {
-      return noOfBags;
-    } else if (noOfBags < 1000000) {
-      return `${Math.floor(noOfBags / 1000)}k+`
-    } else if (noOfBags < 1000000000) {
-      return `${Math.floor(noOfBags / 1000000)}M+`
-    } else {
-      return `${Math.floor(noOfBags / 1000000000)}mld+`
-    }
-  };
+  const noOfBags = bagsArray.reduce?.((total, item) => total + item, 0) || 10;
 
   return (
-      <>
-        {displayNoOfBags()}
-      </>
+      <DisplayNoOf noOf={noOfBags} />
   )
 }

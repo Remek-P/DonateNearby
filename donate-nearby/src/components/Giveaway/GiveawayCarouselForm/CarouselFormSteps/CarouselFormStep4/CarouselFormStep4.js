@@ -29,11 +29,6 @@ export default function CarouselFormStep4({ formData, setFormData, step, handleN
     const maxTime = "22:00";
 
     //TODO: if maxDate changes from 2024-01-03
-    console.log(minDate);
-    console.log(nextYear);
-    console.log(maxDate);
-    console.log(minTime);
-    console.log(maxTime);
 
     return (
         <section className="carouselFormStep4">

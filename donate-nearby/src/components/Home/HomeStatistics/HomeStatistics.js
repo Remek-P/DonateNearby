@@ -1,6 +1,7 @@
 import React from "react";
 import NoOfBags from "./NoOfBags/NoOfBags";
 import BackedNGOs from "./BackedNGOs/BackedNGOs";
+import NoOfCollections from "./NoOfCollections/NoOfCollections";
 
 export default function HomeStatistics() {
 
@@ -38,7 +39,7 @@ export default function HomeStatistics() {
             <li className="statistics-ul-li">
                 {/*TODO: Implement counting component*/}
                 <div className="statistics-ul-li__component">
-                    7
+                    <NoOfCollections formDataSessionStorage={formDataSessionStorage} />
                 </div>
                 <h5 className="statistics-ul-li__header">
                     Zorganizowanych zbiórek

@@ -23,9 +23,9 @@ Validation:
 * Contact form message - between 120 and 500 signs.
 
 ### Other:
+* Statistics 
 * Global state management via useContext hook;
 * React-scroll for smooth navigation (front page);
-* 
 
 #### Caveat:
 * The login and registration functionality is performed by useContext hook - demo purpose;
@@ -34,7 +34,8 @@ Validation:
   * front page - done;
   * Login/register - done;
   * Multistep form is cooking - please set the resolution to 1900 x 962.
-* Support statistics - currently static element;
+* Support statistics - if no data added by the user, showing fixed number for demo purpose;
+* Zorganizuj zbiórkę functionality - under construction;
 
 
 ### Shout out to Grzegorz Kowalski - the course mentor.
