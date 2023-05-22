@@ -64,27 +64,6 @@ export default function CarouselForm() {
         },
     });
 
-
-    // const [ formData,   setFormData    ] = useState({
-    //     // id,
-    //     giveaway: "ubrania, które nadają się do ponownego użycia",
-    //     bagNumber: "3",
-    //     location: "Warszawa",
-    //     aidTarget: ["dzieciom", "samotnym matkom", "bezdomnym", "niepełnosprawnym", "osobom starszym" ],
-    //     NGO: "Jakiś",
-    //     address: {
-    //         street: "Leszczynowa 268",
-    //         city: "Inowrocław",
-    //         postalCode: "00-000",
-    //         phoneNumber: "600606060",
-    //     },
-    //     schedulePackage: {
-    //         date: "2022-12-22",
-    //         time: "04:06",
-    //         notes: "asdada ad aasd d",
-    //     },
-    // });
-
     const handlePrevious = (e) => {
         e.preventDefault();
         setStep((previousStep) => previousStep - 1)
@@ -93,6 +72,24 @@ export default function CarouselForm() {
     const handleNext = (e) => {
         e.preventDefault();
         setStep((previousStep) => previousStep + 1)
+    };
+
+    const getFromSessionStorage = () => {
+        return sessionStorage.getItem("formDataSessionStorage") !== null
+            ? JSON.parse(sessionStorage.getItem("formDataSessionStorage"))
+            : [];
+
+    };
+
+    const addToSessionStorage = () => {
+        const formDataSessionStorage = getFromSessionStorage();
+        formDataSessionStorage.push(formData);
+        sessionStorage.setItem("formDataSessionStorage", JSON.stringify(formDataSessionStorage));
+    };
+
+    const handleSubmit = (e, formData) => {
+        addToSessionStorage(formData);
+        handleNext(e);
     };
 
     const DisplayStep = () => {
@@ -141,7 +138,7 @@ export default function CarouselForm() {
                     formData={formData}
                     step={step}
                     handlePrevious={handlePrevious}
-                    handleNext={handleNext}
+                    handleNext={handleSubmit}
                 />
             )
         } else if (step === 5) {

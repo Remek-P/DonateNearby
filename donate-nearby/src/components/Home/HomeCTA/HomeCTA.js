@@ -32,7 +32,7 @@ export default function HomeCTA() {
                 </li>
                 <li className="cta-steps-li cta-steps-li-icon3">
                     <h6 className="cta-steps-li__header">
-                        Zdecyduj komu<br/> chcesz pomóc
+                        Komu pomagasz
                     </h6>
                     <p className="cta-steps-li__description">
                         wybierz zaufane<br/> miejsce

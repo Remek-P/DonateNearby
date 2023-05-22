@@ -1,13 +1,20 @@
 import React from "react";
+import NoOfBags from "./NoOfBags/NoOfBags";
+import BackedNGOs from "./BackedNGOs/BackedNGOs";
 
 export default function HomeStatistics() {
+
+    const formDataSessionStorage = sessionStorage.getItem("formDataSessionStorage") === null
+        ? []
+        : JSON.parse(sessionStorage.getItem("formDataSessionStorage"))
+
     return(
     <section className="statistics" id="statistics">
         <ul className="statistics-ul">
             <li className="statistics-ul-li">
                 {/*TODO: Implement counting component*/}
                 <div className="statistics-ul-li__component">
-                    10
+                    <NoOfBags formDataSessionStorage={formDataSessionStorage}/>
                 </div>
                 <h5 className="statistics-ul-li__header">
                     Oddanych worków
@@ -19,7 +26,7 @@ export default function HomeStatistics() {
             <li className="statistics-ul-li">
                 {/*TODO: Implement counting component*/}
                 <div className="statistics-ul-li__component">
-                    5
+                    <BackedNGOs formDataSessionStorage={formDataSessionStorage} />
                 </div>
                 <h5 className="statistics-ul-li__header">
                     Wspartych organizacji

@@ -42,6 +42,7 @@
       flex-wrap: wrap;
       padding-top: calc(2% + var(--icon-size));
       row-gap: var(--icon-size);
+      column-gap: 5%;
     }
 
     &-li {
@@ -65,11 +66,11 @@
         position: absolute;
         top: -10%;
         left: 50%;
-        transform: translate(-50%, -100%);
+        transform: translate(-50%, -120%);
 
         @media (max-width: $breakpointM) {
-          scale: 50%;
-          transform: translate(-100%, -150%);
+          scale: 65%;
+          transform: translate(-78%, -135%);
         }
       }
 
@@ -97,24 +98,23 @@
         width: 70px;
         border: 1px solid $border-color-main;
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translateX(-50%);
-
-        @media (max-width: $breakpointM) {
-          top: 40%;
-        }
       }
 
       &__header {
         position: relative;
         flex-grow: 1;
         padding-bottom: 18%;
+
+        @media (max-width: $breakpointM) {
+          padding-bottom: 15%;
+        }
       }
 
       &__description {
         font-size: $font-size-16;
-        //line-height: $line-height-10;
       }
     }
   }
