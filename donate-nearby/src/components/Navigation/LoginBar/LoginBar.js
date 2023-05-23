@@ -5,7 +5,6 @@ import Logout from "../../Logout/Logout";
 
 import { GlobalContext } from "../../../context/GlobalContext";
 
-
 export default function LoginBar() {
 
     const { loggedUser } = useContext(GlobalContext);

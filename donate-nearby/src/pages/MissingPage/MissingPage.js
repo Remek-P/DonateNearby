@@ -5,14 +5,14 @@ import image from "../../assets/images/This-is-not-the-page-you-are-looking-for.
 
 export default function MissingPage() {
 
-    const navigate = useNavigate()
+    const navigate = useNavigate();
 
     useEffect(() => {
         const timerID = setTimeout(() => {
             navigate("/")
         }, 5000)
 
-        return () => clearTimeout(timerID)
+        return () => clearTimeout(timerID);
     }, [])
 
     return (
