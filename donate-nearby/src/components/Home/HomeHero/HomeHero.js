@@ -21,7 +21,7 @@ export default function HomeHero() {
                     w&nbsp;zaufane&nbsp;ręce
                 </h2>
                 <div className="hero-container__links">
-                    <Link className="hero-container__link-stuff" to={link}>
+                    <Link className="hero-container__link-stuff" to={link} state={{direction: "giveaway"}}>
                         Oddaj<br/> rzeczy
                     </Link>
                     <Link className="hero-container__link-organise" to="/login">

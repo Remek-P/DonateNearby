@@ -13,7 +13,7 @@ export default function MissingPage() {
         }, 5000)
 
         return () => clearTimeout(timerID);
-    }, [])
+    }, []);
 
     return (
         <>

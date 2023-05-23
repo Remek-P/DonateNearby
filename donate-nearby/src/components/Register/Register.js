@@ -1,5 +1,5 @@
 import React, {useContext, useState} from "react";
-import {Link, useNavigate} from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 
 import { GlobalContext } from "../../context/GlobalContext";
 
@@ -8,6 +8,15 @@ export default function Register() {
     const { registerUser } = useContext(GlobalContext);
 
     const navigate = useNavigate();
+    const { state } = useLocation();
+
+    const destination = () => {
+        if (state?.direction === "giveaway") {
+            return navigate("/giveaway");
+        } else {
+            return navigate("/");
+        }
+    };
 
     const pass = "passRegistration";
     const fail = "failRegistration";
@@ -59,7 +68,7 @@ export default function Register() {
                 isLogged: true,
             }
             registerUser(userData);
-            navigate("/");
+            destination();
         }
     }
 

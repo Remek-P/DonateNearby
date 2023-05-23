@@ -14,7 +14,7 @@ export default function Giveaway() {
   useEffect(() => {
     const timerID = setTimeout(() => {
       if (!loggedUser) {
-        navigate("/login", { replace: true })
+        navigate("/login", {state: {direction: "giveaway"}, replace: true})
       }
     })
 

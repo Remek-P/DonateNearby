@@ -1,5 +1,5 @@
 import React, {useContext, useEffect, useRef, useState} from "react";
-import { Link, useNavigate } from "react-router-dom";
+import {Link, useLocation, useNavigate} from "react-router-dom";
 
 import { GlobalContext } from "../../context/GlobalContext";
 
@@ -16,6 +16,15 @@ export default function Login() {
     const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState(pass);
 
     const navigate = useNavigate();
+    const { state } = useLocation();
+
+    const destination = () => {
+        if (state?.direction === "giveaway") {
+             return navigate("/giveaway");
+        } else {
+            return navigate("/");
+        }
+    };
 
     const didMount = useRef(true)
 
@@ -24,7 +33,7 @@ export default function Login() {
 
     useEffect(() => {
         if (loggedUser === email && email.length !== 0) {
-            navigate("/");
+            destination();
         } else if (didMount.current) {
             didMount.current = false;
         } else {
@@ -42,7 +51,7 @@ export default function Login() {
         constant
             ? setEmailValidation(pass)
             : setEmailValidation(fail)
-    }
+    };
 
     const handleLogin = (event) => {
         const checkEmailRegEx = /^\S+@\S+\.\S+$/.test(email);
@@ -115,6 +124,7 @@ export default function Login() {
             <div className="login__buttons">
                 <Link to="/register"
                       className="login__buttons-register"
+                      state={{direction: "giveaway"}}
                 >
                     Załóż konto
                 </Link>

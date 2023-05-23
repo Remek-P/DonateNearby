@@ -47,7 +47,7 @@ export default function HomeCTA() {
                     </p>
                 </li>
             </ul>
-            <Link to={link} className="cta-link">
+            <Link to={link} className="cta-link" state={{direction: "giveaway"}}>>
                 oddaj<br/> rzeczy
             </Link>
         </section>
