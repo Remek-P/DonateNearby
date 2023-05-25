@@ -5,23 +5,24 @@ import image from "../../assets/images/This-is-not-the-page-you-are-looking-for.
 
 export default function MissingPage() {
 
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
-    useEffect(() => {
-        const timerID = setTimeout(() => {
-            navigate("/")
-        }, 3000)
+  useEffect(() => {
+    const timerID = setTimeout(() => {
+      navigate("/", {replace: true});
+    }, 3000)
 
-        return () => clearTimeout(timerID);
-    }, []);
+    return () => clearTimeout(timerID);
+  }, []);
 
-    return (
-        <>
-            <h2>This is NOT the page you are looking for</h2>
-            <div
-                className="missingPage"
-                style={{backgroundImage: `url(${image})`}}
-            />
-        </>
-    )
+  return (
+      <>
+        <h2>This is NOT the page you are looking for</h2>
+
+        <div
+            className="missingPage"
+            style={{backgroundImage: `url(${image})`}}
+        />
+      </>
+  )
 }

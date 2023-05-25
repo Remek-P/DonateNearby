@@ -20,9 +20,9 @@ export default function Login() {
 
     const destination = () => {
         if (state?.direction === "giveaway") {
-             return navigate("/giveaway");
+             return navigate("/giveaway", { replace: true });
         } else {
-            return navigate("/");
+            return navigate("/") ;
         }
     };
 

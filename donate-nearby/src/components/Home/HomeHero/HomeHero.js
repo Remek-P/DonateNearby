@@ -24,7 +24,7 @@ export default function HomeHero() {
                     <Link className="hero-container__link-stuff" to={link} state={{direction: "giveaway"}}>
                         Oddaj<br/> rzeczy
                     </Link>
-                    <Link className="hero-container__link-organise" to="/login">
+                    <Link className="hero-container__link-organise" to="/campaign" >
                         Zorganizuj<br/>zbiórkę
                     </Link>
                 </div>
