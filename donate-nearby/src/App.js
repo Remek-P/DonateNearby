@@ -38,7 +38,7 @@ function App() {
             </Route>
             <Route path="*"
                    element={<Suspense>
-                     <MissingPage defer />
+                     <MissingPage />
                    </Suspense>}
             />
           </Routes>
