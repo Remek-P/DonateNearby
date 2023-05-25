@@ -13,14 +13,14 @@ export default function MissingPage() {
     }, 3000)
 
     return () => clearTimeout(timerID);
-  });
+  }, []);
 
   return (
       <>
-        <h2>This is NOT the page you are looking for</h2>
+        <h2 className="missingPage__header">This is NOT the page you are looking for</h2>
 
         <div
-            className="missingPage"
+            className="missingPage__img"
             style={{backgroundImage: `url(${image})`}}
         />
       </>

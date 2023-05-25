@@ -1,6 +1,10 @@
-.missingPage {
-  aspect-ratio: 1200 / 630;
-  background-repeat: no-repeat;
-  background-size: contain;
+.missingPage__header {
+  margin-top: 3%;
+}
 
+.missingPage__img {
+  margin: 3%;
+  aspect-ratio: 840 / 472;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
