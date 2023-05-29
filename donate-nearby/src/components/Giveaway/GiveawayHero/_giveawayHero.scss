@@ -3,17 +3,33 @@
   background-size: contain;
   background-position: top 0 left 0;
 
+  @media (max-width: $breakpointXL) {
+    background-position: top 0 left -20%;
+  }
+
+  @media (max-width: $breakpointL) {
+    background-position: top 0 left -25vw;
+  }
+
+  @media (max-width: $breakpointM) {
+    background-image: none !important;
+  }
+
   &-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 257px 311px 141px 951px;
+    padding: calc(130px + 6.7%) 16.4% 7.42% 50.006%;
+
+    @media (max-width: $breakpointM) {
+      padding: calc(130px + 6.7%) 8% 15% 8%;
+    }
 
     &__header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-bottom: 27px;
+      padding-bottom: 4.2%;
 
       & > h2 {
         position: relative;
@@ -32,8 +48,8 @@
       }
 
       & > h3 {
-        padding-top: 77px;
-        font-size: $font-size-40;
+        padding-top: calc(40px + 5.8%);
+        font-size: $font-size-36;
         font-weight: $font-weight-light;
         line-height: $line-height-55;
       }
@@ -41,19 +57,54 @@
 
     &__steps {
       display: flex;
-      //gap: 2.75rem;
-      padding-top: 25.8px;
+      padding-top: 26px;
+      --transition: scale 0.2s;
+      --dimensions: clamp(50px, calc(5.88vw + 10px), 180px);
+
+      @media (max-width: $breakpointM) {
+        justify-content: center;
+        align-self: stretch;
+        --min: 80px;
+        --dimensions: clamp(var(--min), calc(12vw + 10px), 180px)
+      }
+
+      @media (max-width: 704px) {
+        flex-wrap: wrap;
+        margin: 0 auto;
+        max-width: 80%;
+        --min: 120px;
+      }
+
+      @media (max-width: $breakpointS) {
+        max-width:79%;
+        --min: 80px;
+      }
+
+      @media (max-width: 430px) {
+        max-width: 100%;
+      }
 
       &__step {
-        width: 120px;
-        height: 120px;
+        width: var(--dimensions);
+        height: var(--dimensions);
         margin: 15px;
         padding: 15px;
         border: 0.75px solid $font-color-main;
         rotate: 45deg;
         display: flex;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: space-between;
+        transition: var(--transition);
+        flex-shrink: 0;
+        position: relative;
+
+        @media (max-width: $breakpointXL) {
+          margin: 10px;
+        }
+
+        @media (max-width: $breakpointM) {
+          margin: 15px;
+        }
 
         & :where(*) {
           font-weight: $font-weight-light;
@@ -62,15 +113,51 @@
         }
 
         & :where(h5) {
-          padding-left: 5px;
+          padding-left: 10px;
+          padding-bottom: 5px;
           align-self: flex-start;
           font-size: $font-size-32;
+
+          @media (max-width: $breakpointXL) {
+            //padding-bottom: 0;
+          }
+
+          @media (max-width: $breakpointM) {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            font-size: $font-size-40;
+          }
         }
 
         & > :where(div) {
-          padding-right: 10px;
-          padding-bottom: 10px;
+          padding-right: 12px;
+          padding-bottom: 8px;
           font-size: $font-size-22;
+          line-height: $line-height-24;
+          translate: -5% -0%;
+
+          @media (max-width: $breakpointXL) {
+            translate: -10% 15%;
+          }
+
+          @media (max-width: $breakpointM) {
+            translate: -3% 5%;
+            font-size: $font-size-32;
+            line-height: $line-height-27;
+          }
+
+          @media (max-width: $breakpointS) {
+            translate: -3% 20%;
+          }
+        }
+
+        &:hover,
+        &:focus {
+          scale: 1.2;
+          border-color: $border-color-alt;
+          transition: var(--transition);
+          background-color: $background-color-main;
+          z-index: 5;
         }
       }
     }

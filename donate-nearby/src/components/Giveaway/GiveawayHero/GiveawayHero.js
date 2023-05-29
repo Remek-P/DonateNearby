@@ -12,7 +12,7 @@ export default function GiveawayHero() {
             <div className={"giveaway-hero-container"}>
                 <header className="giveaway-hero-container__header">
                     <h2>
-                        Oddaj rzeczy, których już nie chcesz POTRZEBUJĄCYM
+                        Oddaj rzeczy, których już nie&nbsp;chcesz POTRZEBUJĄCYM
                     </h2>
                     <h3>
                         Wystarczą 4 proste kroki:
@@ -25,7 +25,7 @@ export default function GiveawayHero() {
                     </li>
                     <li className="giveaway-hero-container__steps__step">
                         <h5>2</h5>
-                        <div>Spakuj je w worki</div>
+                        <div>Spakuj&nbsp;w worki</div>
                     </li>
                     <li className="giveaway-hero-container__steps__step">
                         <h5>3</h5>

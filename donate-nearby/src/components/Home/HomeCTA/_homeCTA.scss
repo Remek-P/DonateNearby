@@ -129,6 +129,12 @@
     text-align: center;
     text-transform: uppercase;
 
+    &:hover,
+    &:focus {
+      border-color: $border-color-alt;
+      opacity: 0.75;
+    }
+
     @media (max-width: $breakpointS) {
       margin-top: 4%;
     }

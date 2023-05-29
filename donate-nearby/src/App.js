@@ -27,6 +27,7 @@ function App() {
               <Route path="login" element={<LoginPage />} />
               <Route path="logged-out" element={<LogoutPage />} />
               <Route path="register" element={<RegisterPage />} />
+              {/*<Route path="/giveaway" element={<Giveaway />} />*/}
               <Route
                   path="/giveaway"
                   element={
