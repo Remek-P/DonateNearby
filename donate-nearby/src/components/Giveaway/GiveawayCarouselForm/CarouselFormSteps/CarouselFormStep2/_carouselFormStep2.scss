@@ -46,7 +46,7 @@
     bottom: $button-giveaway-container-bottom;
     display: flex;
     justify-content: space-between;
-    width: max(calc(($button-giveaway-container-width * 2) + $button-giveaway-container-gap), calc(($button-giveaway-container-min) + $button-giveaway-container-gap)); //regulates the width of a button regardless of text;
+    width: $button-giveaway-container-width-double; //regulates the width of a button regardless of text;
     gap: $button-giveaway-container-gap;
   }
 }

@@ -5,7 +5,14 @@ $padding-right: 6.37%;
 $padding-left: 7.4215%;
 
 //Button container in GiveawaySteps
-$button-giveaway-container-width: 9.5vw;
 $button-giveaway-container-gap: 5vmin;
 $button-giveaway-container-min: 60px;
+$button-giveaway-container-max: 350px;
+$button-giveaway-container: 9.5vw;
+$button-giveaway-container-width-single: clamp($button-giveaway-container-min, $button-giveaway-container, $button-giveaway-container-max);
+$button-giveaway-container-double-min: calc(($button-giveaway-container-min) * 2 + $button-giveaway-container-gap);
+$button-giveaway-container-double-max: calc(($button-giveaway-container-max) * 2 + $button-giveaway-container-gap);
+$button-giveaway-container-double: calc(($button-giveaway-container * 2) + $button-giveaway-container-gap);
+$button-giveaway-container-width-double: clamp($button-giveaway-container-double-min, $button-giveaway-container-double, $button-giveaway-container-double-max);
 $button-giveaway-container-bottom: 8%;
+$button-giveaway-paddingY: 8%;
