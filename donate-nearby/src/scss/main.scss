@@ -3,6 +3,7 @@
 @import "./variables/breakpoints";
 @import "./variables/mixins";
 @import "./variables/fonts";
+@import "./variables/variables";
 @import "./styles/styles";
 @import "../components/Navigation/navigation";
 @import "../components/Navigation/LoginBar/loginBar";
@@ -30,8 +31,7 @@
 @import "../components/Giveaway/GiveawayCarouselForm/CarouselFormSteps/CarouselFormStep3/Step3Partials/Step3AidTarget/step3AidTarget";
 @import "../components/Giveaway/GiveawayCarouselForm/CarouselFormSteps/CarouselFormStep3/Step3Partials/Step3NGO/step3NGO";
 @import "../components/Giveaway/GiveawayCarouselForm/CarouselFormSteps/CarouselFormStep3/Step3Partials/Step3Location/step3Location";
-@import "../components/Giveaway/GiveawayCarouselForm/GiveawayCarouselFormButtons/NextOrConfirmButton/nextButton";
-@import "../components/Giveaway/GiveawayCarouselForm/GiveawayCarouselFormButtons/PreviousButton/previoustButton";
+@import "../components/Giveaway/GiveawayCarouselForm/GiveawayCarouselFormButtons/formButton";
 @import "../components/Giveaway/GiveawayCarouselForm/GiveawayCarouselFormStepCount/giveawayCarouselFormStepCount";
 @import "../pages/MissingPage/missingPage";
 @import "../components/Home/HomePartners/_homePartenrs.scss";

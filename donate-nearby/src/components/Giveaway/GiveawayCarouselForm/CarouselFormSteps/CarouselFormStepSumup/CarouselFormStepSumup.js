@@ -6,6 +6,8 @@ import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirm
 
 export default function CarouselFormStepSumup({ formData, step, handlePrevious, handleNext }) {
 
+    const buttonClassName = "paddingSumup"
+
     const bagDeclination = () => {
         if (formData.bagNumber === "1") {
             return "worek"
@@ -78,8 +80,11 @@ export default function CarouselFormStepSumup({ formData, step, handlePrevious, 
                     </div>
                 </div>
                 <div className="buttonContainer">
-                    <PreviousButton handlePrevious={handlePrevious}/>
-                    <NextOrConfirmButton step={step} />
+                    <PreviousButton handlePrevious={handlePrevious}
+                                    buttonClassName={buttonClassName}
+                    />
+                    <NextOrConfirmButton step={step}
+                                         buttonClassName={buttonClassName} />
                 </div>
             </form>
         </section>

@@ -1,18 +1,23 @@
-.carouselForm{
+.carouselForm {
   position: relative;
 
-&-container {
-  background-color: #eeedeb;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: top left;
-  aspect-ratio: 1900 / 883;
-  position: relative;
+  &-container {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #eeedeb;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
+    //aspect-ratio: 1900 / 883;
+    position: relative;
 
+    @media (max-width: $breakpointS) {
+      background-image: none !important;
+    }
 
-  &__steps {
-    padding: 1.895% 0 1% 7.474%;
-    text-align: left;
+    &__steps {
+      padding: 1.895% 1% 1% $padding-left;
+      text-align: left;
+    }
   }
-}
 }

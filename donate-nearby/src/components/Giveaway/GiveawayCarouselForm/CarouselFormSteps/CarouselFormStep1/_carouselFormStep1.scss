@@ -1,51 +1,72 @@
 .carouselFormStep1 {
-  --radio-size: clamp(15px, 2.5vw, 40px);
-  color: $font-color-send;
-  font-weight: $font-weight-light;
-  font-size: $font-size-24;
-  line-height: $line-height-27;
+  padding-bottom: 18%;
 
-  &__header {
-    font-size: $font-size-36;
-    font-weight: $font-weight-semibold;
-    line-height: $line-height-45;
+  @media (max-width: $breakpointS) {
+    padding-bottom: 27%;
   }
 
-  &_container {
-    padding-top: 40px;
+  @media (max-width: $breakpointXS) {
+    padding-bottom: max(35%, 100px);
+  }
 
-    input[type="radio"] {
-      display: none;
+  &__form {
+    color: $font-color-send;
+    font-weight: $font-weight-light;
+    font-size: $font-size-24;
+    line-height: $line-height-27;
+
+
+    --radio-size: clamp(15px, 2.5vw, 40px);
+
+    &__header {
+      font-size: $font-size-36;
+      font-weight: $font-weight-semibold;
+      line-height: $line-height-45;
     }
 
-    &__label {
-      padding-left: calc(var(--radio-size) + 30px);
-      line-height: $line-height-32;
-      position: relative;
-      cursor: pointer;
+    &--container {
+      padding-top: max(calc(var(--radio-size) + 0.035%), 13px);
 
-      &::before {
-        content: "";
-        width: var(--radio-size);
-        height: var(--radio-size);
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        background-color: transparent;
-        border: 0.75px solid $font-color-main;
+      input[type="radio"] {
+        display: none;
+      }
+
+      &__label {
+        padding-left: max(calc(var(--radio-size) + 1.72%), 25px);
+        line-height: $line-height-27;
+        position: relative;
+        cursor: pointer;
+
+        //input styling
+        &::before {
+          content: "";
+          width: var(--radio-size);
+          height: var(--radio-size);
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          background-color: transparent;
+          border: 0.75px solid $font-color-main;
+        }
       }
     }
-  }
 
-  &-buttonContainer {
-    display: flex;
-    gap: 50px;
-    margin-top: 158px;
+    &--buttonContainer {
+      position: absolute;
+      bottom: $button-giveaway-container-bottom;
+      display: flex;
+      width: max($button-giveaway-container-width, $button-giveaway-container-min); //regulates the width of a button regardless of text;
+    }
   }
 }
 
 //visualising the selection of custom "radio" input
-.carouselFormStep1_container input[type="radio"]:checked + label:before {
-    background-color: $border-color-alt;
+.carouselFormStep1__form--container input[type="radio"]:checked + label:before {
+  background-color: $border-color-alt;
+}
+
+//individual paddings for buttons
+.padding1 {
+  padding: 12.5% 0;
 }

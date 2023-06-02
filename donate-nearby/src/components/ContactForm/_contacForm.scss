@@ -9,19 +9,16 @@
 }
 
 .contact-form {
-
-  --padding-right: $right;
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding-right: $right;
+  padding-right: $padding-right;
   padding-bottom: calc(#{$line-height-24} * 5);
   position: relative;
 
   @media (max-width: $breakpointL) {
     align-items: stretch;
-    padding-left: $right;
+    padding-left: $padding-right;
   }
 
   &:before {

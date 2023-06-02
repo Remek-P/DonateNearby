@@ -19,7 +19,7 @@ export default function CarouselFormNotificationBar({ step }) {
     const ShowHideNotificationBar = () => {
         if (step <= 3) {
             return (
-                <section className="giveaway-form">
+                <div className="giveaway-form">
                     <div className="giveaway-form__notification">
                         <h4 className="giveaway-form__notification__header">
                             Ważne!
@@ -31,7 +31,7 @@ export default function CarouselFormNotificationBar({ step }) {
                     <div className="giveaway-form">
 
                     </div>
-                </section>
+                </div>
             )
         }
     }

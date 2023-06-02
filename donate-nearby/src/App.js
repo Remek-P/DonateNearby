@@ -27,15 +27,15 @@ function App() {
               <Route path="login" element={<LoginPage />} />
               <Route path="logged-out" element={<LogoutPage />} />
               <Route path="register" element={<RegisterPage />} />
-              {/*<Route path="/giveaway" element={<Giveaway />} />*/}
-              <Route
-                  path="/giveaway"
-                  element={
-                    <RestrictedRedirect destination="/login">
-                      <Giveaway />
-                    </RestrictedRedirect>
-                  }
-              />
+              <Route path="/giveaway" element={<Giveaway />} />
+              {/*<Route*/}
+              {/*    path="/giveaway"*/}
+              {/*    element={*/}
+              {/*      <RestrictedRedirect destination="/login">*/}
+              {/*        <Giveaway />*/}
+              {/*      </RestrictedRedirect>*/}
+              {/*    }*/}
+              {/*/>*/}
             </Route>
             <Route path="*"
                    element={<Suspense>

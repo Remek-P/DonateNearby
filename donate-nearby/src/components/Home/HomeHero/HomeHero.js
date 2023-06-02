@@ -10,6 +10,12 @@ export default function HomeHero() {
 
     const link = loggedUser === "" ? "/login" : "/giveaway";
 
+    const dataToolTip = "Ze względu na stan pandemii, organizacja zbiórek została czasowo wstrzymana."
+
+    const handleClick = (e) => {
+        return dataToolTip ? e.preventDefault() : false
+    };
+
     return (
         <section
             className="hero"
@@ -24,7 +30,11 @@ export default function HomeHero() {
                     <Link className="hero-container__link-stuff" to={link} state={{direction: "giveaway"}}>
                         Oddaj<br/> rzeczy
                     </Link>
-                    <Link className="hero-container__link-organise" to="/campaign" >
+                    <Link className="hero-container__link-organise"
+                          to="/campaign"
+                          onClick={handleClick}
+                          data-tool-tip={dataToolTip}
+                    >
                         Zorganizuj<br/>zbiórkę
                     </Link>
                 </div>

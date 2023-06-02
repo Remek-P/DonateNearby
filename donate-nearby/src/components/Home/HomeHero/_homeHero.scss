@@ -66,6 +66,36 @@
         opacity: 0.75;
       }
     }
+
+    &__link-organise {
+      position: relative;
+      --time: 200ms;
+
+      &::after {
+        content: attr(data-tool-tip);
+        display: block;
+        position: absolute;
+        top: 70%;
+        left: 0;
+        padding: 2% 5%;
+        border-radius: 3px;
+        background-color: $border-color-alt;
+        font-size: $font-size-13;
+        line-height: $line-height-24;
+        color: $font-color-send;
+        text-transform: none;
+        scale: 0;
+        transition:
+                scale ease-in-out var(--time),
+                top ease-out var(--time);
+      }
+
+      &:hover::after,
+      &:focus::after {
+        top: 110%;
+        scale: 1;
+      }
+    }
   }
 }
 

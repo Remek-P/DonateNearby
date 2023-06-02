@@ -1,7 +1,8 @@
 .giveaway-form {
+  --padding-Y: 2.632%;
 
   &__notification {
-    padding: 50px 20px 50px 141px;
+    padding: var(--padding-Y) $padding-right var(--padding-Y) $padding-left;
     background-color: $border-color-alt;
     text-align: left;
 

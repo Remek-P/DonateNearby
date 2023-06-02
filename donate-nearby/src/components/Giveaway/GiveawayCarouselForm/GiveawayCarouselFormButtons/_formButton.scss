@@ -1,0 +1,19 @@
+.formButton {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    flex-basis: 10%;
+    border: 0.75px solid $font-color-main;
+    text-align: center;
+    color: $font-color-send;
+    font-weight: $font-weight-light;
+    font-size: $font-size-24;
+    line-height: $line-height-32;
+
+    &:hover,
+    &:focus {
+        border-color: $border-color-alt;
+        opacity: 0.75;
+    }
+}

@@ -1,10 +1,10 @@
 import React from "react";
 
-export default function PreviousButton({ handlePrevious }) {
+export default function PreviousButton({ handlePrevious, buttonClassName }) {
 
     return (
         <button
-            className="previousButton"
+            className={`formButton ${buttonClassName}`}
             onClick={handlePrevious}
         >
             Wstecz

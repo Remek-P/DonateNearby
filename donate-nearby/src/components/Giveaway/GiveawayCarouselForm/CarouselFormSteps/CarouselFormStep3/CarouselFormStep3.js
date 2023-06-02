@@ -8,6 +8,8 @@ import NextOrConfirmButton from "../../GiveawayCarouselFormButtons/NextOrConfirm
 
 export default function CarouselFormStep3({ formData, setFormData, step, handleNext, handlePrevious }) {
 
+  const buttonClassName = "padding3"
+
     return (
         <>
             <GiveawayCarouselFormStepCount step={step} />
@@ -28,8 +30,10 @@ export default function CarouselFormStep3({ formData, setFormData, step, handleN
                     setFormData={setFormData}
                 />
                 <div className="carouselFormStep3-buttonContainer">
-                    <PreviousButton handlePrevious={handlePrevious}/>
-                    <NextOrConfirmButton />
+                    <PreviousButton handlePrevious={handlePrevious}
+                                    buttonClassName={buttonClassName}
+                    />
+                    <NextOrConfirmButton buttonClassName={buttonClassName} />
                 </div>
 
             </form>

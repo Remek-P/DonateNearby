@@ -1,33 +1,68 @@
 .carouselFormStep2 {
+  padding-bottom: 28%;
+
+  @media (max-width: $breakpointS) {
+    padding-bottom: 27%;
+  }
+
+  @media (max-width: $breakpointXS) {
+    padding-bottom: max(35%, 100px);
+  }
+}
+
+
+.carouselFormStep2__form {
   color: $font-color-send;
   font-weight: $font-weight-light;
   font-size: $font-size-24;
   line-height: $line-height-27;
 
   &__header {
+    padding-right: $padding-right;
+    padding-bottom: 2.82%;
     font-size: $font-size-36;
     font-weight: $font-weight-semibold;
     line-height: $line-height-45;
+
+    @media (max-width: $breakpointL) {
+      padding-bottom: 7%;
+    }
   }
 
-  &_container {
-    margin-top: 49px;
+  &--container {
+    padding-bottom: 18%;
 
+    @media (max-width: $breakpointS) {
+      padding-bottom: 27%;
+    }
+
+    @media (max-width: $breakpointXS) {
+      padding-bottom: max(35%, 100px);
+    }
   }
 
-  &-buttonContainer {
+  &--buttonContainer {
+    position: absolute;
+    bottom: $button-giveaway-container-bottom;
     display: flex;
-    gap: 50px;
-    margin-top: 403px;
+    justify-content: space-between;
+    width: max(calc(($button-giveaway-container-width * 2) + $button-giveaway-container-gap), calc(($button-giveaway-container-min) + $button-giveaway-container-gap)); //regulates the width of a button regardless of text;
+    gap: $button-giveaway-container-gap;
   }
 }
 
 .carouselFormStep2 select {
+
+  --paddingY: 0.374%;
+
   margin-left: 26px;
-  padding-left: 18px;
-  width: 300px;
-  height: 49px;
+  padding: var(--paddingY) 0.1% var(--paddingY) 18px;
+  width: max(17.245%, 130px);
   background-color: transparent;
   border: 0.75px solid $font-color-main;
   font: inherit;
+}
+
+.padding2 {
+  padding: 5.515% 0;
 }
