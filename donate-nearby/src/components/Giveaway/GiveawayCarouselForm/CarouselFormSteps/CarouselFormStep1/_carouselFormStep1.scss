@@ -70,3 +70,22 @@
 .padding1 {
   padding: 12.5% 0;
 }
+
+.padding1.attrHover {
+  &::after {
+    left: 50%;
+    translate: -50% 0%;
+    width: 100%;
+    
+    @media (max-width: $breakpointL) {
+      top: -1%;
+      left: 105%;
+      height: 99%;
+      display: flex;
+
+      align-items: center;
+      translate: 0 0;
+      width: max-content;
+    }
+  }
+}

@@ -13,7 +13,7 @@ export default function CarouselFormStep1({ formData, setFormData, step, handleN
 
     const giveawayOptions = [giveawayOption1, giveawayOption2, giveawayOption3, giveawayOption4, giveawayOption5];
 
-    const buttonClassName = "padding1"
+    const buttonClassName = formData.giveaway === "" ? "padding1 attrHover" : "padding1"
 
     const chooseGiveawayOption = () => {
         return (
@@ -54,7 +54,9 @@ export default function CarouselFormStep1({ formData, setFormData, step, handleN
                     chooseGiveawayOption()
                 }
                 <div className="carouselFormStep1__form--buttonContainer">
-                    <NextOrConfirmButton buttonClassName={buttonClassName} />
+                    <NextOrConfirmButton buttonClassName={buttonClassName}
+                                         step={step}
+                    />
                 </div>
             </form>
         </div>

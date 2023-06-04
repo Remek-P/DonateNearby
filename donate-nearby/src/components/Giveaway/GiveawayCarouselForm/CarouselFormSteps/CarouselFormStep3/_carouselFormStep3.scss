@@ -1,6 +1,6 @@
-.carouselFormStep3 {
+.carouselFormStep3__form {
 
-  &-buttonContainer {
+  &--buttonContainer {
     display: flex;
     justify-content: space-between;
     width: max(23.45%, calc(1.2 * ($button-giveaway-container-min * 2) + $button-giveaway-container-gap)); //regulates the width of a button regardless of text;
@@ -11,5 +11,16 @@
 
 .padding3 {
   padding: 5.515% 0;
+}
+
+.padding3.attrHover {
+  &::after {
+    top: -1%;
+    left: 105%;
+    display: flex;
+    align-items: center;
+    width: max-content;
+    height: 95%;
+  }
 }
 

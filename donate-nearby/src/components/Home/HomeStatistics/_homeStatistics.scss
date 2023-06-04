@@ -57,3 +57,11 @@
     }
   }
 }
+
+.statistics-ul-li.attrHover{
+  &::after {
+    top: 10%;
+    background-color: $background-color-main;
+    color: $font-color-main;
+  }
+}

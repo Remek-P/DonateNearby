@@ -28,7 +28,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, handleN
     const minTime = "08:00";
     const maxTime = "22:00";
 
-    const buttonClassName = "padding4"
+    const buttonClassName = "padding4";
 
     //TODO: if maxDate changes from 2024-01-03
 
@@ -164,7 +164,8 @@ export default function CarouselFormStep4({ formData, setFormData, step, handleN
                     <PreviousButton handlePrevious={handlePrevious}
                                     buttonClassName={buttonClassName}
                     />
-                    <NextOrConfirmButton buttonClassName={buttonClassName} />
+                    <NextOrConfirmButton buttonClassName={buttonClassName}
+                    />
                 </div>
 
             </form>

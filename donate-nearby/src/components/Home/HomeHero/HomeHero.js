@@ -30,7 +30,7 @@ export default function HomeHero() {
                     <Link className="hero-container__link-stuff" to={link} state={{direction: "giveaway"}}>
                         Oddaj<br/> rzeczy
                     </Link>
-                    <Link className="hero-container__link-organise"
+                    <Link className="hero-container__link-organise attrHover"
                           to="/campaign"
                           onClick={handleClick}
                           data-tool-tip={dataToolTip}

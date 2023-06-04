@@ -5,7 +5,8 @@ import GiveawayCarouselFormStepCount from "../../GiveawayCarouselFormStepCount/G
 
 export default function CarouselFormStep2({ formData, setFormData, step, handlePrevious, handleNext }) {
 
-  const buttonClassName = "padding2"
+  const buttonClassName = formData.bagNumber === "" ? "padding2 attrHover" : "padding2";
+  const buttonClassNameBack = "padding2";
 
     const bagNoOption = ["1", "2", "3", "4", "5"];
 
@@ -31,7 +32,7 @@ export default function CarouselFormStep2({ formData, setFormData, step, handleP
                 onSubmit={handleNext}
             >
                     <h3 className="carouselFormStep2__form__header">
-                        Podaj liczbę 60l worków, w które spakowałeś/aś rzeczy:
+                        Podaj liczbę 60l worków, w&nbsp;które spakowałeś/aś rzeczy:
                     </h3>
                 <label htmlFor="bagNo" id="location">Liczba 60l worków:</label>
                     <select
@@ -46,9 +47,10 @@ export default function CarouselFormStep2({ formData, setFormData, step, handleP
                         }
                     </select>
                 <div className="carouselFormStep2__form--buttonContainer">
-                    <PreviousButton handlePrevious={handlePrevious} buttonClassName={buttonClassName}
+                    <PreviousButton handlePrevious={handlePrevious} buttonClassName={buttonClassNameBack}
                     />
-                    <NextOrConfirmButton buttonClassName={buttonClassName}/>
+                    <NextOrConfirmButton buttonClassName={buttonClassName} step={step}
+                    />
                 </div>
             </form>
         </div>

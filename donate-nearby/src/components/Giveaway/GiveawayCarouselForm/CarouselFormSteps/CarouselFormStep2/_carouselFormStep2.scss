@@ -1,12 +1,8 @@
 .carouselFormStep2 {
-  padding-bottom: 28%;
-
-  @media (max-width: $breakpointS) {
-    padding-bottom: 27%;
-  }
+  padding-bottom: 29.5%;
 
   @media (max-width: $breakpointXS) {
-    padding-bottom: max(35%, 100px);
+    padding-bottom: max(40%, 100px);
   }
 }
 
@@ -25,7 +21,12 @@
     line-height: $line-height-45;
 
     @media (max-width: $breakpointL) {
+      width: 62%;
       padding-bottom: 7%;
+    }
+
+    @media (max-width: $breakpointS) {
+      width: 100%;
     }
   }
 
@@ -65,4 +66,22 @@
 
 .padding2 {
   padding: 5.515% 0;
+}
+
+.padding2.attrHover {
+  &::after {
+    left: 50%;
+    translate: -50% 0%;
+    width: 100%;
+
+    @media (max-width: $breakpointL) {
+      top: -1%;
+      left: 105%;
+      height: 99%;
+      display: flex;
+      align-items: center;
+      translate: 0 0;
+      width: max-content;
+    }
+  }
 }

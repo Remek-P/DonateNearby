@@ -74,6 +74,7 @@ export default function CarouselForm() {
         setStep((previousStep) => previousStep + 1)
     };
 
+    // Getting the object from session storage to always update instead of overwrite
     const getFromSessionStorage = () => {
         return sessionStorage.getItem("formDataSessionStorage") !== null
             ? JSON.parse(sessionStorage.getItem("formDataSessionStorage"))
@@ -81,9 +82,18 @@ export default function CarouselForm() {
 
     };
 
+    // creating object from form data for the Statistic's component
+    const statisticsData = () => {
+        return {
+            bagNumber: formData.bagNumber,
+            NGO: formData.NGO,
+        };
+    };
+
+    // Adding required form data to session storage, so the Statistic's section can be updated (instead of fetching data from some fake server)
     const addToSessionStorage = () => {
         const formDataSessionStorage = getFromSessionStorage();
-        formDataSessionStorage.push(formData);
+        formDataSessionStorage.push(statisticsData());
         sessionStorage.setItem("formDataSessionStorage", JSON.stringify(formDataSessionStorage));
     };
 
