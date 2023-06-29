@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function DisplayNoOf({noOf}) {
+export default function DisplayNoOf({ noOf }) {
   if (noOf <= 10000) {
     return (noOf);
   } else if (noOf < 1000000) {

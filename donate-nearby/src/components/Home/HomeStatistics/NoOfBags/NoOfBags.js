@@ -1,20 +1,20 @@
 import React from "react";
 import DisplayNoOf from "../../../DisplayNoOf/DisplayNoOf";
 
-export default function NoOfBags({formDataSessionStorage, setActiveAttrHover}) {
+export default function NoOfBags({ formDataSessionStorage, setActiveAttrHover }) {
 
   let bagsArray = [];
 
   formDataSessionStorage.forEach((el) => bagsArray.push(+el.bagNumber));
 
   const defaultValue = () => {
-    setActiveAttrHover("attrHover")
-    return 10
+    setActiveAttrHover("attrHover");
+    return 10;
   };
 
   const exactValue = () => {
-    setActiveAttrHover(false)
-    return bagsArray.reduce?.((total, item) => total + item, 0)
+    setActiveAttrHover(false);
+    return bagsArray.reduce?.((total, item) => total + item, 0);
   };
 
   const noOfBags = exactValue() || defaultValue();

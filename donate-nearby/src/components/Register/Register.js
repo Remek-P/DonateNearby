@@ -84,6 +84,7 @@ export default function Register() {
                         Email
                     </label>
                     <input
+                        autoFocus
                         className="register__form-container__input"
                         required={true}
                         type="text"

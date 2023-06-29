@@ -1,5 +1,5 @@
-import React, {useContext, useEffect, useRef, useState} from "react";
-import {Link, useLocation, useNavigate} from "react-router-dom";
+import React, { useContext, useEffect, useRef, useState } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 import { GlobalContext } from "../../context/GlobalContext";
 
@@ -10,10 +10,12 @@ export default function Login() {
     const pass = "passLogin";
     const fail = "failLogin";
 
-    const [ email,              setEmail                            ] = useState("");
-    const [ password,           setPassword                         ] = useState("");
-    const [ emailValidation,    setEmailValidation                  ] = useState(pass);
-    const [ passwordLengthValidation, setPasswordLengthValidation   ] = useState(pass);
+    const [ email,                      setEmail                    ] = useState("");
+    const [ password,                   setPassword                 ] = useState("");
+    const [ emailValidation,            setEmailValidation          ] = useState(pass);
+    const [ passwordLengthValidation,   setPasswordLengthValidation ] = useState(pass);
+
+    const didMount = useRef(true);
 
     const navigate = useNavigate();
     const { state } = useLocation();
@@ -25,8 +27,6 @@ export default function Login() {
             return navigate("/") ;
         }
     };
-
-    const didMount = useRef(true)
 
     const emailAlert = "Podane hasło lub email nie są poprawne";
     const passwordAlert = "Hasło powinno być dłuższe niż 6 znaków";
@@ -86,6 +86,7 @@ export default function Login() {
                         Email
                     </label>
                     <input
+                        autoFocus
                         className="login__form-container__input"
                         type="email"
                         value={email}
@@ -108,6 +109,7 @@ export default function Login() {
                         Hasło
                     </label>
                     <input
+                        onKeyDown={e => e.key.toLowerCase() === "enter" && handleLogin(e)}
                         className="login__form-container__input"
                         type="password"
                         value={password}

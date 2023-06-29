@@ -8,6 +8,10 @@
     flex-wrap: wrap;
     margin-top: 24px;
     max-width: 650px;
+    
+    @media (max-width: $breakpointL) {
+      row-gap: 18px;
+    }
   }
 
   &__header {
