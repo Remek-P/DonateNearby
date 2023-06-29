@@ -127,6 +127,7 @@ export default function Register() {
                            type="password"
                            value={rePassword}
                            onChange={event => setRePassword(event.target.value)}
+                           onKeyDown={e => e.key.toLowerCase() === "enter" && handleRegister(e)}
                            name="password"
                            id="password"
                     />
