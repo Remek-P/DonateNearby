@@ -15,7 +15,7 @@ export default function CarouselFormStep3({ formData, setFormData, step, handleN
         <>
             <GiveawayCarouselFormStepCount step={step} />
             <form
-                className="giveawayForm__form"
+                className="carouselFormStep3__form"
                 name="giveawayForm"
                 onSubmit={handleNext}
             >
