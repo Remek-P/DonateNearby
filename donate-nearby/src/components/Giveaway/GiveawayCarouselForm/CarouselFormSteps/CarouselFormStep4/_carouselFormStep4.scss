@@ -1,5 +1,6 @@
 .carouselFormStep4 {
   padding-right: $padding-right;
+  padding-bottom: 12%;
   color: $font-color-send;
   font-weight: $font-weight-light;
   font-size: $font-size-24;
@@ -88,9 +89,16 @@
   }
 
   &-buttonContainer {
+    position: absolute;
+    bottom: $button-giveaway-container-bottom;
     display: flex;
-    gap: 50px;
-    margin-top: 100px;
+    justify-content: space-between;
+    width: $button-giveaway-container-width-double; //regulates the width of a button regardless of text;
+    gap: $button-giveaway-container-gap;
   }
+}
+
+.padding4 {
+  padding: 5.515% 0;
 }
 
