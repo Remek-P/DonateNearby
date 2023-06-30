@@ -1,4 +1,5 @@
 .carouselFormStep4 {
+  padding-right: $padding-right;
   color: $font-color-send;
   font-weight: $font-weight-light;
   font-size: $font-size-24;
@@ -12,31 +13,44 @@
 
   &-container {
     display: flex;
-    justify-content: space-between;
+    //justify-content: space-between;
     padding-top: 50px;
-    column-gap: 100px;
-    max-width: 500px;
+    column-gap: 6.5%;
+    //max-width: 500px;
 
     & :where(div > h5) {
       font-weight: $font-weight-semibold;
       line-height: $line-height-45;
     }
 
-    & :where(div > div > div){
+    & :where(div > div > div) {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      column-gap: 35px;
       padding-top: 20px;
+      column-gap: 35px;
+
+      @media (max-width: 880px) {
+        justify-content: flex-end;
+        column-gap: 20%;
+      }
+
+      @media (max-width: $breakpointXS) {
+        column-gap: 10px;
+      }
 
       & :where(:last-child > label){
         align-self: start;
       }
 
       & > label {
-        width: 115px;
+        min-width: 115px;
         line-height: $line-height-32;
         color: $font-color-send;
+
+        @media (max-width: $breakpointS) {
+          min-width: 100px;
+        }
       }
 
       & > input, & > textarea {
@@ -46,6 +60,10 @@
         font-weight: $font-weight-light;
         line-height: $line-height-40;
         text-align: center;
+
+        @media (max-width: 880px) {
+          width: clamp(200px, 50%, 500px);
+        }
       }
 
       & > input {
@@ -61,12 +79,18 @@
         resize: none;
       }
     }
+    
+    @media (max-width: 880px) {
+      flex-direction: column;
+      justify-content: flex-end;
+      gap: 50px;
+    }
   }
 
   &-buttonContainer {
     display: flex;
     gap: 50px;
-    margin-top: 205px;
+    margin-top: 100px;
   }
 }
 

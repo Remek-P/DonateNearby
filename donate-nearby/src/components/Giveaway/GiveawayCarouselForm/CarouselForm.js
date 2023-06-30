@@ -162,7 +162,7 @@ export default function CarouselForm() {
         <section className="carouselForm">
             <CarouselFormNotificationBar step={step} />
             <div
-                className="carouselForm-container"
+                className={`carouselForm-container step${step}`}
                 style={{backgroundImage: `url(${image})`}}
             >
                 <div className="carouselForm-container__steps">

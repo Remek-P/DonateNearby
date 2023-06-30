@@ -11,13 +11,38 @@
     //aspect-ratio: 1900 / 883;
     position: relative;
 
-    @media (max-width: $breakpointS) {
-      background-image: none !important;
-    }
-
     &__steps {
       padding: 1.895% 1% 1% $padding-left;
       text-align: left;
+    }
+  }
+}
+
+.step {
+  &0, &1 {
+    @media (max-width: $breakpointS) {
+      background-image: none !important;
+    }
+  }
+  &2 {
+    @media (max-width: 1150px) {
+      background-position-x: right -120px;
+    }
+    @media (max-width: 940px) {
+      background-image: none !important;
+    }
+  }
+  &3 {
+    @media (max-width: 1860px) {
+      background-image: none !important;
+    }
+  }
+  &4 {
+    @media (max-width: $breakpointXL) {
+      background-position-x: center;
+    }
+    @media (max-width: $breakpointL) {
+      background-image: none !important;
     }
   }
 }
