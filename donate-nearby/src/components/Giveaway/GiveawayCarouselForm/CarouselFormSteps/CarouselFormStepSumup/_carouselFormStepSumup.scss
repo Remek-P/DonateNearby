@@ -52,21 +52,22 @@
   }
 
   &__ul-giveaway {
-    max-width: 60%;
     --icon-size: 50px;
 
     & :where(li) {
+      display: flex;
+      align-items: center;
       margin-top: 20px;
       padding-left: calc(var(--icon-size) + 19px);
-      line-height: 3.125rem;
+      padding-right: 5px;
+      min-height: 30px;
       font-weight: $font-weight-regular;
-      overflow: hidden;
       position: relative;
 
       &::before {
         content: "";
-        width: 50px;
-        height: 50px;
+        min-width: 50px;
+        min-height: 50px;
         position: absolute;
         top: 50%;
         left: 0;
@@ -98,6 +99,12 @@
 
 .buttonContainer {
   display: flex;
-  gap: 50px;
-  margin-top: 59px;
+  justify-content: space-between;
+  padding-top: 5%;
+  width: $button-giveaway-container-width-double; //regulates the width of a button regardless of text;
+  gap: $button-giveaway-container-gap;
+}
+
+.paddingSumup {
+  padding: 5.515% 0;
 }
