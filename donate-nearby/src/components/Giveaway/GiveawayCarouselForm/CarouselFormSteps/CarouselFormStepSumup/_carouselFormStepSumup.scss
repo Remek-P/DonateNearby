@@ -12,10 +12,9 @@
 
   &-container {
     display: flex;
-    //justify-content: space-between;
     align-items: flex-start;
-    //gap: clamp(10px, 10%, 5000px);
-    gap: 8.5%;
+    gap: clamp(10px, 8.5%, 5000px);
+    //gap: 8.5%;
     //width: max-content;
     padding-top: 50px;
 
