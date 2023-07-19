@@ -42,42 +42,42 @@ export default function Step3AidTarget({ formData, setFormData }) {
         }
     };
 
-    const chooseAidTarget = () => {
-        return (
-            aidOptions.map(el =>
-                <div key={el} className="carouselFormStep3AidTarget-container">
-                    <input
-                        type="checkbox"
-                        id={el}
-                        name="aidTarget"
-                        // value={formData.aidTarget.find(el => el.name === aidOption1).name}
-                        value={el}
-                        onChange={handleChange}
-                        // checked={formData.aidTarget.find(el => el.name === aidOption1).value}
-                        checked={formData.aidTarget.find(target => target === el)}
-                        required={formData.aidTarget.length === 0}
-                    />
-                    <label
-                        htmlFor={el}
-                        className="carouselFormStep3AidTarget-container__label"
-                    >
-                        {el}
-                    </label>
-                </div>)
-
-        )
-    }
-
+  const chooseAidTarget = () => {
     return (
-        <div className="carouselFormStep3AidTarget">
-            <legend className="carouselFormStep3AidTarget__header">
-                Komu chcesz pomóc? *
-            </legend>
-            <div>
-                {
-                    chooseAidTarget()
-                }
+        aidOptions.map(el =>
+            <div key={el} className="carouselFormStep3AidTarget-container">
+              <input
+                  type="checkbox"
+                  id={el}
+                  name="aidTarget"
+                  // value={formData.aidTarget.find(el => el.name === aidOption1).name}
+                  value={el}
+                  onChange={handleChange}
+                  // checked={formData.aidTarget.find(el => el.name === aidOption1).value}
+                  checked={formData.aidTarget.find(target => target === el)}
+                  required={formData.aidTarget.length === 0}
+              />
+              <label
+                  htmlFor={el}
+                  className="carouselFormStep3AidTarget-container__label"
+              >
+                {el}
+              </label>
             </div>
-        </div>
+        )
     )
+  }
+
+  return (
+      <div className="carouselFormStep3AidTarget">
+        <legend className="carouselFormStep3AidTarget__header">
+          Komu chcesz pomóc? *
+        </legend>
+        <div>
+          {
+            chooseAidTarget()
+          }
+        </div>
+      </div>
+  )
 }
