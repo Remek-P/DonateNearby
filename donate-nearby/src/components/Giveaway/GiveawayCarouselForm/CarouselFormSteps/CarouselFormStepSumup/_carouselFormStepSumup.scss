@@ -48,6 +48,11 @@
         line-height: $line-height-40;
       }
     }
+    
+    @media (max-width: $breakpointM) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
   }
 
   &__ul-giveaway {
@@ -100,10 +105,19 @@
   display: flex;
   justify-content: space-between;
   padding-top: 5%;
-  width: $button-giveaway-container-width-double; //regulates the width of a button regardless of text;
+  padding-bottom: 5%;
+  //width: $button-giveaway-container-width-double; //regulates the width of a button regardless of text;
+  width: 40%;
+  min-width: 210px;
+  max-width: 600px;
   gap: $button-giveaway-container-gap;
+
+  @media (max-width: $breakpointL) {
+    padding-top: 15%;
+    padding-bottom: 8%;
+  }
 }
 
 .paddingSumup {
-  padding: 5.515% 0;
+  padding: 4% 0;
 }
