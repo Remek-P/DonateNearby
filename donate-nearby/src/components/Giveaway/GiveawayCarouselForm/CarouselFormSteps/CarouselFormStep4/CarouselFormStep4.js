@@ -42,7 +42,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, handleN
             >
                 <legend className="carouselFormStep4__header">Podaj adres oraz termin odbioru rzecz przez kuriera</legend>
                 <div className="carouselFormStep4-container">
-                    <div>
+                    <div className="carouselFormStep4-container__data">
                         <h5>Adres odbioru:</h5>
                         <div>
                             <label htmlFor={street}>Ulica</label>
@@ -144,7 +144,7 @@ export default function CarouselFormStep4({ formData, setFormData, step, handleN
                             />
                         </div>
                         <div>
-                            <label htmlFor={notes}>Uwagi<br/> dla kuriera</label>
+                            <label htmlFor={notes} className="last">Uwagi<br/> dla kuriera</label>
                             <textarea
                                 value={formData.schedulePackage.notes}
                                 onChange={event => setFormData({
