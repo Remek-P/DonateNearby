@@ -30,10 +30,6 @@ Validation:
 #### Caveat:
 * The login and registration functionality is performed by useContext hook - demo purpose;
 * The form data is using fake API - demo purpose;
-* RWD pending:
-  * front page - done;
-  * Login/register - done;
-  * Multistep form is cooking - please set the resolution to 1900 x 962.
 * Support statistics - if no data added by the user, showing fixed number for demo purpose;
 * Zorganizuj zbiórkę functionality - under construction;
 
