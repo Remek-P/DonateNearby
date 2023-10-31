@@ -3,7 +3,7 @@
   font-size: $font-size-12;
   color: $font-color-login;
 
-  &:hover, &:focus {
+  &:hover, &:focus-visible {
     opacity: 0.75;
   }
 }

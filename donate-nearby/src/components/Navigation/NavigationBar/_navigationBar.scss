@@ -19,7 +19,7 @@
       display: block;
       padding: 0.47385vw $padding-navigation;
 
-      &:hover, &:focus {
+      &:hover, &:focus-visible {
         opacity: 0.75;
       }
     }

@@ -152,7 +152,7 @@
         }
 
         &:hover,
-        &:focus {
+        &:focus-visible {
           scale: 1.2;
           border-color: $border-color-alt;
           transition: var(--transition);

@@ -45,7 +45,7 @@
     line-height: $line-height-32;
     cursor: pointer;
 
-    &:hover, &:focus {
+    &:hover, &:focus-visible {
       opacity: 0.75;
     }
   }

@@ -23,7 +23,8 @@
     padding: 0.5625rem 0.625rem;
     border: 0.75px solid $border-color-alt;
 
-    &:hover {
+    &:hover,
+    &:focus-visible {
       opacity: 0.75;
     }
   }

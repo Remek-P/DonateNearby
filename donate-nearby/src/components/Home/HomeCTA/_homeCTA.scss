@@ -130,7 +130,7 @@
     text-transform: uppercase;
 
     &:hover,
-    &:focus {
+    &:focus-visible {
       border-color: $border-color-alt;
       opacity: 0.75;
     }
